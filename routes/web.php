@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/auth/verifyemail/{token}', 'Auth\RegisterController@verify');
+Route::get('/auth/verifyemail/{token}', 'C:\Users\student\code\sample\app\Http\Controllers\Auth\RegisterController@verify');
 
 Auth::routes();
 
