@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,23 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * The user has been authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function authenticated(Request $request, $user){
+        // ログイン後にここが呼び出される
+        // メールでの認証が済んでいるかをチェックする
+        if(!$user->verified) {
+            // メールでの認証が済んでいないので強制ログアウト
+            $this->guard()->logout();
+            $request->session()->invalidate();
+            return redirect('/login')->with('warning', 'メールの確認をしてください');
+        }
     }
 }

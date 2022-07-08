@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use App\Jobs\SendVerificationEmail;
+use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
@@ -98,6 +99,17 @@ class RegisterController extends Controller
     public function verify($token)
     {
         $user = User::where('email_token',$token)->first();
+
+        // 現在の時刻を取得
+        $date_now = new Carbon(Carbon::now());
+        // メールの送信時刻を取得し，１時間加えた時刻を有効期限とする
+        $date_expire = Carbon::createFromFormat('Y-m-d H:i:s', $user->sent_at);
+        $date_expire->addHour();
+        // リンクの有効期限のチェック
+        if ($date_now->gt($date_expire)) {  // gt は Grater Than，つまり "より大きい"
+            return redirect('/')->with('warning', 'メールリンクの有効期限（１時間）を過ぎました');
+        }
+
         $user->verified = 1;
         if($user->save()) {
             return view('auth.emailconfirm',['user'=>$user]);

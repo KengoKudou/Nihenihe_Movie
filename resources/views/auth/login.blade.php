@@ -8,6 +8,17 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                    {{-- フラッシュメッセージの表示 --}}
+                    @if (session('warning'))
+                        <div class="alert alert-warning">
+                            {{ session('warning') }}
+                        </div>
+                    @endif
+                    @if (session('status'))
+                        <div class="alert alert-info">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
