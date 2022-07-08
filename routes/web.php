@@ -21,5 +21,7 @@ Route::get('/', function () {
 
 Route::get('/auth/verifyemail/{token}', 'Auth\RegisterController@verify');
 Auth::routes();
+Route::get('/resend', 'Auth\RegisterController@showReSendForm')->name('resend');
+Route::post('/resend', 'Auth\RegisterController@reSend');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

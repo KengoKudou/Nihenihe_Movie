@@ -89,6 +89,29 @@ class RegisterController extends Controller
         dispatch(new SendVerificationEmail($user));
         return view('auth.verification');
     }
+    public function showReSendForm()
+    {
+        return view('auth.resend');
+    }
+
+    public function reSend(Request $request){
+        $user = User::where('email', $request->email)->first();
+        if (!$user) {
+            return redirect('/resend')
+                ->with('warning', '登録されていないアドレスです');
+        }
+        if ($user->verified == 1) {
+            return redirect('/resend')
+                ->with('warning', 'すでに検証されています．ログイン画面からログインしてください');
+        }
+        // メールの送信時間を現在時刻に変更
+        $user->sent_at = Carbon::now();
+        $user->save();
+        // メールの送信ジョブを作成し，キューに投入する
+        event(new Registered($user));
+        dispatch(new SendVerificationEmail($user));
+        return view('auth.verification');
+    }
 
     /**
      *  Handle a registration request for the application.
