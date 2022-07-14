@@ -69,7 +69,7 @@
                             </div>
                         </div>
                     </form>
-                    <p><a href="{{ route('resend') }}">Send Register link again</a></p>
+                    <p><a href="{{ route('resend') }}">{{__('Send Register link again') }}</a></p>
                 </div>
             </div>
         </div>
