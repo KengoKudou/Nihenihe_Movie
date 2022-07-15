@@ -24,6 +24,7 @@ Auth::routes();
 Route::get('/resend', 'Auth\RegisterController@showReSendForm')->name('resend');
 Route::post('/resend', 'Auth\RegisterController@reSend');
 
-Route::post('/newimgsend', 'UploadController@saveimg');
+// 画像投稿をコントローラーに送信
+Route::post('/new_movies_send', 'UploadController@saveimg');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
