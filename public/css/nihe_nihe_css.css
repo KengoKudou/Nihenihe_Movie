@@ -36,12 +36,14 @@ button {
 }
 
 .container {
-    display: -webkit-flex;
     display: flex;
 }
 
+.collapse {
+    margin: 0 0 0 auto;
+}
+
 .navbar-nav {
-    display: -webkit-flex;
     display: flex;
 }
 
