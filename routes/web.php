@@ -24,4 +24,6 @@ Auth::routes();
 Route::get('/resend', 'Auth\RegisterController@showReSendForm')->name('resend');
 Route::post('/resend', 'Auth\RegisterController@reSend');
 
+Route::post('/newimgsend', 'UploadController@saveimg');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
