@@ -34,3 +34,19 @@ button {
     border-color: #09C #069 #036;
     box-shadow: 0 1px 4px rgb(0 0 0 / 50%);
 }
+
+.container {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.navbar-nav {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.nav-item {
+    margin: 1em;
+    justify-content: flex-end;
+}
+
