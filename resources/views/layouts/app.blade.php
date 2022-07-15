@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="storage/movies/nihenihe.gif" width="100" height="100" alt="logo">
+                <img src="storage/movies/nihenihe.gif" width="100" height="100">
 
             </a>
 
