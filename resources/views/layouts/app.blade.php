@@ -17,16 +17,15 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{asset("css/nihe_nihe_css.css")}}" rel="stylesheet">
+    <link href="{{asset("css/main.css")}}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
+            <!-- タイトルロゴランダム表示 -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="storage/movies/nihenihe.gif" width="100" height="100">
-
+                <script type="text/javascript" src="{{asset("js/logoRandom.js")}}"></script>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,7 +52,7 @@
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}
                             </a>
 
