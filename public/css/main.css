@@ -1,5 +1,6 @@
-vahtml {
+html {
     background: #FAFAFA;
+    padding-left: 25px;
 }
 
 .card-body {
@@ -12,7 +13,7 @@ vahtml {
     background-image: linear-gradient(white, #EFEFEC);
     position: relative;
     width: 200px;
-    padding: 16px;
+    padding: 20px;
 }
 
 button {

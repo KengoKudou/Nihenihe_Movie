@@ -6,11 +6,11 @@
             <div class="col-md-8">
                 <div class="card">
                     <div>
-                        <form action="/new_movies_send" method="post" enctype="multipart/form-data" accept-charset="video/*">
+                        <form action="/new_movies_send" method="post" enctype="multipart/form-data">
                             @csrf
                             <p>&nbsp;</p>
-                            <p>アップロード</p>
-                            <input type="file" name="post_img">
+                            <p>動画アップロード</p>
+                            <input type="file" name="post_movies">
                             <p>&nbsp;</p>
                             <input type="submit">
                         </form>
