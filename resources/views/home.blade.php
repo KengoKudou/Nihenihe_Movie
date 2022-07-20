@@ -17,8 +17,7 @@
                         {{ __('You are logged in!') }}
                     </div>
                     <div>
-                        <form action="/new_movies_send" method="post" enctype="multipart/form-data"
-                              accept-charset="video/*">
+                        <form action="/new_movies_send" method="post" enctype="multipart/form-data" accept-charset="video/*">
                             @csrf
                             <p>&nbsp;</p>
                             <p>アップロード</p>
