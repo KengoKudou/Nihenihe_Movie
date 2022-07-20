@@ -52,3 +52,6 @@ button {
     justify-content: flex-end;
 }
 
+.card {
+    display: flex;
+}
