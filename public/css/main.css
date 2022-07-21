@@ -62,7 +62,7 @@ button {
 
 }
 
-.Contributor {
+.Description_Contributor {
     display: flex;
 }
 
@@ -77,5 +77,26 @@ button {
 
 .Advertisement_Icon {
     width: 250px;
+    height: auto;
+}
+
+.PickUp_Container_Thumbnail {
+    width: 250px;
+    height: auto;
+}
+
+.PickUp {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.PickUp_Container {
+    margin: 10px 10px 10px 10px;
+    background-color: #FFFFFF;
+
+}
+
+.PickUp_Container_Icon {
+    width: 50px;
     height: auto;
 }
