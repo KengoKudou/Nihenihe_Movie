@@ -1,9 +1,9 @@
-var randomList = ["storage/img/S__6012947.jpg",
-    "storage/img/S__6021158.jpg",
-    "storage/img/S__6021165.jpg",
-    "storage/img/IMG_1846.JPG",
-    "storage/img/IMG_3065.PNG",
-    "storage/img/IMG_E3107.JPG"];
+var randomList = ["storage/img/ch_img_miku.png",
+    "storage/img/S__6012947.jpg",
+    "storage/img/S__169746443.jpg",
+    "storage/img/S__169746446.jpg",
+    "storage/img/S__169746450.jpg",
+    "storage/img/tmp-0fd68437d6da5967ac63cb41d8e51ca1-1a494132d7bc26d4259aa6ab5cd4229e.jpg"];
 var num = Math.floor(Math.random() * randomList.length);
 var printHtml = '<img src=' + randomList[num] + ' width="50%" height="auth" alt="ランダム画像">';
 document.write(printHtml);
