@@ -56,3 +56,21 @@ button {
 .card {
     display: flex;
 }
+
+.Top_Movie {
+    display: flex;
+
+}
+
+.Contributor {
+    display: flex;
+}
+
+.Description {
+    margin: auto 0 auto 100px;
+}
+
+.Contributor_Icon {
+    width: 50px;
+    height: auto;
+}
