@@ -11,6 +11,8 @@
                             <p>&nbsp;</p>
                             <p>動画アップロード</p>
                             <input type="file" name="post_movies">
+                            <p>タイトル</p>
+                            <input type="text" name="title" placeholder="動画のタイトルを入力">
                             <p>&nbsp;</p>
                             <input type="submit">
                         </form>

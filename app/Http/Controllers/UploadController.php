@@ -14,9 +14,13 @@ class UploadController extends Controller
 
     public function saveimg(Request $request)
     {
+
+        $title=$request->input(['title']);
+        $extension=$request->file('post_movies')->getClientOriginalName();
+
+        $fileName=$title.'.'.$extension;
         $request->validate(['post_movies' => 'mimes:mp4,wmv,mpg,mov,avi,mkv.flv,asf,wmv']);
-        //$request->file('post_movies')->store('public/post_movies');
-        $request->file('post_movies')->storeAs('public/post_movies');
+        $request->file('post_movies')->storeAs('public/post_movies',$fileName);
 
         return redirect('/home');
     }
