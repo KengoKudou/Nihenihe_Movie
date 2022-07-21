@@ -48,7 +48,7 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -63,7 +63,7 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \App\Models\User
      */
     protected function create(array $data)
@@ -89,12 +89,14 @@ class RegisterController extends Controller
         dispatch(new SendVerificationEmail($user));
         return view('auth.verification');
     }
+
     public function showReSendForm()
     {
         return view('auth.resend');
     }
 
-    public function reSend(Request $request){
+    public function reSend(Request $request)
+    {
         $user = User::where('email', $request->email)->first();
         if (!$user) {
             return redirect('/resend')
@@ -121,7 +123,7 @@ class RegisterController extends Controller
      */
     public function verify($token)
     {
-        $user = User::where('email_token',$token)->first();
+        $user = User::where('email_token', $token)->first();
 
         // 現在の時刻を取得
         $date_now = new Carbon(Carbon::now());
@@ -134,8 +136,8 @@ class RegisterController extends Controller
         }
 
         $user->verified = 1;
-        if($user->save()) {
-            return view('auth.emailconfirm',['user'=>$user]);
+        if ($user->save()) {
+            return view('auth.emailconfirm', ['user' => $user]);
         }
     }
 }

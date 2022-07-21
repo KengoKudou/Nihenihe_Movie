@@ -1,3 +1,11 @@
+const fs = require('fs');
+
+// カレントディレクトリ
+const path = "storage/img";
+// ファイル名の一覧
+const filenames = fs.readdirSync(path);
+console.log(filenames);
+
 var randomList = ["storage/img/ch_img_miku.png",
     "storage/img/S__6012947.jpg",
     "storage/img/S__169746443.jpg",
