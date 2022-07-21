@@ -100,3 +100,25 @@ button {
     width: 50px;
     height: auto;
 }
+
+.Video_GridCell_MetaContainer {
+    display: flex;
+}
+
+.Video_Creator_Thumbnail {
+    width: 50px;
+    height: auto;
+}
+
+.Video_Creator_FollowButton {
+    width: 20%;
+}
+
+.Video_Tag_List {
+    display: flex;
+}
+
+.Video_Player {
+    display: flex;
+
+}

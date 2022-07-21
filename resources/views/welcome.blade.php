@@ -137,7 +137,7 @@
             <div class="PickUp_Container_Overview">
                 ピックアップ概要
             </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon">
+            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
