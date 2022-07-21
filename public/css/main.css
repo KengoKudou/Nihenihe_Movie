@@ -67,10 +67,15 @@ button {
 }
 
 .Description {
-    margin: auto 0 auto 100px;
+    margin: auto 10px auto 10px;
 }
 
 .Contributor_Icon {
     width: 50px;
+    height: auto;
+}
+
+.Advertisement_Icon {
+    width: 250px;
     height: auto;
 }
