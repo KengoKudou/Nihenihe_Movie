@@ -82,6 +82,9 @@
                             </div>
                         </form>
                     </div>
+                    <div class="imgRandom">
+                        <script type="text/javascript" src="{{asset("js/imgRandom.js")}}"></script>
+                    </div>
                 </div>
             </div>
         </div>

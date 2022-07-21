@@ -22,6 +22,7 @@
                 <span class="Contributor_Name">
                     投稿者ネーム
                 </span>
+
             </a>
         </div>
     </div>

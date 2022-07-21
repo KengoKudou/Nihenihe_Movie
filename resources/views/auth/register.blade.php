@@ -79,11 +79,7 @@
                         </form>
                         <p><a href="{{ route('resend') }}">{{__('Send Register link again') }}</a></p>
                     </div>
-                    <div class="imgRandom">
-                        <script type="text/javascript" src="{{asset("js/imgRandom.js")}}"></script>
-                    </div>
                 </div>
-
             </div>
         </div>
     </div>
