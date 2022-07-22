@@ -87,6 +87,9 @@ html {
 
 .Description {
     margin: auto 10px auto 10px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
 }
 
 .Contributor_Icon {
@@ -102,6 +105,7 @@ html {
 .PickUp_Container_Thumbnail {
     width: 250px;
     height: auto;
+    border-radius: 5px 5px 0 0;
 }
 
 .PickUp {
@@ -112,6 +116,8 @@ html {
 .PickUp_Container {
     margin: 10px 10px 10px 10px;
     background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
 }
 
 .PickUp_Container_Icon {
@@ -119,7 +125,15 @@ html {
     height: auto;
 }
 
+.Video_GridCell {
+    display: flex;
+}
+
 .Video_GridCell_MetaContainer {
+    display: flex;
+}
+
+.Video_GridCell_Meta {
     display: flex;
 }
 
@@ -137,5 +151,13 @@ html {
 }
 
 .Video_Player {
+    display: flex;
+}
+
+.Video_Comment_Input {
+    width: 85%;
+}
+
+.Video_Creator_Info {
     display: flex;
 }

@@ -10,15 +10,15 @@
         <div class="Video_GridCell">
             <div class="Video_Creator_Info">
                 <img src="{{ asset('storage/img/thumbnail/K_pink.png') }}" class="Video_Creator_Thumbnail" alt="">
-                <div class="Video_Creator_Name">
-                    クリエイター名
+                <div class="Video_Creator_Meta">
+                    <div class="Video_Creator_Name">
+                        クリエイター名
+                    </div>
+                    <button type="button" onclick="alert('投稿動画確認しました')" class="Video_Creator_Button">投稿動画</button>
                 </div>
-                <div class="Video_Creator_Button">
-                    登校動画ボタン
-                </div>
-                <button type="button" onclick="alert('Follow!')" class="Video_Creator_FollowButton">フォローボタン</button>
+                <button type="button" onclick="alert('フォローしました')" class="Video_Creator_FollowButton">フォロー</button>
             </div>
-            <div class="Video_GridCell_MetaContainer">
+            <div class="Video_GridCell_Meta">
                 <div class="Video_UploadDateMeta">
                     登校時間
                 </div>
@@ -59,6 +59,12 @@
                     <source src="{{ asset('storage/post_video/Q2Frsr5QEp88XwLifQaJtpcCIpDD9pGwrrRucpW4.mp4') }}"
                             type="video/mp4">
                 </video>
+                <div class="Video_Comment">
+                    <label>
+                        <input type="text" class="Video_Comment_Input">
+                    </label>
+                    <button type="button" onclick="alert('コメント登録')" class="Video_Creator_FollowButton">コメント</button>
+                </div>
             </div>
             <div class="Video_Comment_List">
                 コメント一覧
