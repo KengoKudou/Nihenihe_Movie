@@ -16,7 +16,27 @@ html {
     padding: 20px;
 }
 
-button {
+.Button_Register {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 52px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 1px #036;
+    border-radius: 6px;
+    background-color: #00CCCC;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00CCCC), color-stop(100%, #6699CC));
+    background-image: -webkit-linear-gradient(#00CCCC, #6699CC);
+    background-image: linear-gradient(#00CCCC, #6699CC);
+    cursor: pointer;
+    border: solid 2px;
+    border-color: #09C #069 #036;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 50%);
+}
+
+.Button_Login {
     position: relative;
     display: block;
     width: 100%;
@@ -57,9 +77,8 @@ button {
     display: flex;
 }
 
-.Top_Movie {
+.Top_Video {
     display: flex;
-
 }
 
 .Description_Contributor {
@@ -93,7 +112,6 @@ button {
 .PickUp_Container {
     margin: 10px 10px 10px 10px;
     background-color: #FFFFFF;
-
 }
 
 .PickUp_Container_Icon {
@@ -111,7 +129,7 @@ button {
 }
 
 .Video_Creator_FollowButton {
-    width: 20%;
+
 }
 
 .Video_Tag_List {
@@ -120,5 +138,4 @@ button {
 
 .Video_Player {
     display: flex;
-
 }
