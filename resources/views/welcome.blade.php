@@ -24,20 +24,24 @@
                 </span>
             </a>
         </div>
+        <!-- 広告部分 -->
         <div class="Advertisement">
+            <!-- 西潟ポートフォリオ -->
             <a class="Advertisement_nishigata" href="{{ asset('storage/img/advertisement/ポートフォリオ_西潟.pdf') }}">
                 <img src="{{ asset('storage/img/advertisement/カヤック.png') }}" class="Advertisement_Icon"
                      alt="面白法人カヤック_西潟ポートフォリオ">
             </a>
             <br>
+            <!-- 工藤ポートフォリオ -->
             <a class="Advertisement_kudo" href="{{ asset('storage/img/advertisement/ポートフォリオ_工藤.pdf') }}">
                 <img src="{{ asset('storage/img/advertisement/クリプトン.png') }}" class="Advertisement_Icon"
                      alt="クリプトン・フューチャー・メディア_工藤ポートフォリオ">
             </a>
         </div>
     </div>
-
+    <!-- ピックアップ管理 -->
     <div class="PickUp">
+        <!-- ピックアップ -->
         <div class="PickUp_Container">
             <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge1.png') }}" class="PickUp_Container_Thumbnail" alt="">
             <div class="PickUp_Container_Title">
@@ -47,12 +51,11 @@
                 ピックアップ概要
             </div>
             <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-
-
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
         </div>
+        <!-- ピックアップ -->
         <div class="PickUp_Container">
             <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge2.png') }}" class="PickUp_Container_Thumbnail" alt="">
             <div class="PickUp_Container_Title">
@@ -66,6 +69,7 @@
                     ピックアップ投稿者ネーム
                 </span>
         </div>
+        <!-- ピックアップ -->
         <div class="PickUp_Container">
             <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge3.png') }}" class="PickUp_Container_Thumbnail" alt="">
             <div class="PickUp_Container_Title">
@@ -79,6 +83,7 @@
                     ピックアップ投稿者ネーム
                 </span>
         </div>
+        <!-- ピックアップ -->
         <div class="PickUp_Container">
             <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge4.png') }}" class="PickUp_Container_Thumbnail" alt="">
             <div class="PickUp_Container_Title">
@@ -92,6 +97,7 @@
                     ピックアップ投稿者ネーム
                 </span>
         </div>
+        <!-- ピックアップ -->
         <div class="PickUp_Container">
             <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge5.png') }}" class="PickUp_Container_Thumbnail" alt="">
             <div class="PickUp_Container_Title">
@@ -105,6 +111,7 @@
                     ピックアップ投稿者ネーム
                 </span>
         </div>
+        <!-- ピックアップ -->
         <div class="PickUp_Container">
             <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge6.png') }}" class="PickUp_Container_Thumbnail" alt="">
             <div class="PickUp_Container_Title">
@@ -118,6 +125,7 @@
                     ピックアップ投稿者ネーム
                 </span>
         </div>
+        <!-- ピックアップ -->
         <div class="PickUp_Container">
             <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge7.png') }}" class="PickUp_Container_Thumbnail" alt="">
             <div class="PickUp_Container_Title">
@@ -131,6 +139,7 @@
                     ピックアップ投稿者ネーム
                 </span>
         </div>
+        <!-- ピックアップ -->
         <div class="PickUp_Container">
             <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge8.png') }}" class="PickUp_Container_Thumbnail" alt="">
             <div class="PickUp_Container_Title">

@@ -12,7 +12,9 @@
                             <p>動画アップロード</p>
                             <input type="file" name="post_movies">
                             <p>タイトル</p>
-                            <input type="text" name="title" placeholder="動画のタイトルを入力">
+                            <label>
+                                <input type="text" name="title" placeholder="動画のタイトルを入力">
+                            </label>
                             <p>&nbsp;</p>
                             <input type="submit">
                         </form>
