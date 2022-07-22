@@ -27,13 +27,14 @@
         <!-- 広告部分 -->
         <div class="Advertisement">
             <!-- 西潟ポートフォリオ -->
-            <a class="Advertisement_nishigata" href="{{ asset('storage/img/advertisement/ポートフォリオ_西潟.pdf') }}">
+            <a class="Advertisement_nishigata" href="/portfolio_nishigata">
                 <img src="{{ asset('storage/img/advertisement/カヤック.png') }}" class="Advertisement_Icon"
                      alt="面白法人カヤック_西潟ポートフォリオ">
             </a>
+
             <br>
             <!-- 工藤ポートフォリオ -->
-            <a class="Advertisement_kudo" href="{{ asset('storage/img/advertisement/ポートフォリオ_工藤.pdf') }}">
+            <a class="Advertisement_kudo" href="/portfolio_kudou">
                 <img src="{{ asset('storage/img/advertisement/クリプトン.png') }}" class="Advertisement_Icon"
                      alt="クリプトン・フューチャー・メディア_工藤ポートフォリオ">
             </a>

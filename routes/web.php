@@ -31,3 +31,13 @@ Route::post('/resend', 'Auth\RegisterController@reSend');
 Route::post('/new_movies_send', 'UploadController@saveimg');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//　ポートフォリオ（西潟）接続
+Route::get('/portfolio_nishigata',function(){
+    return view('portfolio_nishigata');
+});
+
+//　ポートフォリオ（西潟）接続
+Route::get('/portfolio_kudou',function(){
+    return view('portfolio_kudou');
+});
