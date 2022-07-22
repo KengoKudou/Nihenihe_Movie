@@ -11,9 +11,9 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->foreign('name')->references('name')->on('users');
-            $table->string('title', 29)->nullable(false);
-            $table->string('comment', 511)->nullable(false);
-            $table->string('data_path', 255)->nullable(false);
+            $table->integer('artwork_num')->nullable(false);
+            $table->string('title')->nullable(false);
+            $table->string('comment')->nullable(false);
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
         });

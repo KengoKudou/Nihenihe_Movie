@@ -10,28 +10,44 @@ class Artwork extends Model
     protected $fillable = [
         // ユーザー名が登録されるカラムです。
         'name',
+        // ユーザー事の作品のフォルダー数が登録されているカラムです。
+        'artwork_num',
         // 作品のタイトルが登録されるカラムです。
         'title',
         // 作品のコメントが登録されるカラムです。
-        'comment',
-        // 作品の場所を登録するカラムです。
-        'data_path'
+        'comment'
     ];
 
     // データをインサートするためのメソッド
-    public function insert_data($user_id, $title, $comment, $data_path)
+    public function insert_data($user_id, $title, $comment)
     {
         // リターンを使う事で、登録しつつそのデータを返している
         return $this
             ->create([
                 // カラム'user_id'に受け取ったユーザー名を登録
                 'name' => $user_id,
+                // カラム'artwork_num'に作品の数を登録
+                'artwork_num' => $this->max_artwork_num($user_id),
                 // カラム'title'に受け取ったタイトルを登録
                 'title' => $title,
                 // カラム'comment'に受け取ったコメントを登録
                 'comment' => $comment,
-                // カラム'data_path'に受け取った情報の保存場所を保存
-                'data_path' => $data_path
             ]);
+    }
+
+    private function max_artwork_num($user_id)
+    {
+        $artwork_num = $this
+            // カラム'artwork_num'の最大値を取得する
+            ->where('name', $user_id)
+            ->max('artwork_num')
+            ->first('artwork_num');
+
+        // 作品が一個もない場合
+        if ($artwork_num == 0 || $artwork_num == null) {
+            return 1;
+        }
+
+        return $artwork_num + 1;
     }
 }
