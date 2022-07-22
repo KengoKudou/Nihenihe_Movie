@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +23,13 @@ Route::get('/video', function () {
     return view('video/video');
 });
 
-Route::get('/auth/verifyemail/{token}', 'Auth\RegisterController@verify');
+Route::get('/auth/verifyemail/{token}', [RegisterController::class, 'verify']);
 Auth::routes();
-Route::get('/resend', 'Auth\RegisterController@showReSendForm')->name('resend');
-Route::post('/resend', 'Auth\RegisterController@reSend');
+Route::get('/resend', [RegisterController::class, 'showReSendForm'])->name('resend');
+Route::post('/resend', [RegisterController::class, 'reSend']);
 
 // 画像投稿をコントローラーに送信
-Route::post('/new_movies_send', 'UploadController@saveimg');
+Route::post('/new_movies_send', [UploadController::class, 'saveimg']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
