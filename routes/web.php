@@ -18,8 +18,8 @@ use Http\Controllers\Auth\RegisterController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/movie', function () {
-    return view('movie/movie');
+Route::get('/video', function () {
+    return view('video/video');
 });
 
 Route::get('/auth/verifyemail/{token}', 'Auth\RegisterController@verify');

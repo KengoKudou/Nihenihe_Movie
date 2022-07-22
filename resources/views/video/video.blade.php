@@ -9,16 +9,14 @@
         </div>
         <div class="Video_GridCell">
             <div class="Video_Creator_Info">
-                <img src="{{ asset('storage/img/thumbnail/K_pink.png') }}" class="Video_Creator_Thumbnail">
+                <img src="{{ asset('storage/img/thumbnail/K_pink.png') }}" class="Video_Creator_Thumbnail" alt="">
                 <div class="Video_Creator_Name">
                     クリエイター名
                 </div>
                 <div class="Video_Creator_Button">
                     登校動画ボタン
                 </div>
-                <div class="Video_Creator_FollowButton">
-                    <button type="button" onclick="alert('Follow!')">フォローボタン</button>
-                </div>
+                <button type="button" onclick="alert('Follow!')" class="Video_Creator_FollowButton">フォローボタン</button>
             </div>
             <div class="Video_GridCell_MetaContainer">
                 <div class="Video_UploadDateMeta">
@@ -57,8 +55,9 @@
         </ul>
         <div class="Video_Player">
             <div class="Video">
-                <video controls autoplay width="80%" height="auth">
-                    <source src="{{ asset('storage/post_movies/Q2Frsr5QEp88XwLifQaJtpcCIpDD9pGwrrRucpW4.mp4') }}" type="video/mp4">
+                <video controls autoplay>
+                    <source src="{{ asset('storage/post_video/Q2Frsr5QEp88XwLifQaJtpcCIpDD9pGwrrRucpW4.mp4') }}"
+                            type="video/mp4">
                 </video>
             </div>
             <div class="Video_Comment_List">
@@ -66,5 +65,4 @@
             </div>
         </div>
     </div>
-
 @endsection
