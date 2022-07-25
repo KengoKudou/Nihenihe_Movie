@@ -42,14 +42,15 @@ class LoginController extends Controller
     /**
      * The user has been authenticated.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
+     * @param \Illuminate\Http\Request $request
+     * @param mixed $user
      * @return mixed
      */
-    protected function authenticated(Request $request, $user){
+    protected function authenticated(Request $request, $user)
+    {
         // ログイン後にここが呼び出される
         // メールでの認証が済んでいるかをチェックする
-        if(!$user->verified) {
+        if (!$user->verified) {
             // メールでの認証が済んでいないので強制ログアウト
             $this->guard()->logout();
             $request->session()->invalidate();

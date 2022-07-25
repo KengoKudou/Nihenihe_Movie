@@ -25,7 +25,7 @@
         <div class="container">
             <!-- タイトルロゴランダム表示 -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                <script type="text/javascript" src="{{asset("js/logoRandom.js")}}"></script>
+                <script type="text/javascript" src="{{ asset("js/logoRandom.js") }}"></script>
             </a>
             <!-- 検索ボックス表示 -->
             <div class="Video_Search">
