@@ -24,13 +24,13 @@ class Artwork extends Model
         // リターンを使う事で、登録しつつそのデータを返している
         return $this
             ->create([
-                // カラム'user_id'に受け取ったユーザー名を登録
+                // カラム 'user_id' に受け取ったユーザー名を登録
                 'name' => $user_id,
-                // カラム'artwork_num'に作品の数を登録
+                // カラム 'artwork_num' に作品の数を登録
                 'artwork_num' => $this->max_artwork_num($user_id),
-                // カラム'title'に受け取ったタイトルを登録
+                // カラム 'title' に受け取ったタイトルを登録
                 'title' => $title,
-                // カラム'comment'に受け取ったコメントを登録
+                // カラム 'comment' に受け取ったコメントを登録
                 'comment' => $comment,
             ]);
     }
@@ -38,7 +38,7 @@ class Artwork extends Model
     private function max_artwork_num($user_id)
     {
         $artwork_num = $this
-            // カラム'artwork_num'の最大値を取得する
+            // カラム 'artwork_num' の最大値を取得する
             ->where('name', $user_id)
             ->max('artwork_num')
             ->first('artwork_num');

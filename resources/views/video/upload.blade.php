@@ -13,6 +13,12 @@
                         <label for="title">
                             <input type="text" name="title" id="title" placeholder="動画のタイトルを入力">
                         </label>
+                        <label for="title">
+                            <input type="text" name="title" id="title" placeholder="動画のタイトルを入力">
+                        </label>
+                        <label for="title">
+                            <input type="text" name="title" id="title" placeholder="動画のタイトルを入力">
+                        </label>
                         <input type="submit">
                     </form>
                     <button type="button" class="return" onclick="location.href='http://localhost:8000/home'">ホームへ戻る</button>

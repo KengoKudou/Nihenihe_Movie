@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* ユニバーサルセレクタでデフォルトの余白をリセット */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* サイト共通コンテナ */
+.container {
+    margin: 30px auto;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+
+#portfolio {
+    width: 870px;
+    height: 615px;
+    margin: 30px auto;
+}
+
+img {
+    width: 100%;
+}
