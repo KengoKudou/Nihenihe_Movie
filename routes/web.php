@@ -34,16 +34,16 @@ Route::post('/new_movies_send', [UploadController::class, 'saveimg']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // ポートフォリオ（西潟）接続
-Route::get('/portfolio_nishigata',function(){
+Route::get('/portfolio_nishigata', function () {
     return view('portfolio_nishigata');
 });
 
 // ポートフォリオ（西潟）接続
-Route::get('/portfolio_kudou',function(){
+Route::get('/portfolio_kudou', function () {
     return view('portfolio_kudou');
 });
 
 // 動画アップロードページ接続
-Route::get('/Video_Upload',function(){
-    return view('Video_Upload');
+Route::get('/upload', function () {
+    return view('video/upload');
 });
