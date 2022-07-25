@@ -23,18 +23,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <!-- タイトルロゴランダム表示 -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                <script type="text/javascript" src="{{ asset("js/logoRandom.js") }}"></script>
-            </a>
-            <!-- 検索ボックス表示 -->
-            <div class="Video_Search">
-                <label>
-                    <input type="text" class="Video_Search_Input">
-                </label>
-                <button type="button" onclick="alert('動画検索')" class="Video_Search_FollowButton">検索</button>
-            </div>
-
+            <img src="storage/logo/niconico_logo2.png" class="Logo_Header_Main">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <div class="navbar-nav me-auto">
@@ -57,18 +46,21 @@
                             </div>
                         @endif
                     @else
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{route('home')}}" role="button"
-                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ Auth::user()->name }}
-                        </a>
-
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
+                            <div class="doropdown-name">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{route('home')}}"
+                                   role="button"
+                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </a>
+                            </div>
+                            <div class="doropdown-logout">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
+                                    {{ __('Logout') }}
+                                </a>
+                            </div>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>

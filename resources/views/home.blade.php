@@ -1,6 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+    <!-- ロゴ&検索ボックス表示 -->
+    <div class="HeaderContainer">
+        <!-- タイトルロゴランダム表示 -->
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <script type="text/javascript" src="{{asset("js/logoRandom.js")}}"></script>
+        </a>
+        <!-- 検索ボックス表示 -->
+        <div class="Video_Search">
+            <label>
+                <input type="text" class="Video_Search_Input">
+            </label>
+            <button type="button" onclick="alert('動画検索')" class="Video_Search_FollowButton">検索</button>
+        </div>
+    </div>
+
     <div class="Top_MyPage">
         <div class="MyPage_Upload_Button">
             <button type="button" class="Video_Creator_FollowButton" onclick="location.href='http://localhost:8000/upload'">アップロード</button>

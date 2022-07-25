@@ -37,7 +37,9 @@ html {
 }
 
 .container {
+    background: #000000;
     display: flex;
+
 }
 
 .collapse {
@@ -51,6 +53,23 @@ html {
 .nav-item {
     margin: 1em;
     justify-content: flex-end;
+}
+
+.dropdown-menu {
+    margin: 1em;
+    display: flex;
+}
+
+.navbarDropdown {
+    margin: 0 1em;
+}
+
+.doropdown-name {
+    margin: 0 1em;
+}
+
+.doropdown-logout {
+    margin: 0 auto;
 }
 
 .card {
@@ -136,4 +155,17 @@ html {
 
 .Video_Creator_Info {
     display: flex;
+}
+
+.Video_Search {
+
+}
+
+.HeaderContainer {
+    display: flex;
+}
+
+.Logo_Header_Main {
+    width: 3em;
+    height: 3em;
 }
