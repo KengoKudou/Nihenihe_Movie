@@ -5,7 +5,7 @@
     <div class="HeaderContainer">
         <!-- タイトルロゴランダム表示 -->
         <a class="navbar-brand" href="{{ url('/') }}">
-            <script type="text/javascript" src="{{asset("js/logoRandom.js")}}"></script>
+            <script type="text/javascript" src="{{ asset("js/logoRandom.js") }}"></script>
         </a>
     </div>
 
@@ -14,12 +14,12 @@
             <div class="card">
                 <div class="card-body">
                     {{-- フラッシュメッセージの表示 --}}
-                    @if (session('warning'))
+                    @if ( session('warning') )
                         <div class="alert alert-warning">
                             {{ session('warning') }}
                         </div>
                     @endif
-                    @if (session('status'))
+                    @if ( session('status') )
                         <div class="alert alert-info">
                             {{ session('status') }}
                         </div>
@@ -90,7 +90,7 @@
                     </form>
                 </div>
                 <div class="imgRandom">
-                    <script type="text/javascript" src="{{asset("js/imgRandom.js")}}"></script>
+                    <script type="text/javascript" src="{{ asset("js/imgRandom.js") }}"></script>
                 </div>
             </div>
         </div>

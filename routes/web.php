@@ -35,7 +35,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // ポートフォリオ（西潟）接続
 Route::get('/portfolio_nishigata', function () {
-    return view('add.portfolio_ura_nishigata');
+    return view('add/portfolio_nishigata');
 });
 
 // ポートフォリオ（工藤）接続
@@ -44,7 +44,7 @@ Route::get('/portfolio_kudou', function () {
 });
 // ポートフォリオ補足説明(西潟)接続
 Route::get('/atioa_poroslgtnihfi', function () {
-    return view('add.portfolio_nishigata');
+    return view('add/portfolio_ura_nishigata');
 });
 
 // 動画アップロードページ接続

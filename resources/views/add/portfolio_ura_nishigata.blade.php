@@ -44,7 +44,10 @@
         <div><img src="{{ asset('storage\img\portfolio_ura_nishigata\スライド31.JPG') }}" alt="portfolio"></div>
         <div><img src="{{ asset('storage\img\portfolio_ura_nishigata\スライド32.JPG') }}" alt="portfolio"></div>
     </div>
-    <a>sample.pdfのダウンロード</a>
+    <a href="/">二へ二へ動画へ戻る</a>
+    <a href=/portfolio_nishigata>表</a>
+    <a href="{{ asset('storage/pdf/portfolio_ura_nishigata.pdf') }}"
+       download="supplement"> portfolio.pdfのダウンロード</a>
 </div>
 
 </body>
