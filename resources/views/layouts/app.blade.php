@@ -23,7 +23,9 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <img src="storage/logo/niconico_logo2.png" class="Logo_Header_Main">
+            <a class="HeaderLogo" href="{{ url('/') }}">
+                <img src="storage/logo/niconico_logo2.png" class="Logo_Header_Main">
+            </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <div class="navbar-nav me-auto">
