@@ -10,10 +10,10 @@ return new class extends Migration {
         Schema::create('artwork_tags', function (Blueprint $table) {
             $table->id();
 
-            $table->bigInteger('artwork_id')->unsigned();
+            $table->bigInteger('artwork_id')->unsigned()->nullable(false);
             $table->foreign('artwork_id')->references('id')->on('artworks')->cascadeOnDelete();
 
-            $table->bigInteger('tag1')->unsigned();
+            $table->bigInteger('tag1')->unsigned()->nullable(false);
             $table->foreign('tag1')->references('id')->on('tags');
 
             $table->bigInteger('tag2')->unsigned();
