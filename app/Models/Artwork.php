@@ -10,7 +10,7 @@ class Artwork extends Model
     protected $fillable = [
         // ユーザー名が登録されるカラムです。
         'name',
-        // ユーザー事の作品のフォルダー数が登録されているカラムです。
+        // ユーザー毎の作品のフォルダー数が登録されているカラムです。
         'artwork_num',
         // 作品のタイトルが登録されるカラムです。
         'title',
