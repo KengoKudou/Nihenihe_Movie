@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckBoxController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,8 @@ Route::post('/new_movies_send', [UploadController::class, 'saveimg']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/upload', [CheckBoxController::class, 'showValue']);
+
 // ポートフォリオ（西潟）接続
 Route::get('/portfolio_nishigata', function () {
     return view('add/portfolio_nishigata');
@@ -47,7 +50,3 @@ Route::get('/atioa_poroslgtnihfi', function () {
     return view('add/portfolio_ura_nishigata');
 });
 
-// 動画アップロードページ接続
-Route::get('/upload', function () {
-    return view('video/upload');
-});

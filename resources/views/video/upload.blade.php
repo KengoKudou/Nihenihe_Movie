@@ -6,16 +6,30 @@
             <div class="card">
                 <form action="/new_movies_send" method="post" enctype="multipart/form-data">
                     @csrf
+
                     <p>動画アップロード</p>
                     <input type="file" name="post_movies">
+
                     <p>タイトル</p>
                     <label for="title">
                         <input type="text" name="title" id="title" placeholder="動画のタイトルを入力">
                     </label>
+
                     <p>概要欄</p>
                     <label for="Summary">
                         <input type="text" name="title" id="title" placeholder="動画のタイトルを入力">
                     </label>
+
+                    <details>
+                        <summary>タグを指定(最大十個)</summary>
+                        <div class="boxes">
+                            @foreach($tags as $key => $tag)
+                                <input type="checkbox" id="box-{{$key}}">
+                                <label for="box-{{$key}}">{{$tag}}</label>
+                            @endforeach
+                        </div>
+                    </details>
+
                     <input type="submit">
                 </form>
                 <button type="button" class="return" onclick="location.href='http://localhost:8000/home'">ホームへ戻る
