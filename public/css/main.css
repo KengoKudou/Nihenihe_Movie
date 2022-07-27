@@ -183,3 +183,8 @@ html {
 .nav-link:active {
     color: #a71d5d;
 }
+
+.dropdown-icon {
+    width: 50px;
+    height: auto;
+}

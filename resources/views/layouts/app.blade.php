@@ -51,6 +51,7 @@
                         @endif
                     @else
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="dropdown-icon" alt="">
                             <div class="doropdown-name">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{route('home')}}"
                                    role="button"
