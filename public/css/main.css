@@ -49,13 +49,17 @@ html {
 }
 
 .nav-item {
-    margin: 1em;
+    margin: 1em 1em;
     justify-content: flex-end;
 }
 
 .dropdown-menu {
-    margin: 1em;
+    margin: 5px 1em;
     display: flex;
+}
+
+.Container_Icon {
+    margin: 5px 1em;
 }
 
 .navbarDropdown {
@@ -67,7 +71,7 @@ html {
 }
 
 .doropdown-logout {
-    margin: 0 auto;
+    margin: auto;
 }
 
 .card {
@@ -164,8 +168,8 @@ html {
 }
 
 .Logo_Header_Main {
-    width: 3em;
-    height: 3em;
+    width: 50px;
+    height: 50px;
 }
 
 .nav-link:link {
@@ -186,5 +190,5 @@ html {
 
 .dropdown-icon {
     width: 50px;
-    height: auto;
+    height: 50px;
 }

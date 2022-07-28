@@ -25,15 +25,15 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="HeaderLogo" href="{{ url('/') }}">
-                <img src="storage/logo/niconico_logo2.png" class="Logo_Header_Main">
-            </a>
+            <div class="Container_Icon">
+                <a class="HeaderLogo" href="{{ url('/') }}">
+                    <img src="storage/logo/niconico_logo2.png" class="Logo_Header_Main">
+                </a>
+            </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <div class="navbar-nav me-auto">
-
                 </div>
-
                 <!-- Right Side Of Navbar -->
                 <div class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
@@ -51,12 +51,17 @@
                         @endif
                     @else
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="dropdown-icon" alt="">
                             <div class="doropdown-name">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{route('home')}}"
-                                   role="button"
-                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }}
+                                   role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    <div style="display: flex">
+                                        <img src="{{ asset('storage/img/thumbnail/K_white.png') }}"
+                                             class="dropdown-icon" alt="">
+                                        <div style="margin: auto">
+                                            <span class="User_Id_Name">{{ Auth::user()->name }}</span>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
                             <div class="doropdown-logout">
