@@ -2,7 +2,7 @@ html {
     background: #FAFAFA;
 }
 
-.card-body {
+.card-body-login, .card-body-register {
     margin-left: 8px;
     margin-right: 8px;
     border-radius: 8px;
@@ -15,7 +15,20 @@ html {
     padding: 20px;
 }
 
-.Button_Register, .Button_Login {
+.card-body-upload {
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+    border: #9C9F9F solid 2px;
+    box-shadow: 0 0 4px #9C9F9F;
+    background-color: white;
+    background-image: linear-gradient(white, #EFEFEC);
+    position: relative;
+    width: 250px;
+    padding: 20px;
+}
+
+.Button_Register, .Button_Login, .Button_Upload {
     position: relative;
     display: block;
     width: 100%;

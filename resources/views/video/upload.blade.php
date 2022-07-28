@@ -3,10 +3,9 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card-body-upload">
                 <form action="/new_movies_send" method="post" enctype="multipart/form-data">
                     @csrf
-
                     <p>動画アップロード</p>
                     <input type="file" name="post_movies">
 
@@ -31,9 +30,10 @@
                             </ul>
                         </div>
                     </details>
-
-                    <input type="submit">
+                    <input type="submit" class="Button_Upload">
                 </form>
+            </div>
+            <div class="Page_Back">
                 <button type="button" class="return" onclick="location.href='http://localhost:8000/home'">ホームへ戻る
                 </button>
             </div>
