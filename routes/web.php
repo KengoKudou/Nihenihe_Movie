@@ -50,3 +50,7 @@ Route::get('/atioa_poroslgtnihfi', function () {
     return view('add/portfolio_ura_nishigata');
 });
 
+// 動画検索ページの表示
+Route::get('/list', function () {
+    return view('components/list');
+});

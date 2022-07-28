@@ -210,3 +210,40 @@ html {
     width: 50px;
     height: 50px;
 }
+
+.Video_List {
+    margin: 0  0 0 100px;
+}
+
+.Video_List_Element {
+    margin: 25px 0 0 0;
+}
+
+.Video_List_Element_CommentList {
+    display: flex;
+}
+
+.Video_List_Element_List {
+    display: flex;
+}
+
+.Video_List_Element_Thumbnail {
+    width: 250px;
+    height: auto;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0 20px 20px 20px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .2);
+}
+
+.Video_List_Element_Container {
+    display: flex;
+    width: 1000px;
+    margin: 10px 10px 10px 10px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+.Video_List_Element_PostingTime {
+    margin: 0 0 0 20px;
+}
