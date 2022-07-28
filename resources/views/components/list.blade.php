@@ -5,13 +5,20 @@
         <div class="Video_List">
 
             <div class="Video_List_Element_Container">
-                <div>
-                <div class="Video_List_Element_PostingTime">
-                    投稿時間
-                </div>
-                    <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge1.png') }}"
-                         class="Video_List_Element_Thumbnail"
-                         alt="">
+                <div class="Video_List_Element_Container_Left">
+                    <div class="Video_List_Element_PostingTime">
+                        投稿時間
+                    </div>
+                    <div style="position: relative">
+                        <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge1.png') }}"
+                             class="Video_List_Element_Thumbnail"
+                             alt="">
+                        <span class="Video_List_Element_VideoTime">
+                            00:00
+                        </span>
+                    </div>
+
+
                 </div>
                 <div class="Video_List_Element">
                     <div class="Video_List_Element_Title">

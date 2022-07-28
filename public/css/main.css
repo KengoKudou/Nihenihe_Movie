@@ -231,7 +231,7 @@ html {
     width: 250px;
     height: auto;
     border-radius: 5px 5px 5px 5px;
-    margin: 0 20px 20px 20px;
+    margin: 0 20px 10px 20px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .2);
 }
 
@@ -246,4 +246,14 @@ html {
 
 .Video_List_Element_PostingTime {
     margin: 0 0 0 20px;
+}
+.Video_List_Element_VideoTime {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    margin: 0 20px 10px 20px;
+    background:rgba(0,0,0,0.8);
+    opacity: 0.8;
+    color: #FFFFFF;
+
 }
