@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\UploadController;
 use App\Http\Controllers\CheckBoxController;
-use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
@@ -30,7 +30,7 @@ Route::get('/resend', [RegisterController::class, 'showReSendForm'])->name('rese
 Route::post('/resend', [RegisterController::class, 'reSend']);
 
 // 画像投稿をコントローラーに送信
-Route::post('/new_movies_send', [UploadController::class, 'saveimg']);
+Route::post('/new_send', [UploadController::class, 'saveimg']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

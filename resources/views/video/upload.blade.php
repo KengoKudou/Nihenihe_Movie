@@ -4,10 +4,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card-body-upload">
-                <form action="/new_movies_send" method="post" enctype="multipart/form-data">
+                <form action="/new_send" method="post" enctype="multipart/form-data">
                     @csrf
                     <p>動画アップロード</p>
                     <input type="file" name="post_movies">
+
+                    <p>サムネイルアップロード</p>
+                    <input type="file" name="post_thumbnail">
 
                     <p>タイトル</p>
                     <label for="title">
@@ -16,7 +19,7 @@
 
                     <p>概要欄</p>
                     <label for="Summary">
-                        <input type="text" name="title" id="title" placeholder="動画のタイトルを入力">
+                        <input type="text" name="comment" id="comment" placeholder="概要欄">
                     </label>
 
                     <details>
