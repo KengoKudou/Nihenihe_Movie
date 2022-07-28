@@ -56,5 +56,11 @@ class LoginController extends Controller
             $request->session()->invalidate();
             return redirect('/login')->with('warning', 'メールの確認をしてください');
         }
+
+        // 「storage」フォルダ内の「users」フォルダの中に各ユーザーのフォルダが無かった場合
+        if (!file_exists(storage_path('app/public/users/' . $user['name']))) {
+            // ユーザーフォルダを作成
+            mkdir(storage_path('app/public/users/' . $user['name']));
+        }
     }
 }
