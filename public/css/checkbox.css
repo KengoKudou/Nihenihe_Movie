@@ -49,3 +49,13 @@ input[type="checkbox"]:checked + label:before {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+.boxes ul li.locked{
+    opacity: 0.75;
+    color: #000000;
+    text-decoration: line-through;
+}
+
+.boxes ul li {
+    list-style-type: none;
+    margin: 0 0 10px 0;
+}

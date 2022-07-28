@@ -23,10 +23,12 @@
                     <details>
                         <summary>タグを指定(最大十個)</summary>
                         <div class="boxes">
-                            @foreach($tags as $key => $tag)
-                                <input type="checkbox" id="box-{{$key}}">
-                                <label for="box-{{$key}}">{{$tag}}</label>
-                            @endforeach
+                            <ul>
+                                @foreach($tags as $key => $tag)
+                                    <li><input type="checkbox" id="box-{{$key}}" onclick="click_cb();">
+                                        <label for="box-{{$key}}">{{$tag}}</label></li>
+                                @endforeach
+                            </ul>
                         </div>
                     </details>
 

@@ -10,7 +10,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/checkbox.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,6 +21,7 @@
     <!-- Styles -->
     <link href="{{asset("css/main.css")}}" rel="stylesheet">
     <link href="{{asset("css/checkbox.css")}}" rel="stylesheet">
+
 
 </head>
 <body>
