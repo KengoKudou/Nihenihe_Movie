@@ -51,11 +51,37 @@ class Artwork extends Model
         return $artwork_num + 1;
     }
 
+    private function get_path($data){
+        $user_path = 'storage/users/' . $data['name'] . $data['artwork_num'] . '/';
+        $movie_name = glob($user_path . 'movie.*');
+        $thumbnail_name = glob($user_path . 'thumbnail.*');
+
+        $movie_path = $user_path . $movie_name;
+        $thumbnail_path = $user_path . $thumbnail_name;
+
+        $paths['movie_path'] = $movie_path;
+        $paths['thumbnail_path'] = $thumbnail_path;
+
+        return $paths;
+    }
+
     // 作品の情報を取得
-    public function get_data($name, $title){
-        return $this
+    public function get_data($name, $title)
+    {
+        $data = $this
             ->where('name', $name)
             ->where('title', $title)
             ->first();
+
+        $paths = $this->get_path($data);
+
+        $data['movie_path'] = $paths['movie_path'];
+        $data['thumbnail_path'] = $paths['thumbnail_path'];
+
+        return $data;
+    }
+
+    public function random_data(){
+
     }
 }
