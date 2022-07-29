@@ -35,13 +35,12 @@ class Artwork extends Model
             ]);
     }
 
-    public function max_artwork_num($name)
+    private function max_artwork_num($name)
     {
         $artwork_num = $this
             // カラム 'artwork_num' の最大値を取得する
             ->where('name', $name)
-            ->max('artwork_num')
-            ->first('artwork_num');
+            ->max('artwork_num');
 
         // 作品が一個もない場合
         if ($artwork_num == 0 || $artwork_num == null) {
