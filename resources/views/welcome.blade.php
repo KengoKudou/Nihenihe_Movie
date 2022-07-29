@@ -22,7 +22,7 @@
         <div class="Video">
             <a href="{{url('/video')}}">
                 <video controls loop autoplay muted width="700px" height="auth">
-                    <source src="{{ asset('storage/post_video/Q2Frsr5QEp88XwLifQaJtpcCIpDD9pGwrrRucpW4.mp4') }}"
+                    <source src="{{ asset('storage/users/K.Kudou/1/movie.mp4') }}"
                             type="video/mp4">
                 </video>
             </a>
