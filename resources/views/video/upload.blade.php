@@ -26,7 +26,7 @@
                         <summary>タグを指定(最大十個)</summary>
                         <div class="boxes">
                             <ul>
-                                @foreach($tags as $key => $tag)
+                                @foreach( $tags as $key => $tag )
                                     <li><input type="checkbox" id="box-{{$key}}" onclick="click_cb();">
                                         <label for="box-{{$key}}">{{$tag}}</label></li>
                                 @endforeach

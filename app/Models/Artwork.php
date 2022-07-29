@@ -51,13 +51,14 @@ class Artwork extends Model
         return $artwork_num + 1;
     }
 
-    private function get_path($data){
-        $user_path = 'storage/users/' . $data['name'] . $data['artwork_num'] . '/';
+    private function get_path($data)
+    {
+        $user_path = 'storage/users/' . $data['name'] . '/' . $data['artwork_num'] . '/';
         $movie_name = glob($user_path . 'movie.*');
         $thumbnail_name = glob($user_path . 'thumbnail.*');
 
-        $movie_path = $user_path . $movie_name;
-        $thumbnail_path = $user_path . $thumbnail_name;
+        $movie_path = $user_path . $movie_name[0];
+        $thumbnail_path = $user_path . $thumbnail_name[0];
 
         $paths['movie_path'] = $movie_path;
         $paths['thumbnail_path'] = $thumbnail_path;
@@ -66,11 +67,10 @@ class Artwork extends Model
     }
 
     // 作品の情報を取得
-    public function get_data($name, $title)
+    public function get_data_name($name)
     {
         $data = $this
             ->where('name', $name)
-            ->where('title', $title)
             ->first();
 
         $paths = $this->get_path($data);
@@ -81,7 +81,23 @@ class Artwork extends Model
         return $data;
     }
 
-    public function random_data(){
+    // 作品の情報を取得
+    public function get_data_title($title)
+    {
+        $data = $this
+            ->where('name', $title)
+            ->first();
+
+        $paths = $this->get_path($data);
+
+        $data['movie_path'] = $paths['movie_path'];
+        $data['thumbnail_path'] = $paths['thumbnail_path'];
+
+        return $data;
+    }
+
+    public function random_data()
+    {
 
     }
 }
