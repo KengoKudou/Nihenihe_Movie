@@ -35,7 +35,7 @@ class Artwork extends Model
             ]);
     }
 
-    private function max_artwork_num($name)
+    public function max_artwork_num($name)
     {
         $artwork_num = $this
             // カラム 'artwork_num' の最大値を取得する
