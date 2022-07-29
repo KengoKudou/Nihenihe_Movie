@@ -61,7 +61,11 @@
     <div class="PickUp">
         <!-- ピックアップ -->
         <div class="PickUp_Container">
-            <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge1.png') }}" class="PickUp_Container_Thumbnail" alt="">
+            <div style="position: relative">
+                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge1.png') }}" class="PickUp_Container_Thumbnail"
+                     alt="">
+                <span class="PickUp_Container_VideoTime">00:00</span>
+            </div>
             <div class="PickUp_Container_Title">
                 ピックアップタイトル
             </div>
@@ -75,7 +79,11 @@
         </div>
         <!-- ピックアップ -->
         <div class="PickUp_Container">
-            <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge2.png') }}" class="PickUp_Container_Thumbnail" alt="">
+            <div style="position: relative">
+                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge2.png') }}" class="PickUp_Container_Thumbnail"
+                     alt="">
+                <span class="PickUp_Container_VideoTime">00:00</span>
+            </div>
             <div class="PickUp_Container_Title">
                 ピックアップタイトル
             </div>
@@ -89,7 +97,11 @@
         </div>
         <!-- ピックアップ -->
         <div class="PickUp_Container">
-            <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge3.png') }}" class="PickUp_Container_Thumbnail" alt="">
+            <div style="position: relative">
+                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge3.png') }}" class="PickUp_Container_Thumbnail"
+                     alt="">
+                <span class="PickUp_Container_VideoTime">00:00</span>
+            </div>
             <div class="PickUp_Container_Title">
                 ピックアップタイトル
             </div>
@@ -103,7 +115,11 @@
         </div>
         <!-- ピックアップ -->
         <div class="PickUp_Container">
-            <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge4.png') }}" class="PickUp_Container_Thumbnail" alt="">
+            <div style="position: relative">
+                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge4.png') }}" class="PickUp_Container_Thumbnail"
+                     alt="">
+                <span class="PickUp_Container_VideoTime">00:00</span>
+            </div>
             <div class="PickUp_Container_Title">
                 ピックアップタイトル
             </div>
@@ -117,7 +133,11 @@
         </div>
         <!-- ピックアップ -->
         <div class="PickUp_Container">
-            <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge5.png') }}" class="PickUp_Container_Thumbnail" alt="">
+            <div style="position: relative">
+                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge5.png') }}" class="PickUp_Container_Thumbnail"
+                     alt="">
+                <span class="PickUp_Container_VideoTime">00:00</span>
+            </div>
             <div class="PickUp_Container_Title">
                 ピックアップタイトル
             </div>
@@ -131,7 +151,11 @@
         </div>
         <!-- ピックアップ -->
         <div class="PickUp_Container">
-            <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge6.png') }}" class="PickUp_Container_Thumbnail" alt="">
+            <div style="position: relative">
+                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge6.png') }}" class="PickUp_Container_Thumbnail"
+                     alt="">
+                <span class="PickUp_Container_VideoTime">00:00</span>
+            </div>
             <div class="PickUp_Container_Title">
                 ピックアップタイトル
             </div>
@@ -145,7 +169,11 @@
         </div>
         <!-- ピックアップ -->
         <div class="PickUp_Container">
-            <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge7.png') }}" class="PickUp_Container_Thumbnail" alt="">
+            <div style="position: relative">
+                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge7.png') }}" class="PickUp_Container_Thumbnail"
+                     alt="">
+                <span class="PickUp_Container_VideoTime">00:00</span>
+            </div>
             <div class="PickUp_Container_Title">
                 ピックアップタイトル
             </div>
@@ -159,7 +187,11 @@
         </div>
         <!-- ピックアップ -->
         <div class="PickUp_Container">
-            <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge8.png') }}" class="PickUp_Container_Thumbnail" alt="">
+            <div style="position: relative">
+                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge8.png') }}" class="PickUp_Container_Thumbnail"
+                     alt="">
+                <span class="PickUp_Container_VideoTime">00:00</span>
+            </div>
             <div class="PickUp_Container_Title">
                 ピックアップタイトル
             </div>
