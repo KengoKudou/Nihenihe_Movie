@@ -54,3 +54,8 @@ Route::get('/atioa_poroslgtnihfi', function () {
 Route::get('/list', function () {
     return view('components/list');
 });
+
+// テストページの表示
+Route::get('/test', function () {
+    return view('components/test');
+});

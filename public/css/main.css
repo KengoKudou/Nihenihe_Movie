@@ -173,9 +173,21 @@ html {
 }
 
 .Video_Search {
-
+    border: 2px solid #999f9f;
+    border-radius: 8px;
+    background: #f8f9f9;
+    background: -webkit-linear-gradient(#fff, #d9dfdf) left repeat;
+    background: linear-gradient( #fff, #d9dfdf) left repeat;
+    box-shadow: 0 0 0 1px #e4e7e7;
+    margin: 15px auto;
 }
 
+.Video_SearchBox_Button {
+    padding: 10px;
+}
+.Video_Search_NumberOfVideos {
+    margin: 1em;
+}
 .HeaderContainer {
     display: flex;
 }
