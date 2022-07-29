@@ -38,22 +38,40 @@
             </div>
             <div class="Video_GridCell_Meta">
                 <div class="Video_UploadDateMeta">
-                    投稿時間 00:00:000
+                    投稿時間
+                    <div class="Video_UploadDateMeta_Data">
+                    0000/00/00 00:00
+                    </div>
                 </div>
                 <div class="Video_ViewCountMeta">
-                    再生数 000
+                    再生数
+                    <div class="Video_ViewCountMeta_Data">
+                        000
+                    </div>
                 </div>
                 <div class="Video_CommentCountMeta">
-                    コメント数 000
+                    コメント数
+                    <div class="Video_CommentCountMeta_Data">
+                        000
+                    </div>
                 </div>
                 <div class="Video_MylistCountMeta">
-                    マイリスト数 000
+                    マイリスト数
+                    <div class="Video_MylistCountMeta_Data">
+                        000
+                    </div>
                 </div>
                 <div class="Video_GenreMeta">
-                    動画ジャンル ボーカロイド
+                    動画ジャンル
+                    <div class="Video_GenreMeta_Data">
+                        音楽・サウンド
+                    </div>
                 </div>
                 <div class="Video_GenreRankMeta">
-                    過去ランキング最高順位　000 位
+                    過去ランキング最高順位
+                    <div class="Video_GenreRankMeta_Data">
+                        000 位
+                    </div>
                 </div>
                 <div class="Video_MetaOverflowMenuContainer">
                     ・・・
