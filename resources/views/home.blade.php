@@ -25,15 +25,18 @@
             </div>
             <div class="Profile_Name">
                 名前
+                <span>{{ Auth::user()-> name}}</span>
             </div>
             <div class="Profile_Id">
                 ID
+                <span>{{ Auth::user()-> id}}</span>
             </div>
             <div class="Profile_Password">
                 パスワード
             </div>
             <div class="Profile_Address">
                 アドレス
+                <span>{{ Auth::user()-> email}}</span>
             </div>
             <div class="Profile_Introduction">
                 紹介文
