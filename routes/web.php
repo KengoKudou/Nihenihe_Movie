@@ -61,4 +61,4 @@ Route::get('/test', function () {
     return view('components/test');
 });
 
-Route::get('/tes', [\App\Http\Controllers\MoviePathController::class, 'path']);
+Route::get('/tes', [\App\Http\Controllers\TestController::class, 'index']);

@@ -99,7 +99,7 @@ class Artwork extends Model
     public function get_random_data()
     {
         $all_data = $this
-            ->inRomanOrder()
+            ->inRandomOrder()
             ->take(10)
             ->get();
 
