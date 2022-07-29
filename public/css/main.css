@@ -160,6 +160,15 @@ html {
     display: flex;
 }
 
+.Video_Tag {
+    width: auto;
+    height: 24px;
+    line-height: 24px;
+    background-color: #fff;
+    border: 1px solid #e5e8ea;
+    border-radius: 12px;
+}
+
 .Video_Player {
     display: flex;
 }

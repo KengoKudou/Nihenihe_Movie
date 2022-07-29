@@ -38,7 +38,7 @@
             </div>
             <div class="Video_GridCell_Meta">
                 <div class="Video_UploadDateMeta">
-                    登校時間
+                    投稿時間
                 </div>
                 <div class="Video_ViewCountMeta">
                     再生数
@@ -62,7 +62,7 @@
         </div>
         <ul class="Video_Tag_List">
             <div class="Video_Tag_Edit">
-                タグ編集
+                タグ編集：
             </div>
             <div class="Video_Tag">
                 タグ①
