@@ -33,7 +33,7 @@
                             </ul>
                         </div>
                     </details>
-                    <input type="submit" class="Button_Uploada">
+                    <input type="submit" class="Button_Upload">
                 </form>
             </div>
             <div class="Page_Back">
