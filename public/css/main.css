@@ -204,7 +204,6 @@ html {
     border-radius: 8px;
     background: #f8f9f9;
     background: -webkit-linear-gradient(#fff, #d9dfdf) left repeat;
-    background: linear-gradient( #fff, #d9dfdf) left repeat;
     box-shadow: 0 0 0 1px #e4e7e7;
     margin: 15px auto;
 }
@@ -299,25 +298,48 @@ html {
 .Video_UploadDateMeta {
     border-style:outset;
 }
-
+.Video_UploadDateMeta_Data {
+    text-align: right;
+}
 .Video_ViewCountMeta {
     border-style:outset;
+}
+.Video_ViewCountMeta_Data {
+    text-align: right;
 }
 .Video_CommentCountMeta {
     border-style:outset;
 }
+.Video_CommentCountMeta_Data {
+    text-align: right;
+}
 .Video_MylistCountMeta {
     border-style:outset;
+}
+.Video_MylistCountMeta_Data {
+    text-align: right;
 }
 .Video_GenreMeta {
     border-style:outset;
 }
+.Video_GenreMeta_Data {
+    text-align: right;
+}
+
 .Video_GridCell_Meta {
     border-style:outset;
 }
+.Video_GridCell_Meta_Data {
+    text-align: right;
+}
+
 .Video_GenreRankMeta {
     border-style:outset;
 }
+.Video_GenreRankMeta_Data {
+    text-align: right;
+}
+
 .Video_MetaOverflowMenuContainer {
     border-style:outset;
 }
