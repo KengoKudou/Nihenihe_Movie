@@ -37,7 +37,7 @@
                 </form>
             </div>
             <div class="Page_Back">
-                <button type="button" class="return" onclick="location.href='http://localhost:8000/home'">ホームへ戻る
+                <button type="button" class="return" onclick="location.href='/home'">ホームへ戻る
                 </button>
             </div>
         </div>

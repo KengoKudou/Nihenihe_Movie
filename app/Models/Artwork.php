@@ -53,7 +53,6 @@ class Artwork extends Model
 
     private function get_path($data)
     {
-        // やぶのばか
         $user_path = 'storage/users/' . $data['name'] . '/' . $data['artwork_num'] . '/';
         $movie_name = glob($user_path . 'movie.*');
         $thumbnail_name = glob($user_path . 'thumbnail.*');
@@ -97,8 +96,23 @@ class Artwork extends Model
         return $data;
     }
 
-    public function random_data()
+    public function get_random_data()
     {
+        $all_data = $this
+            ->inRomanOrder()
+            ->take(10)
+            ->get();
 
+        $send_data = array();
+
+        foreach($all_data as $data){
+            $paths = $this->get_path($data);
+            $data['movie_path'] = $paths['movie_path'];
+            $data['thumbnail_path'] = $paths['thumbnail_path'];
+
+            $send_data[] = $data;
+        }
+
+        return $send_data;
     }
 }
