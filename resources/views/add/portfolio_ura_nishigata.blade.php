@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+<!-- マウスポインタ等の動きを制御 -->
 <head>
     <meta charset="UTF-8">
     <title>portfolio</title>
@@ -9,6 +10,7 @@
     <script src="{{ asset('js/my_script.js') }}"></script>
 </head>
 <body>
+<!-- ポートフォリオ「裏」格納先指定（西潟） -->
 <div class="container">
     <div id="portfolio">
         <div><img src="{{ asset('storage\img\portfolio_ura_nishigata\スライド1.JPG') }}" alt="portfolio"></div>
