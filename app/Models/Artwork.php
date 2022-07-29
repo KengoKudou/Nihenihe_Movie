@@ -53,6 +53,7 @@ class Artwork extends Model
 
     private function get_path($data)
     {
+        // やぶのばか
         $user_path = 'storage/users/' . $data['name'] . '/' . $data['artwork_num'] . '/';
         $movie_name = glob($user_path . 'movie.*');
         $thumbnail_name = glob($user_path . 'thumbnail.*');
