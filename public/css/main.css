@@ -159,7 +159,6 @@ html {
 .Video_Tag_List {
     display: flex;
 }
-
 .Video_Tag {
     width: auto;
     height: 24px;
@@ -168,6 +167,25 @@ html {
     border: 1px solid #e5e8ea;
     border-radius: 12px;
 }
+
+.Video_Tag:link {
+    color: #39c4c1;
+}
+
+.Video_Tag:visited {
+    color: #39c4c1;
+}
+
+.Video_Tag:hover {
+    color: #a71d5d;
+    text-decoration: underline;
+}
+
+.Video_Tag:active {
+    color: #a71d5d;
+    text-decoration: underline;
+}
+
 
 .Video_Player {
     display: flex;
@@ -276,5 +294,30 @@ html {
     background:rgba(0,0,0,0.8);
     opacity: 0.8;
     color: #FFFFFF;
+}
 
+.Video_UploadDateMeta {
+    border-style:outset;
+}
+
+.Video_ViewCountMeta {
+    border-style:outset;
+}
+.Video_CommentCountMeta {
+    border-style:outset;
+}
+.Video_MylistCountMeta {
+    border-style:outset;
+}
+.Video_GenreMeta {
+    border-style:outset;
+}
+.Video_GridCell_Meta {
+    border-style:outset;
+}
+.Video_GenreRankMeta {
+    border-style:outset;
+}
+.Video_MetaOverflowMenuContainer {
+    border-style:outset;
 }
