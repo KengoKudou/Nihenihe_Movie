@@ -35,6 +35,7 @@ class Artwork extends Model
             ]);
     }
 
+    // 作品の番号を取得
     private function max_artwork_num($name)
     {
         $artwork_num = $this
@@ -48,5 +49,13 @@ class Artwork extends Model
         }
 
         return $artwork_num + 1;
+    }
+
+    // 作品の情報を取得
+    public function get_data($name, $title){
+        return $this
+            ->where('name', $name)
+            ->where('title', $title)
+            ->first();
     }
 }
