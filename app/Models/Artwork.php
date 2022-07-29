@@ -19,15 +19,15 @@ class Artwork extends Model
     ];
 
     // データをインサートするためのメソッド
-    public function insert_data($user_id, $title, $comment)
+    public function insert_data($name, $title, $comment)
     {
         // リターンを使う事で、登録しつつそのデータを返している
         return $this
             ->create([
-                // カラム 'user_id' に受け取ったユーザー名を登録
-                'name' => $user_id,
+                // カラム 'name' に受け取ったユーザー名を登録
+                'name' => $name,
                 // カラム 'artwork_num' に作品の数を登録
-                'artwork_num' => $this->max_artwork_num($user_id),
+                'artwork_num' => $this->max_artwork_num($name),
                 // カラム 'title' に受け取ったタイトルを登録
                 'title' => $title,
                 // カラム 'comment' に受け取ったコメントを登録
@@ -35,11 +35,11 @@ class Artwork extends Model
             ]);
     }
 
-    private function max_artwork_num($user_id)
+    public function max_artwork_num($name)
     {
         $artwork_num = $this
             // カラム 'artwork_num' の最大値を取得する
-            ->where('name', $user_id)
+            ->where('name', $name)
             ->max('artwork_num')
             ->first('artwork_num');
 

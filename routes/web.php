@@ -34,6 +34,7 @@ Route::post('/new_send', [UploadController::class, 'saveimg']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// チェックボックスの内容をコントローラーから取得
 Route::get('/upload', [CheckBoxController::class, 'showValue']);
 
 // ポートフォリオ（西潟）接続

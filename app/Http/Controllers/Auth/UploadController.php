@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\Artwork;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -13,6 +14,7 @@ class UploadController extends Controller
     public function saveimg(Request $request)
     {
         $user = Auth::user();
+        dd(\DB::table('artworks')->get());
 
         // 送られてきた動画の拡張子を制限
         $request->validate(['post_movies' => 'mimes:mp4,wmv,mpg,mov,avi,mkv.flv,asf,wmv']);
