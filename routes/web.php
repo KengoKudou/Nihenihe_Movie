@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CheckBoxController;
 use App\Http\Controllers\RandomPath;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -59,3 +60,5 @@ Route::get('/atioa_poroslgtnihfi', function () {
 Route::get('/list', function () {
     return view('components/list');
 });
+
+Route::get('/test', [TestController::class, 'index']);
