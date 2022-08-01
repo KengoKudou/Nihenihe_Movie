@@ -58,9 +58,9 @@
         </div>
     </div>
     <!-- ピックアップ管理 -->
-    <div class="PickUp">
+    <ul class="PickUp">
         <!-- ピックアップ -->
-        <div class="PickUp_Container">
+        <li class="PickUp_Container">
             <div style="position: relative">
                 <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge1.png') }}" class="PickUp_Container_Thumbnail"
                      alt="">
@@ -76,9 +76,9 @@
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
-        </div>
+        </li>
         <!-- ピックアップ -->
-        <div class="PickUp_Container">
+        <li class="PickUp_Container">
             <div style="position: relative">
                 <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge2.png') }}" class="PickUp_Container_Thumbnail"
                      alt="">
@@ -94,9 +94,9 @@
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
-        </div>
+        </li>
         <!-- ピックアップ -->
-        <div class="PickUp_Container">
+        <li class="PickUp_Container">
             <div style="position: relative">
                 <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge3.png') }}" class="PickUp_Container_Thumbnail"
                      alt="">
@@ -112,9 +112,9 @@
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
-        </div>
+        </li>
         <!-- ピックアップ -->
-        <div class="PickUp_Container">
+        <li class="PickUp_Container">
             <div style="position: relative">
                 <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge4.png') }}" class="PickUp_Container_Thumbnail"
                      alt="">
@@ -130,9 +130,9 @@
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
-        </div>
+        </li>
         <!-- ピックアップ -->
-        <div class="PickUp_Container">
+        <li class="PickUp_Container">
             <div style="position: relative">
                 <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge5.png') }}" class="PickUp_Container_Thumbnail"
                      alt="">
@@ -148,9 +148,9 @@
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
-        </div>
+        </li>
         <!-- ピックアップ -->
-        <div class="PickUp_Container">
+        <li class="PickUp_Container">
             <div style="position: relative">
                 <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge6.png') }}" class="PickUp_Container_Thumbnail"
                      alt="">
@@ -166,9 +166,9 @@
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
-        </div>
+        </li>
         <!-- ピックアップ -->
-        <div class="PickUp_Container">
+        <li class="PickUp_Container">
             <div style="position: relative">
                 <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge7.png') }}" class="PickUp_Container_Thumbnail"
                      alt="">
@@ -184,9 +184,9 @@
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
-        </div>
+        </li>
         <!-- ピックアップ -->
-        <div class="PickUp_Container">
+        <li class="PickUp_Container">
             <div style="position: relative">
                 <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge8.png') }}" class="PickUp_Container_Thumbnail"
                      alt="">
@@ -202,6 +202,6 @@
             <span class="PickUp_Container_Name">
                     ピックアップ投稿者ネーム
                 </span>
-        </div>
-    </div>
+        </li>
+    </ul>
 @endsection
