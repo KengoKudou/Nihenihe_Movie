@@ -59,149 +59,25 @@
     </div>
     <!-- ピックアップ管理 -->
     <div class="PickUp">
-        <!-- ピックアップ -->
-        <div class="PickUp_Container">
-            <div style="position: relative">
-                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge1.png') }}" class="PickUp_Container_Thumbnail"
-                     alt="">
-                <span class="PickUp_Container_VideoTime">00:00</span>
-            </div>
-            <div class="PickUp_Container_Title">
-                ピックアップタイトル
-            </div>
-            <div class="PickUp_Container_Overview">
-                ピックアップ概要
-            </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-            <span class="PickUp_Container_Name">
-                    ピックアップ投稿者ネーム
+        @foreach( $data as $datum)
+            <!-- ピックアップ -->
+            <div class="PickUp_Container">
+                <div style="position: relative">
+                    <img src="{{ asset($datum['thumbnail_path']) }}" class="PickUp_Container_Thumbnail"
+                         alt="Thumbnail">
+                    <span class="PickUp_Container_VideoTime">00:00</span>
+                </div>
+                <div class="PickUp_Container_Title">
+                    {{ $datum['title'] }}
+                </div>
+                <div class="PickUp_Container_Overview">
+                    {{ $datum['comment'] }}
+                </div>
+                <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
+                <span class="PickUp_Container_Name">
+                    {{ $datum['name'] }}
                 </span>
-        </div>
-        <!-- ピックアップ -->
-        <div class="PickUp_Container">
-            <div style="position: relative">
-                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge2.png') }}" class="PickUp_Container_Thumbnail"
-                     alt="">
-                <span class="PickUp_Container_VideoTime">00:00</span>
             </div>
-            <div class="PickUp_Container_Title">
-                ピックアップタイトル
-            </div>
-            <div class="PickUp_Container_Overview">
-                ピックアップ概要
-            </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-            <span class="PickUp_Container_Name">
-                    ピックアップ投稿者ネーム
-                </span>
-        </div>
-        <!-- ピックアップ -->
-        <div class="PickUp_Container">
-            <div style="position: relative">
-                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge3.png') }}" class="PickUp_Container_Thumbnail"
-                     alt="">
-                <span class="PickUp_Container_VideoTime">00:00</span>
-            </div>
-            <div class="PickUp_Container_Title">
-                ピックアップタイトル
-            </div>
-            <div class="PickUp_Container_Overview">
-                ピックアップ概要
-            </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-            <span class="PickUp_Container_Name">
-                    ピックアップ投稿者ネーム
-                </span>
-        </div>
-        <!-- ピックアップ -->
-        <div class="PickUp_Container">
-            <div style="position: relative">
-                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge4.png') }}" class="PickUp_Container_Thumbnail"
-                     alt="">
-                <span class="PickUp_Container_VideoTime">00:00</span>
-            </div>
-            <div class="PickUp_Container_Title">
-                ピックアップタイトル
-            </div>
-            <div class="PickUp_Container_Overview">
-                ピックアップ概要
-            </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-            <span class="PickUp_Container_Name">
-                    ピックアップ投稿者ネーム
-                </span>
-        </div>
-        <!-- ピックアップ -->
-        <div class="PickUp_Container">
-            <div style="position: relative">
-                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge5.png') }}" class="PickUp_Container_Thumbnail"
-                     alt="">
-                <span class="PickUp_Container_VideoTime">00:00</span>
-            </div>
-            <div class="PickUp_Container_Title">
-                ピックアップタイトル
-            </div>
-            <div class="PickUp_Container_Overview">
-                ピックアップ概要
-            </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-            <span class="PickUp_Container_Name">
-                    ピックアップ投稿者ネーム
-                </span>
-        </div>
-        <!-- ピックアップ -->
-        <div class="PickUp_Container">
-            <div style="position: relative">
-                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge6.png') }}" class="PickUp_Container_Thumbnail"
-                     alt="">
-                <span class="PickUp_Container_VideoTime">00:00</span>
-            </div>
-            <div class="PickUp_Container_Title">
-                ピックアップタイトル
-            </div>
-            <div class="PickUp_Container_Overview">
-                ピックアップ概要
-            </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-            <span class="PickUp_Container_Name">
-                    ピックアップ投稿者ネーム
-                </span>
-        </div>
-        <!-- ピックアップ -->
-        <div class="PickUp_Container">
-            <div style="position: relative">
-                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge7.png') }}" class="PickUp_Container_Thumbnail"
-                     alt="">
-                <span class="PickUp_Container_VideoTime">00:00</span>
-            </div>
-            <div class="PickUp_Container_Title">
-                ピックアップタイトル
-            </div>
-            <div class="PickUp_Container_Overview">
-                ピックアップ概要
-            </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-            <span class="PickUp_Container_Name">
-                    ピックアップ投稿者ネーム
-                </span>
-        </div>
-        <!-- ピックアップ -->
-        <div class="PickUp_Container">
-            <div style="position: relative">
-                <img src="{{ asset('storage/img/PickUp_Thumbnail/hoge8.png') }}" class="PickUp_Container_Thumbnail"
-                     alt="">
-                <span class="PickUp_Container_VideoTime">00:00</span>
-            </div>
-            <div class="PickUp_Container_Title">
-                ピックアップタイトル
-            </div>
-            <div class="PickUp_Container_Overview">
-                ピックアップ概要
-            </div>
-            <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="">
-            <span class="PickUp_Container_Name">
-                    ピックアップ投稿者ネーム
-                </span>
-        </div>
+        @endforeach
     </div>
 @endsection

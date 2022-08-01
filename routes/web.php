@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CheckBoxController;
+use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -16,10 +17,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [RandomPath::class, 'random']);
+
 Route::get('/video', function () {
     return view('video/video');
 });
@@ -55,10 +59,3 @@ Route::get('/atioa_poroslgtnihfi', function () {
 Route::get('/list', function () {
     return view('components/list');
 });
-
-// テストページの表示
-Route::get('/test', function () {
-    return view('components/test');
-});
-
-Route::get('/tes', [\App\Http\Controllers\TestController::class, 'index']);
