@@ -54,8 +54,13 @@ class Artwork extends Model
     private function get_path($data)
     {
         $user_path = 'storage/users/' . $data['name'] . '/' . $data['artwork_num'] . '/';
-        $movie_path = glob($user_path . 'movie.*');
-        $thumbnail_path = glob($user_path . 'thumbnail.*');
+
+        $movie_name = glob($user_path . 'movie.*');
+        $thumbnail_name = glob($user_path . 'thumbnail.*');
+
+        $movie_path = $movie_name[0];
+        $thumbnail_path = $thumbnail_name[0];
+
 
         $paths['movie_path'] = $movie_path;
         $paths['thumbnail_path'] = $thumbnail_path;
