@@ -271,7 +271,14 @@ html {
 }
 
 .Video_List_Element_CommentList {
+    background-color: #FFFFFF;
+    border: solid 3px #000000;/*線*/
+    border-radius: 10px;/*角の丸み*/
     display: flex;
+}
+
+.Video_List_Element_Comment {
+    margin: 0 1em 0 0;
 }
 
 .Video_List_Element_List {
@@ -289,8 +296,7 @@ html {
 .Video_List_Element_Container {
     display: flex;
     width: 1000px;
-    margin: 10px 10px 10px 10px;
-    background-color: #FFFFFF;
+    margin: 10px 10px 30px 10px;
     border-radius: 5px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
 }
@@ -356,4 +362,12 @@ html {
 
 .Video_MetaOverflowMenuContainer {
     border-style:outset;
+}
+
+.Advertisement_And_Video_List_Main {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
 }
