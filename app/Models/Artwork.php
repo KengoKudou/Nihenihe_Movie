@@ -66,31 +66,41 @@ class Artwork extends Model
     // 作品の情報を取得
     public function get_data_name($name)
     {
-        $data = $this
+        $all_data = $this
             ->where('name', $name)
-            ->first();
+            ->get();
 
-        $paths = $this->get_path($data);
+        $send_data = array();
 
-        $data['movie_path'] = $paths['movie_path'];
-        $data['thumbnail_path'] = $paths['thumbnail_path'];
+        foreach ($all_data as $data) {
+            $paths = $this->get_path($data);
+            $data['movie_path'] = $paths['movie_path'];
+            $data['thumbnail_path'] = $paths['thumbnail_path'];
 
-        return $data;
+            $send_data[] = $data;
+        }
+
+        return $send_data;
     }
 
     // 作品の情報を取得
     public function get_data_title($title)
     {
-        $data = $this
+        $all_data = $this
             ->where('name', $title)
-            ->first();
+            ->get();
 
-        $paths = $this->get_path($data);
+        $send_data = array();
 
-        $data['movie_path'] = $paths['movie_path'];
-        $data['thumbnail_path'] = $paths['thumbnail_path'];
+        foreach ($all_data as $data) {
+            $paths = $this->get_path($data);
+            $data['movie_path'] = $paths['movie_path'];
+            $data['thumbnail_path'] = $paths['thumbnail_path'];
 
-        return $data;
+            $send_data[] = $data;
+        }
+
+        return $send_data;
     }
 
     public function get_random_data()
@@ -102,7 +112,7 @@ class Artwork extends Model
 
         $send_data = array();
 
-        foreach($all_data as $data){
+        foreach ($all_data as $data) {
             $paths = $this->get_path($data);
             $data['movie_path'] = $paths['movie_path'];
             $data['thumbnail_path'] = $paths['thumbnail_path'];
