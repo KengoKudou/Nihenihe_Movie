@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CheckBoxController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UploadController;
@@ -37,7 +38,7 @@ Route::post('/resend', [RegisterController::class, 'reSend']);
 // 画像投稿をコントローラーに送信
 Route::post('/new_send', [UploadController::class, 'saveimg']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'path'])->name('home');
 
 // チェックボックスの内容をコントローラーから取得
 Route::get('/upload', [CheckBoxController::class, 'showValue']);

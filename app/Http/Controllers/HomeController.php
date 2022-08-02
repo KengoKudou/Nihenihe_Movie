@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Artwork;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function path()
     {
-        return view('home');
+        $artwork = new Artwork();
+        $user = Auth::user();
+        $data['data'] = $artwork->get_data_name($user['name']);
+        return view('home', $data);
     }
 }

@@ -31,4 +31,3 @@ $(document).mousemove(function (e) {
         "px, transparent, #000 20%)"
     );
 });
-
