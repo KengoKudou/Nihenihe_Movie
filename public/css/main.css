@@ -294,6 +294,7 @@ html {
 }
 
 .Video_List_Element_Container {
+    position: relative;
     display: flex;
     width: 1000px;
     margin: 10px 10px 30px 10px;
@@ -370,4 +371,12 @@ html {
 
 ul {
     list-style-type: none;
+}
+
+.Video_List_Element_Container_Edit_Button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* 上 | 右 | 下 | 左 */
+    margin: 0 5px 5px 0;
 }

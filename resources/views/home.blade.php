@@ -95,6 +95,9 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="Video_List_Element_Container_Edit_Button">
+                            編集ボタン
+                        </button>
                     </div>
                 @endforeach
 
