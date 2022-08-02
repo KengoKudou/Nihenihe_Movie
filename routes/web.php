@@ -61,4 +61,5 @@ Route::get('/list', function () {
     return view('components/list');
 });
 
+// テスト用ページ呼び出し
 Route::get('/test', [TestController::class, 'index']);

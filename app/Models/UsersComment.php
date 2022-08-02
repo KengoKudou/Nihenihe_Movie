@@ -19,6 +19,6 @@ class UsersComment extends Model
     {
         return $this
             ->where('name', $name)
-            ->first(['comment']);
+            ->get();
     }
 }
