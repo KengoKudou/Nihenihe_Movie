@@ -59,7 +59,7 @@
     </div>
     <!-- ピックアップ管理 -->
     <ul class="PickUp">
-        @foreach( $data as $datum)
+        @foreach($data as $datum)
             <!-- ピックアップ -->
             <li class="PickUp_Container">
                 <div style="position: relative">
