@@ -19,20 +19,24 @@ class Artwork extends Model
     ];
 
     // データをインサートするためのメソッド
-    public function insert_data($name, $title, $comment)
+    public function insert_data($name, $title, $comment, $tag_data)
     {
-        // リターンを使う事で、登録しつつそのデータを返している
-        return $this
-            ->create([
-                // カラム 'name' に受け取ったユーザー名を登録
-                'name' => $name,
-                // カラム 'artwork_num' に作品の数を登録
-                'artwork_num' => $this->max_artwork_num($name),
-                // カラム 'title' に受け取ったタイトルを登録
-                'title' => $title,
-                // カラム 'comment' に受け取ったコメントを登録
-                'comment' => $comment,
-            ]);
+        $a_tag = new ArtworkTag();
+
+        $artwork_data = $this->create([
+            // カラム 'name' に受け取ったユーザー名を登録
+            'name' => $name,
+            // カラム 'artwork_num' に作品の数を登録
+            'artwork_num' => $this->max_artwork_num($name),
+            // カラム 'title' に受け取ったタイトルを登録
+            'title' => $title,
+            // カラム 'comment' に受け取ったコメントを登録
+            'comment' => $comment,
+        ]);
+
+        $a_tag->insert_data($artwork_data['id'], $tag_data);
+
+        return $artwork_data;
     }
 
     // 作品の番号を取得

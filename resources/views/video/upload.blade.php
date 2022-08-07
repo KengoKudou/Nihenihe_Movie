@@ -27,7 +27,8 @@
                         <div class="boxes">
                             <ul>
                                 @foreach( $tags as $key => $tag )
-                                    <li><input type="checkbox" id="box-{{$key}}" onclick="click_cb();">
+                                    <li><input type="checkbox" id="box-{{$key}}" name='tag[]' value='{{$tag}}'
+                                               onclick="click_cb();">
                                         <label for="box-{{$key}}">{{$tag}}</label></li>
                                 @endforeach
                             </ul>

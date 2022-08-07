@@ -16,31 +16,31 @@ return new class extends Migration {
             $table->bigInteger('tag1')->unsigned()->nullable(false);
             $table->foreign('tag1')->references('id')->on('tags');
 
-            $table->bigInteger('tag2')->unsigned();
+            $table->bigInteger('tag2')->unsigned()->default(1);
             $table->foreign('tag2')->references('id')->on('tags');
 
-            $table->bigInteger('tag3')->unsigned();
+            $table->bigInteger('tag3')->unsigned()->default(1);
             $table->foreign('tag3')->references('id')->on('tags');
 
-            $table->bigInteger('tag4')->unsigned();
+            $table->bigInteger('tag4')->unsigned()->default(1);
             $table->foreign('tag4')->references('id')->on('tags');
 
-            $table->bigInteger('tag5')->unsigned();
+            $table->bigInteger('tag5')->unsigned()->default(1);
             $table->foreign('tag5')->references('id')->on('tags');
 
-            $table->bigInteger('tag6')->unsigned();
+            $table->bigInteger('tag6')->unsigned()->default(1);
             $table->foreign('tag6')->references('id')->on('tags');
 
-            $table->bigInteger('tag7')->unsigned();
+            $table->bigInteger('tag7')->unsigned()->default(1);
             $table->foreign('tag7')->references('id')->on('tags');
 
-            $table->bigInteger('tag8')->unsigned();
+            $table->bigInteger('tag8')->unsigned()->default(1);
             $table->foreign('tag8')->references('id')->on('tags');
 
-            $table->bigInteger('tag9')->unsigned();
+            $table->bigInteger('tag9')->unsigned()->default(1);
             $table->foreign('tag9')->references('id')->on('tags');
 
-            $table->bigInteger('tag10')->unsigned();
+            $table->bigInteger('tag10')->unsigned()->default(1);
             $table->foreign('tag10')->references('id')->on('tags');
 
             $table->dateTime('created_at');

@@ -8,6 +8,11 @@ class Tag extends Model
 {
     protected $fillable = ['tag'];
 
+    public function init()
+    {
+        $this->create(['tag' => 'master_null']);
+    }
+
     public function insert_data($tag)
     {
         return $this
