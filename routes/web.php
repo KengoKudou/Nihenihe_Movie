@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\VideoLinkController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [RandomPath::class, 'random']);
 
-Route::get('/video', function () {
-    return view('video/video');
-});
+Route::get('/video/{id}', [VideoLinkController::class,'getPath']);
 
 Route::get('/auth/verifyemail/{token}', [RegisterController::class, 'verify']);
 Auth::routes();

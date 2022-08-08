@@ -110,7 +110,7 @@
         <div class="Video_Player">
             <div class="Video">
                 <video controls autoplay>
-                    <source src="{{ asset('storage/users/K.Kudou/1/movie.mp4') }}"
+                    <source src="../{{ $data['movie_path'] }}"
                             type="video/mp4">
                 </video>
                 <!-- コメント入力 -->

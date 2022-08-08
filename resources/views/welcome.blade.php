@@ -20,7 +20,7 @@
     </div>
     <div class="Top_Video">
         <div class="Video">
-            <a href="{{url('/video')}}">
+            <a href="/video/1">
                 <video controls loop autoplay muted width="700px" height="auth">
                     <source src="{{ asset('storage/users/K.Kudou/1/movie.mp4') }}"
                             type="video/mp4">
@@ -63,8 +63,10 @@
             <!-- ピックアップ -->
             <li class="PickUp_Container">
                 <div style="position: relative">
-                    <img src="{{ asset($datum['thumbnail_path']) }}" class="PickUp_Container_Thumbnail"
-                         alt="Thumbnail">
+                    <a href="/video/{{ $datum['id'] }}">
+                        <img src="{{ asset($datum['thumbnail_path']) }}" class="PickUp_Container_Thumbnail"
+                             alt="Thumbnail">
+                    </a>
                     <span class="PickUp_Container_VideoTime">00:00</span>
                 </div>
                 <div class="PickUp_Container_Title">
