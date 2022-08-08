@@ -6,6 +6,8 @@ use App\Models\Artwork;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 
 class UploadController extends Controller
 {
@@ -31,13 +33,13 @@ class UploadController extends Controller
 
 
         $extension_m = $request->file('post_movies')->getClientOriginalExtension();
-        $extension_t = $request->file('post_thumbnail')->getClientOriginalExtension();
 
+        $resized_image = Image::make($request->file('post_thumbnail'))->resize(244, 137.25)->encode('jpg');
 
         // 動画を保存
         $request->file('post_movies')->storeAs('public/users/' . $name . '/' . $artwork_num, 'movie.' . $extension_m);
         // 動画を保存
-        $request->file('post_thumbnail')->storeAs('public/users/' . $name . '/' . $artwork_num, 'thumbnail.' . $extension_t);
+        Storage::put('public/users/' . $name . '/' . $artwork_num . '/thumbnail.jpg', $resized_image);
 
         // リダイレクト
         return redirect('/home');
