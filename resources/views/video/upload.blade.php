@@ -22,6 +22,7 @@
                         <input type="text" name="comment" id="comment" placeholder="概要欄">
                     </label>
 
+                    <p>
                     <details>
                         <summary>タグを指定(最大十個)</summary>
                         <div class="boxes">
@@ -34,6 +35,7 @@
                             </ul>
                         </div>
                     </details>
+                    </p>
                     <input type="submit" class="Button_Upload">
                 </form>
             </div>
