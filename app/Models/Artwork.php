@@ -107,6 +107,25 @@ class Artwork extends Model
         return $send_data;
     }
 
+    public function get_data_id($id)
+    {
+        $all_data = $this
+            ->where('id', $id)
+            ->get();
+
+        $send_data = array();
+
+        foreach ($all_data as $data) {
+            $paths = $this->get_path($data);
+            $data['movie_path'] = $paths['movie_path'];
+            $data['thumbnail_path'] = $paths['thumbnail_path'];
+
+            $send_data[] = $data;
+        }
+
+        return $send_data;
+    }
+
     public function get_random_data()
     {
         $all_data = $this
