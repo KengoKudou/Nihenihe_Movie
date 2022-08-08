@@ -33,3 +33,16 @@ function click_cb() {
     }
     return false;
 }
+
+let num = 11;
+$(document).on('click', '#enter_btn', function () {
+    let tag = $('#add_tag');
+    let data = tag.val();
+    $('#add_checkbox').append('<li>' +
+        '<input type="checkbox" id="box-' + num + '" name="tag[]" value="' + data + '" onclick="click_cb();">' +
+        '<label for="box-' + num + '">' + data + '</label>' +
+        '</li>');
+    num++;
+    tag.val('');
+});
+

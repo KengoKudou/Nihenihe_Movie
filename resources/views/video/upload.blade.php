@@ -26,13 +26,20 @@
                     <details>
                         <summary>タグを指定(最大十個)</summary>
                         <div class="boxes">
+                            <p>ランダムタグ</p>
                             <ul>
                                 @foreach( $tags as $key => $tag )
-                                    <li><input type="checkbox" id="box-{{$key}}" name='tag[]' value='{{$tag}}'
+                                    <li>
+                                        <input type="checkbox" id="box-{{$key}}" name='tag[]' value='{{$tag['tag']}}'
                                                onclick="click_cb();">
-                                        <label for="box-{{$key}}">{{$tag}}</label></li>
+                                        <label for="box-{{$key}}">{{$tag['tag']}}</label>
+                                    </li>
                                 @endforeach
                             </ul>
+                            <p>追加したタグ</p>
+                            <ul id="add_checkbox"></ul>
+                            <input type="text" id="add_tag">
+                            <button type="button" id="enter_btn">追加</button>
                         </div>
                     </details>
                     </p>

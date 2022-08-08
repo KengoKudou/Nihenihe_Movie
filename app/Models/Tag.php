@@ -10,7 +10,16 @@ class Tag extends Model
 
     public function init()
     {
-        $this->create(['tag' => 'master_null']);
+        $this->create(
+            ['tag' => 'master_null']
+        );
+
+        $datas = ['VOCALOID4', 'VOCALOID5', 'どうしてこうなった...', '初音ミク', '全ての元凶'];
+        foreach ($datas as $data) {
+            $this->create(
+                ['tag' => $data]
+            );
+        }
     }
 
     public function insert_data($tag)
@@ -30,6 +39,15 @@ class Tag extends Model
     {
         return $this
             ->where('id', $id)
+            ->get();
+    }
+
+    public function random_tag_get()
+    {
+        return $this
+            ->where('id', '!=', 1)
+            ->inRandomOrder()
+            ->take(5)
             ->get();
     }
 }
