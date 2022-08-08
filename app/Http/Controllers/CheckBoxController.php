@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
+
 class CheckBoxController extends Controller
 {
     public function showValue()
     {
-        $send_data['tags'] = ['omoro', '( ﾟДﾟ)ﾊｧ?', '☻', '泣ける', 'うける', 'たのしい', 'おもしろくない', '伝説', '阿保', 'いいね', 'www'];
+        $tag = new Tag();
+        $send_data['tags'] = $tag->random_tag_get();
         return view('video/upload', $send_data);
     }
 }
