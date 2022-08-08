@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card-body-upload">
-                <form action="" method="" enctype="">
+                <form action="" method="post" enctype="multipart/form-data">
                     <p>パスワード再設定</p>
                     <!-- メールアドレス入力欄 -->
                     <p>メールアドレス</p>
@@ -24,7 +24,8 @@
                         <input type="text" name="" id="" placeholder="再設定用パスワードを入力（確認）">
                     </label>
 
-                    <input type="submit" class="Button_Upload">
+                    <!-- 送信ボタン -->
+                    <input type="submit" class="Button_Edit">
                 </form>
             </div>
             <div class="Page_Back">

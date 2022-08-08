@@ -99,8 +99,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="Video_List_Element_Container_Edit_Button">
-                            編集ボタン
+                        <button type="button" class="Video_List_Element_Container_Edit_Button"
+                                onclick="location.href='/video_edit'">編集ボタン
                         </button>
                     </div>
                 @endforeach

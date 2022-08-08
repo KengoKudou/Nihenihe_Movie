@@ -69,3 +69,8 @@ Route::get('/test', [TestController::class, 'index']);
 Route::get('/pw_edit', function () {
     return view('auth/passwords/password_edit');
 });
+
+// 投稿動画変更画面
+Route::get('/video_edit', function () {
+    return view('video/video_edit');
+});

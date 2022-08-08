@@ -28,7 +28,7 @@ html {
     padding: 20px;
 }
 
-.Button_Register, .Button_Login, .Button_Upload {
+.Button_Register, .Button_Login, .Button_Upload, Button_Edit {
     position: relative;
     display: block;
     width: 100%;
@@ -379,4 +379,8 @@ ul {
     bottom: 0;
     /* 上 | 右 | 下 | 左 */
     margin: 0 5px 5px 0;
+}
+
+.Password_Edit {
+    display: flex;
 }
