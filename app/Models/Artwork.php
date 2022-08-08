@@ -87,7 +87,7 @@ class Artwork extends Model
         return $send_data;
     }
 
-    // 作品の情報を取得aiueo
+    // 作品の情報を取得
     public function get_data_title($title)
     {
         $all_data = $this
