@@ -41,8 +41,12 @@
                     紹介文:
                 </div>
             </div>
-            <div class="Profile_Password">
+            <div class="Profile_Password_ChangeButton">
+                <button type="button" class="Video_Creator_Profile_Password_ChangeButton"
+                        onclick="location.href='/pw_edit'">
                 パスワード編集ボタン
+                </button>
+
             </div>
             <div class="MyPage_Upload_Button">
                 <button type="button" class="Video_Creator_FollowButton"
