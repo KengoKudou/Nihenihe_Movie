@@ -64,3 +64,8 @@ Route::get('/list', function () {
 
 // テスト用ページ呼び出し
 Route::get('/test', [TestController::class, 'index']);
+
+// パスワード変更画面
+Route::get('/pw_edit', function () {
+    return view('auth/passwords/password_edit');
+});
