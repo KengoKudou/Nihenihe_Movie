@@ -7,20 +7,43 @@
                 <form action="/new_send" method="post" enctype="multipart/form-data">
                     @csrf
                     <p>動画アップロード</p>
-                    <input type="file" name="post_movies">
+                    <input type="file" name="post_movies" required>
+                    @error('post_movies')
+                    <p class="custom_alert" role="alert">
+                        <strong>{{$message}}</strong>
+                    </p>
+                    @enderror
 
                     <p>サムネイルアップロード</p>
-                    <input type="file" name="post_thumbnail">
+                    <input type="file" name="post_thumbnail" required>
+                    @error('post_thumbnail')
+                    <p class="custom_alert" role="alert">
+                        <strong>{{$message}}</strong>
+                    </p>
+                    @enderror
 
                     <p>タイトル</p>
                     <label for="title">
-                        <input type="text" name="title" id="title" placeholder="動画のタイトルを入力">
+                        <input type="text" name="title" id="title" placeholder="動画のタイトルを入力"
+                               value="{{ old('title') }}"
+                               required>
                     </label>
+                    @error('title')
+                    <p class="custom_alert" role="alert">
+                        <strong>{{$message}}</strong>
+                    </p>
+                    @enderror
 
                     <p>概要欄</p>
                     <label for="Summary">
-                        <input type="text" name="comment" id="comment" placeholder="概要欄">
+                        <input type="text" name="comment" id="comment" placeholder="概要欄" value="{{ old('comment') }}"
+                               required>
                     </label>
+                    @error('comment')
+                    <p class="custom_alert" role="alert">
+                        <strong>{{$message}}</strong>
+                    </p>
+                    @enderror
 
                     <details>
                         <summary>タグを指定(最大十個)</summary>
@@ -34,6 +57,11 @@
                             </ul>
                         </div>
                     </details>
+                    @error('tag')
+                    <p class="custom_alert" role="alert">
+                        <strong>{{$message}}</strong>
+                    </p>
+                    @enderror
                     <input type="submit" class="Button_Upload">
                 </form>
             </div>
