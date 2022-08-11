@@ -65,15 +65,11 @@
                             <button type="button" id="enter_btn">追加</button>
                         </div>
                     </details>
-<<<<<<<<< Temporary merge branch 1
                     @error('tag')
                     <p class="custom_alert" role="alert">
                         <strong>{{$message}}</strong>
                     </p>
                     @enderror
-=========
-                    </p>
->>>>>>>>> Temporary merge branch 2
                     <input type="submit" class="Button_Upload">
                 </form>
             </div>
