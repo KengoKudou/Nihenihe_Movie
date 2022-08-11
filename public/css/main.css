@@ -132,7 +132,7 @@ html {
     position: absolute;
     bottom: 10px;
     right: 5px;
-    background: rgba(0, 0, 0, 0.8);
+    background:rgba(0,0,0,0.8);
     opacity: 0.8;
     color: #FFFFFF;
 }
@@ -168,7 +168,6 @@ html {
 .Video_Tag_List {
     display: flex;
 }
-
 .Video_Tag {
     width: auto;
     height: 24px;
@@ -221,11 +220,9 @@ html {
 .Video_SearchBox_Button {
     padding: 10px;
 }
-
 .Video_Search_NumberOfVideos {
     margin: 1em;
 }
-
 .HeaderContainer {
     display: flex;
 }
@@ -266,7 +263,7 @@ html {
 }
 
 .Video_List {
-    margin: 0 0 0 100px;
+    margin: 0  0 0 100px;
 }
 
 .Video_List_Element {
@@ -275,8 +272,8 @@ html {
 
 .Video_List_Element_CommentList {
     background-color: #FFFFFF;
-    border: solid 3px #000000; /*線*/
-    border-radius: 10px; /*角の丸み*/
+    border: solid 3px #000000;/*線*/
+    border-radius: 10px;/*角の丸み*/
     display: flex;
 }
 
@@ -314,69 +311,58 @@ html {
     bottom: 10px;
     right: 5px;
     margin: 0 20px 10px 20px;
-    background: rgba(0, 0, 0, 0.8);
+    background:rgba(0,0,0,0.8);
     opacity: 0.8;
     color: #FFFFFF;
 }
 
 .Video_UploadDateMeta {
-    border-style: outset;
+    border-style:outset;
 }
-
 .Video_UploadDateMeta_Data {
     text-align: right;
 }
-
 .Video_ViewCountMeta {
-    border-style: outset;
+    border-style:outset;
 }
-
 .Video_ViewCountMeta_Data {
     text-align: right;
 }
-
 .Video_CommentCountMeta {
-    border-style: outset;
+    border-style:outset;
 }
-
 .Video_CommentCountMeta_Data {
     text-align: right;
 }
-
 .Video_MylistCountMeta {
-    border-style: outset;
+    border-style:outset;
 }
-
 .Video_MylistCountMeta_Data {
     text-align: right;
 }
-
 .Video_GenreMeta {
-    border-style: outset;
+    border-style:outset;
 }
-
 .Video_GenreMeta_Data {
     text-align: right;
 }
 
 .Video_GridCell_Meta {
-    border-style: outset;
+    border-style:outset;
 }
-
 .Video_GridCell_Meta_Data {
     text-align: right;
 }
 
 .Video_GenreRankMeta {
-    border-style: outset;
+    border-style:outset;
 }
-
 .Video_GenreRankMeta_Data {
     text-align: right;
 }
 
 .Video_MetaOverflowMenuContainer {
-    border-style: outset;
+    border-style:outset;
 }
 
 .Advertisement_And_Video_List_Main {
@@ -397,8 +383,4 @@ ul {
 
 .Password_Edit {
     display: flex;
-}
-
-.custom_alert {
-    color: red;
 }
