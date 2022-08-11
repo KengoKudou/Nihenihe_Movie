@@ -15,6 +15,25 @@ class UploadController extends Controller
 
     public function saveimg(Request $request)
     {
+        $request->validate([
+            // 入力されており、64文字以内であること
+            'title' => 'required|max:64',
+            // 入力されており、1024文字以内であること
+            'comment' => 'required|max:1024',
+            // タグが一つ以上入力されていること
+            'tag' => 'required',
+            // 送られてきた動画の拡張子を制限
+            'post_movies' => 'required|mimes:mp4,wmv,mpg,mov,avi',
+            // 送られてきたサムネイルの拡張子を制限
+            'post_thumbnail' => 'required|mimes:jpg,jpeg,JPG,JPEG,jpg,png',
+        ], [
+            'title.max' => '64文字以内で入力してください',
+            'comment.max' => '1024文字以内で入力してください',
+            'tag.required' => '一つ以上タグを選択してください',
+            'post_movies.mimes' => '動画の形式は「mp4,wmv,mpg,mov,avi」のどれかにしてください',
+            'post_thumbnail.mimes' => 'サムネイル画像の形式はJPEGもしくはPNGにしてください'
+        ]);
+
         $user = Auth::user();
         $artwork = new Artwork();
 
@@ -26,10 +45,8 @@ class UploadController extends Controller
         $artwork_num = $data['artwork_num'];
         $name = $data['name'];
 
-        // 送られてきた動画の拡張子を制限
-        $request->validate(['post_movies' => 'mimes:mp4,wmv,mpg,mov,avi,mkv.flv,asf,wmv']);
         // 送られてきたサムネイルの拡張子を制限
-        $request->validate(['post_thumbnail' => 'mimes:jpg,jpeg,JPG,JPEG,jpg,jfif,svg,webp,tiff,png']);
+        $request->validate([]);
 
 
         $extension_m = $request->file('post_movies')->getClientOriginalExtension();
