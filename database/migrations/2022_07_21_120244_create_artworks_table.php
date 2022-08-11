@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->foreign('name')->references('name')->on('users')->cascadeOnDelete();
             $table->integer('artwork_num')->nullable(false);
             $table->string('title')->nullable(false);
-            $table->string('comment')->nullable(false);
+            $table->string('comment', 1024)->nullable(false);
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
         });
