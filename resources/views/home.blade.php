@@ -57,6 +57,7 @@
         <div class="Video_List_Main">
             <div class="Video_List">
 
+                <!-- $data が空の場合メッセージ出す -->
                 @foreach($data as $datum)
                     <div class="Video_List_Element_Container">
                         <div class="Video_List_Element_Container_Left">

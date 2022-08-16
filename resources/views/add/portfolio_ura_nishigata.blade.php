@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/portfolio.css') }}">
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('js/portfolio/turn.js') }}"></script>
-    <script src="{{ asset('js/portfolio/my_script.js') }}"></script>
+    <script src="{{ asset('js/portfolio/portfolio_nishigata.js') }}"></script>
 </head>
 <body>
 <!-- ポートフォリオ「裏」格納先指定（西潟） -->
