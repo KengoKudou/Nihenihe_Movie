@@ -17,7 +17,6 @@ body {
     height: 100vh;
 }
 
-
 #portfolio {
     width: 870px;
     height: 615px;
@@ -43,5 +42,3 @@ a:hover {
 a:active {
     color: black;
 }
-
-
