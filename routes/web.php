@@ -57,9 +57,7 @@ Route::get('/atioa_poroslgtnihfi', function () {
 });
 
 // 動画検索ページの表示
-Route::get('/list', function () {
-    return view('components/list');
-});
+Route::get('/search', [TestController::class, 'index']) -> name('test.index');
 
 // テスト用ページ呼び出し
 Route::get('/test', [TestController::class, 'index']);
