@@ -97,7 +97,7 @@
             <!-- 検索ボックス表示 -->
             <div class="Video_Search">
                 <div class="Video_SearchBox_Button">
-                    <form method="get" action="{{ route('test.index') }}">
+                    <form method="get" action="{{ route('search.search') }}">
                         <input type="text" name="keyword" placeholder="キーワードを入力" class="Video_Search_Input">
                         <input type="submit" value="検索" class="Video_Search_FollowButton">
                     </form>
