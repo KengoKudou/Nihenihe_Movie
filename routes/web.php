@@ -73,3 +73,8 @@ Route::get('/pw_edit', function () {
 Route::get('/video_edit', function () {
     return view('video/video_edit');
 });
+
+// マイリスト画面
+Route::get('/my_list', function () {
+    return view('video/my_list');
+});
