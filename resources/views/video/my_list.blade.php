@@ -5,7 +5,8 @@
     <div class="HeaderContainer">
         <!-- タイトルロゴランダム表示 -->
         <a class="navbar-brand" href="{{ url('/') }}">
-            <script type="text/javascript" src="{{asset("js/logoRandom.js")}}"></script>
+            <img src='{{ asset($LogoNameData -> RandomLogo()) }}' width="auto" height="100"
+                 alt="ランダム画像">
         </a>
         <!-- 検索ボックス表示 -->
         <div class="Video_Search">
