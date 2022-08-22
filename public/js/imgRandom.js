@@ -10,6 +10,6 @@ var randomList = ["storage/img/advertisement/ch_img_miku.png",
     "storage/img/advertisement/カヤック.png",
     "storage/img/advertisement/クリプトン.png",
     "storage/img/advertisement/S__6012947.jpg"];
-var num = Math.floor(Math.random() * randomList.length);
-var printHtml = '<img src=' + randomList[num] + ' width="75%" height="auth" alt="ランダム画像">';
+var add_num = Math.floor(Math.random() * randomList.length);
+var printHtml = '<img src=' + randomList[add_num] + ' width="75%" height="auth" alt="ランダム画像">';
 document.write(printHtml);
