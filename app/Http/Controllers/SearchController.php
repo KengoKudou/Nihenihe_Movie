@@ -18,10 +18,8 @@ class SearchController extends Controller
         $keyword = $request->input('keyword');
 
         if (!empty($keyword)) {
-            $data['data'] = $artwork->get_data_title($keyword)[0];
+            $data['data'] = $artwork->get_data_title($keyword);
+            return view('video/search', $data);
         }
-        dd($data);
-        // ビューにusersとsearchを変数として渡す
-        return view('video/search', $data);
     }
 }

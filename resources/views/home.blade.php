@@ -26,7 +26,7 @@
             <div class="Profile_Password_ChangeButton">
                 <button type="button" class="Video_Creator_Profile_Password_ChangeButton"
                         onclick="location.href='/pw_edit'">
-                パスワード編集ボタン
+                    パスワード編集ボタン
                 </button>
 
             </div>
@@ -47,8 +47,11 @@
                                 投稿時間:{{ $datum['created_at'] }}
                             </div>
                             <div style="position: relative">
-                                <img src="{{ asset($datum['thumbnail_path']) }}" class="Video_List_Element_Thumbnail"
-                                     alt="Thumbnail">
+                                <a href="/video/{{ $datum['id'] }}">
+                                    <img src="{{ asset($datum['thumbnail_path']) }}"
+                                         class="Video_List_Element_Thumbnail"
+                                         alt="Thumbnail">
+                                </a>
                                 <span class="Video_List_Element_VideoTime">00:00</span>
                             </div>
                         </div>

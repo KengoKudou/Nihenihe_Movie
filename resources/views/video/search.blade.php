@@ -12,12 +12,12 @@
                                 投稿時間:{{ $datum['created_at'] }}
                             </div>
                             <div style="position: relative">
-                                <img src="{{ asset($datum['thumbnail_path']) }}"
-                                     class="Video_List_Element_Thumbnail"
-                                     alt="thumbnail">
-                                <span class="Video_List_Element_VideoTime">
-                            00:00
-                        </span>
+                                <a href="/video/{{ $datum['id'] }}">
+                                    <img src="{{ asset($datum['thumbnail_path']) }}"
+                                         class="Video_List_Element_Thumbnail"
+                                         alt="thumbnail">
+                                </a>
+                                <span class="Video_List_Element_VideoTime">00:00</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">
