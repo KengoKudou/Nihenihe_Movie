@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="Container_Icon">
                     <a class="HeaderLogo" href="{{ url('/') }}">
-                        <img src="storage/logo/niconico_logo2.png" class="Logo_Header_Main">
+                        <img src="{{ asset('storage/logo/niconico_logo2.png') }}" class="Logo_Header_Main" alt="logo">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

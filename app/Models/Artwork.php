@@ -91,7 +91,7 @@ class Artwork extends Model
     public function get_data_title($title)
     {
         $all_data = $this
-            ->where('title', 'LIKE', "%$title%")
+            ->where("title", "like", "%$title%")
             ->get();
 
         $send_data = array();
