@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>portfolio</title>
     <link rel="stylesheet" href="{{ asset('css/portfolio.css') }}">
-    <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ asset('js/portfolio/turn.js') }}"></script>
     <script src="{{ asset('js/portfolio/portfolio_nishigata.js') }}"></script>
 </head>

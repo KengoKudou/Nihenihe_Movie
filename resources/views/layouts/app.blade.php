@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="Container_Icon">
                     <a class="HeaderLogo" href="{{ url('/') }}">
-                        <img src="storage/logo/niconico_logo2.png" class="Logo_Header_Main">
+                        <img src="{{ asset('storage/logo/niconico_logo2.png') }}" class="Logo_Header_Main" alt="logo">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -87,6 +87,25 @@
     </header>
 
     <main class="py-4">
+
+        <!-- ロゴ&検索ボックス表示 -->
+        <div class="HeaderContainer">
+            <!-- タイトルロゴランダム表示 -->
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <script type="text/javascript" src="{{ asset("js/logoRandom.js") }}"></script>
+            </a>
+            <!-- 検索ボックス表示 -->
+            <div class="Video_Search">
+                <div class="Video_SearchBox_Button">
+                    <form method="get" action="{{ route('search.search') }}">
+                        <input type="text" name="keyword" placeholder="キーワードを入力" class="Video_Search_Input">
+                        <input type="submit" value="検索" class="Video_Search_FollowButton">
+                    </form>
+                </div>
+                <span class="Video_Search_NumberOfVideos">総動画数　000000　でした。</span>
+            </div>
+        </div>
+
         @yield('content')
     </main>
 </div>

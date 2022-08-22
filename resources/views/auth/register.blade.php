@@ -1,14 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- ロゴ&検索ボックス表示 -->
-    <div class="HeaderContainer">
-        <!-- タイトルロゴランダム表示 -->
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <script type="text/javascript" src="{{asset("js/logoRandom.js")}}"></script>
-        </a>
-    </div>
-
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
