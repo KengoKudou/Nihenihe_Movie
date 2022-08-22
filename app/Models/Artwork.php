@@ -91,7 +91,7 @@ class Artwork extends Model
     public function get_data_title($title)
     {
         $all_data = $this
-            ->where("title", "like", "%$title%")
+            ->where("title", "like", "%{$title}%")
             ->get();
 
         $send_data = array();
@@ -100,7 +100,6 @@ class Artwork extends Model
             $paths = $this->get_path($data);
             $data['movie_path'] = $paths['movie_path'];
             $data['thumbnail_path'] = $paths['thumbnail_path'];
-
             $send_data[] = $data;
         }
 
