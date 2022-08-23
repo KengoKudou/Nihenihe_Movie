@@ -402,3 +402,30 @@ ul {
 .custom_alert {
     color: red;
 }
+
+.Video_Comment_List {
+    background: rgba(255, 255, 255, 0.8);
+    /* 上 | 右 | 下 | 左 */
+    margin: 0 0 0 10px;
+    border-radius: 10px;
+}
+
+.Video_Comment_List_Item {
+    display: flex;
+}
+
+.Video_Comment_List_Item_Comment {
+    margin: 0 5px 0 5px;
+}
+
+.Video_Comment_List_Item_PlayTime {
+    margin: 0 5px 0 5px;
+}
+
+.Video_Comment_List_Item_WritingTime {
+    margin: 0 5px 0 5px;
+}
+
+.Video_Comment_List_Item_CommentNumber {
+    margin: 0 5px 0 5px;
+}

@@ -108,8 +108,23 @@
             </div>
             <!-- コメント一覧表示 -->
             <div class="Video_Comment_List">
-                コメント一覧
+                ～コメント一覧～
+                <div class="Video_Comment_List_Item">
+                    <div class="Video_Comment_List_Item_Comment">
+                        コメント
+                    </div>
+                    <div class="Video_Comment_List_Item_PlayTime">
+                        再生時間
+                    </div>
+                    <div class="Video_Comment_List_Item_WritingTime">
+                        書き込み時間
+                    </div>
+                    <div class="Video_Comment_List_Item_CommentNumber">
+                        コメ番
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection
