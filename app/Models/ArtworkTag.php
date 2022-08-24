@@ -35,4 +35,27 @@ class ArtworkTag extends Model
         }
         return $this->create($reg_list);
     }
+
+    public function tag_gat($Artwork_id)
+    {
+        $tag = new Tag();
+
+        $tag_num_data = $this
+            ->where('id', $Artwork_id)
+            ->get();
+
+        $all_tags = array();
+
+        foreach ($tag_num_data as $tag_num) {
+            for ($i = 1; $i < 11; $i++) {
+                $tag_data = $tag->search_id($tag_num['tag' . $i])[0]['tag'];
+                if ($tag_data == 'master_null') {
+                    break;
+                }
+                $all_tags[] = $tag_data;
+            }
+        }
+
+        return $all_tags;
+    }
 }
