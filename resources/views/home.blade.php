@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@inject("VideoTime","App\Http\Controllers\VideoTimeController")
 @section('content')
     <div class="Top_MyPage">
         <div class="Upload_Item">
@@ -51,7 +51,7 @@
                                     <img src="{{ asset($datum['thumbnail_path']) }}"
                                          class="Video_List_Element_Thumbnail" alt="Thumbnail">
                                 </a>
-                                <span class="Video_List_Element_VideoTime">{{ asset($datum['movie_path']) -> Time() }}</span>
+                                <span class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum['movie_path']) }}</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">
