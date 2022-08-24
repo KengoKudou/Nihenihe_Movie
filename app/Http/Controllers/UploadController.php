@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
+use FFMpeg;
 
 class UploadController extends Controller
 {
@@ -51,9 +52,8 @@ class UploadController extends Controller
 
         // 動画を保存
         $request->file('post_movies')->storeAs('public/users/' . $name . '/' . $artwork_num, 'movie.' . $extension_m);
-        // 動画を保存
+        // サムネイルを保存
         Storage::put('public/users/' . $name . '/' . $artwork_num . '/thumbnail.jpg', $resized_image);
-
         // リダイレクト
         return redirect('/home');
     }
