@@ -197,6 +197,8 @@ html {
     background-color: #fff;
     border: 1px solid #e5e8ea;
     border-radius: 12px;
+    /* 上 | 右 | 下 | 左 */
+    padding: 0 10px 0 10px;
 }
 
 .Video_Tag:link {

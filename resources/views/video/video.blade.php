@@ -80,7 +80,7 @@
         <ul class="Video_Tag_List">
             <!-- タグ表示 -->
             <div class="Video_Tag_Edit">
-                タグ編集：
+                タグ：
             </div>
             <!-- タグデータ表示 -->
             @foreach($tags as $tag)
