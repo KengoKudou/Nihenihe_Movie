@@ -49,10 +49,9 @@
                             <div style="position: relative">
                                 <a href="/video/{{ $datum['id'] }}">
                                     <img src="{{ asset($datum['thumbnail_path']) }}"
-                                         class="Video_List_Element_Thumbnail"
-                                         alt="Thumbnail">
+                                         class="Video_List_Element_Thumbnail" alt="Thumbnail">
                                 </a>
-                                <span class="Video_List_Element_VideoTime">00:00</span>
+                                <span class="Video_List_Element_VideoTime">{{ asset($datum['movie_path']) -> Time() }}</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">
