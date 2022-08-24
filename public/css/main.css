@@ -2,7 +2,11 @@ html {
     background: #FAFAFA;
 }
 
-.card-body-login, .card-body-register {
+.card {
+    display: flex;
+}
+
+.card-body-login {
     margin-left: 8px;
     margin-right: 8px;
     border-radius: 8px;
@@ -12,7 +16,26 @@ html {
     background-image: linear-gradient(white, #EFEFEC);
     position: relative;
     width: 200px;
+    height: 250px;
     padding: 20px;
+}
+
+.card-body-register {
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+    border: #9C9F9F solid 2px;
+    box-shadow: 0 0 4px #9C9F9F;
+    background-color: white;
+    background-image: linear-gradient(white, #EFEFEC);
+    position: relative;
+    width: 200px;
+    height: 350px;
+    padding: 20px;
+}
+
+.row.mb-3 {
+    padding: 10px;
 }
 
 .card-body-upload {
@@ -87,9 +110,7 @@ html {
     margin: auto;
 }
 
-.card {
-    display: flex;
-}
+
 
 .Top_Video {
     display: flex;
