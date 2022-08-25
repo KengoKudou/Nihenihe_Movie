@@ -219,24 +219,21 @@ html {
     text-decoration: underline;
 }
 
-.PickUp_Container_Title:link {
+.PickUp_Container_Title:link, .Video_List_Element_Title:link, .Video_List_Element_Title:link {
     color: #000000;
     text-decoration-line: none;
 }
 
-.PickUp_Container_Title:visited {
+.PickUp_Container_Title:visited, .Video_List_Element_Title:visited, .Video_List_Element_Title:visited {
     color: #000000;
     text-decoration-line: none;
 }
 
-.PickUp_Container_Title:hover {
-    color: #000000;
-    text-decoration-line: none;
-}
+.PickUp_Container_Title:hover, .Video_List_Element_Title:hover, .Video_List_Element_Title:hover {
+    color: #a71d5d;}
 
-.PickUp_Container_Title:active {
-    color: #000000;
-    text-decoration-line: none;
+.PickUp_Container_Title:active, .Video_List_Element_Title:active, .Video_List_Element_Title:active {
+    color: #a71d5d;
 }
 
 .Video_Player {

@@ -55,11 +55,11 @@
                             </div>
                         </div>
                         <div class="Video_List_Element">
-                            <div class="Video_List_Element_Title">
-                                動画タイトル:{{ $datum['title'] }}
-                            </div>
+                            <a href="/video/{{ $datum['id'] }}" class="Video_List_Element_Title">
+                                {{ $datum['title'] }}
+                            </a>
                             <div class="Video_List_Element_Overview">
-                                概要欄:{{ $datum['comment'] }}
+                                {{ $datum['comment'] }}
                             </div>
                             <div class="Video_List_Element_CommentList">
                                 <div class="Video_List_Element_Comment">
@@ -89,7 +89,6 @@
                         </button>
                     </div>
                 @endforeach
-
             </div>
         </div>
     </div>
