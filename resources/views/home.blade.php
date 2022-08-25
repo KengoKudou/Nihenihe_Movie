@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@inject("VideoTime","App\Http\Controllers\VideoTimeController")
 @section('content')
     <div class="Top_MyPage">
         <div class="Upload_Item">
