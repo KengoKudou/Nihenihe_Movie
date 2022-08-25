@@ -92,7 +92,7 @@
         <!-- 動画再生 -->
         <div class="Video_Player">
             <div class="Video">
-                <video controls autoplay>
+                <video width="1080" controls autoplay>
                     <source src="../{{ $main_data['movie_path'] }}"
                             type="video/mp4">
                 </video>
@@ -123,6 +123,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection
