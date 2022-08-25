@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@inject("VideoTime","App\Http\Controllers\VideoTimeController")
 @section('content')
     <div class="Advertisement_And_Video_List_Main">
         <ul class="Video_List_Main">
@@ -17,7 +17,7 @@
                                          class="Video_List_Element_Thumbnail"
                                          alt="thumbnail">
                                 </a>
-                                <span class="Video_List_Element_VideoTime">00:00</span>
+                                <span class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum['movie_path']) }}</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">

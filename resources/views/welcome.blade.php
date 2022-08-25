@@ -47,7 +47,8 @@
             <li class="PickUp_Container">
                 <div style="position: relative">
                     <a href="/video/{{ $datum['id'] }}">
-                        <img src="{{ asset($datum['thumbnail_path']) }}" class="PickUp_Container_Thumbnail" alt="Thumbnail">
+                        <img src="{{ asset($datum['thumbnail_path']) }}" class="PickUp_Container_Thumbnail"
+                             alt="Thumbnail">
                     </a>
                     <span class="PickUp_Container_VideoTime">{{ $VideoTime -> time($datum['movie_path']) }}</span>
                 </div>

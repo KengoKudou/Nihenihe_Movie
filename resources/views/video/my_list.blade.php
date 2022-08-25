@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@inject("VideoTime","App\Http\Controllers\VideoTimeController")
 @section('content')
     <!-- ロゴ&検索ボックス表示 -->
     <div class="HeaderContainer">
@@ -69,6 +69,7 @@
                                 onclick="location.href='/video_edit'">編集ボタン
                         </button>
                     </div>
+                @endforeach
             </div>
         </div>
     </div>
