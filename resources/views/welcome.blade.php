@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@inject("VideoTime","App\Http\Controllers\VideoTimeController")
+
 @section('content')
     <div class="Top_Video">
         <div class="Video">

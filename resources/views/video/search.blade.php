@@ -17,7 +17,7 @@
                                          class="Video_List_Element_Thumbnail"
                                          alt="thumbnail">
                                 </a>
-                                <span class="Video_List_Element_VideoTime">00:00</span>
+                                <span class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum['movie_path']) }}</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">

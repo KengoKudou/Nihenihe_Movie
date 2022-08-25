@@ -69,6 +69,7 @@
                                 onclick="location.href='/video_edit'">編集ボタン
                         </button>
                     </div>
+                @endforeach
             </div>
         </div>
     </div>
