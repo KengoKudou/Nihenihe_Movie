@@ -99,6 +99,7 @@
             <div class="Video_Search">
                 <div class="Video_SearchBox_Button">
                     <form method="get" action="{{ route('search.search') }}">
+                        @csrf
                         <input type="text" name="keyword" placeholder="キーワードを入力" class="Video_Search_Input" required>
                         <input type="submit" value="検索" class="Video_Search_FollowButton">
                     </form>
