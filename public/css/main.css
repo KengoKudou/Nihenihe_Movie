@@ -219,6 +219,25 @@ html {
     text-decoration: underline;
 }
 
+.PickUp_Container_Title:link {
+    color: #000000;
+    text-decoration-line: none;
+}
+
+.PickUp_Container_Title:visited {
+    color: #000000;
+    text-decoration-line: none;
+}
+
+.PickUp_Container_Title:hover {
+    color: #000000;
+    text-decoration-line: none;
+}
+
+.PickUp_Container_Title:active {
+    color: #000000;
+    text-decoration-line: none;
+}
 
 .Video_Player {
     display: flex;
