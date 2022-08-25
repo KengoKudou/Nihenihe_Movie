@@ -52,9 +52,9 @@
                     </a>
                     <span class="PickUp_Container_VideoTime">{{ $VideoTime -> time($datum['movie_path']) }}</span>
                 </div>
-                <div class="PickUp_Container_Title">
+                <a href="/video/{{ $datum['id'] }}" class="PickUp_Container_Title">
                     {{ $datum['title'] }}
-                </div>
+                </a>
                 <div class="PickUp_Container_Overview">
                     {{ $datum['comment'] }}
                 </div>
