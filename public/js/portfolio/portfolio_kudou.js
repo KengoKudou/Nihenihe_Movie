@@ -26,7 +26,7 @@ $(document).ready(function(){
         $('body').css('background-color','rgba(255,227,134,0.83)');
     }
     else if( hour <= 16 ) {
-        $('body').css('background-color','#cc783c');
+        $('body').css('background-color','#d27d4a');
     }
     else if( hour <= 20 ) {
         $('body').css('background-color','rgba(41,33,115,0.6)');

@@ -9,10 +9,9 @@ class VideoTimeController extends Controller
 {
     public function time($path)
     {
-        //dd($path);
+
         $path = str_replace('storage','public',$path);
-        //$path = 'public/users/Hero/1/movie.mp4'; //ファイルのパス
-        //dd($path);
+
         $media = FFMpeg::open($path);
 
 

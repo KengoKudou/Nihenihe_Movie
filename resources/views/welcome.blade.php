@@ -59,9 +59,9 @@
                     {{ $datum['comment'] }}
                 </div>
                 <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="icon">
-                <span class="PickUp_Container_Name">
+                <a href="/home/{{ $datum['name'] }}" class="PickUp_Container_Title">
                     {{ $datum['name'] }}
-                </span>
+                </a>
             </li>
         @endforeach
     </ul>
