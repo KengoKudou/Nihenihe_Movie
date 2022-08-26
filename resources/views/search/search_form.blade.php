@@ -1,25 +1,6 @@
 @extends('layouts.app')
 @inject("VideoTime","App\Http\Controllers\VideoTimeController")
 @section('content')
-    <!-- ロゴ&検索ボックス表示 -->
-    <div class="HeaderContainer">
-        <!-- タイトルロゴランダム表示 -->
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src='{{ $LogoNameData -> RandomLogo() }}' width="auto" height="100"
-                 alt="ランダム画像">
-        </a>
-        <!-- 検索ボックス表示 -->
-        <div class="Video_Search">
-            <div class="Video_SearchBox_Button">
-                <label>
-                    <input type="text" class="Video_Search_Input">
-                </label>
-                <button type="button" onclick="alert('動画検索')" class="Video_Search_FollowButton">検索</button>
-            </div>
-            <span class="Video_Search_NumberOfVideos">総動画数　000000　でした。</span>
-        </div>
-    </div>
-
     <div class="My_List">
         <div class="Video_List_Main">
             <div class="Video_List">

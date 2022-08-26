@@ -35,9 +35,11 @@
                     </a>
                 </div>
                 <div class="Container_Tag">
-                    <div class="Container_Tag_Item">
-                        動画
-                    </div>
+                    <a href="/search/form">
+                        <div class="Container_Tag_Item">
+                            動画
+                        </div>
+                    </a>
                     <div class="Container_Tag_Item">
                         チャンネル
                     </div>
@@ -64,7 +66,8 @@
                         @else
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <div class="doropdown-name">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="/home/{{ Auth::user()->name }}"
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle"
+                                       href="/home/{{ Auth::user()->name }}"
                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                                        aria-expanded="false">
                                         <div style="display: flex">
@@ -107,7 +110,9 @@
                 <div class="Video_SearchBox_Button">
                     <form method="get" action="{{ route('search.search') }}">
                         @csrf
-                        <input type="text" name="keyword" placeholder="キーワードを入力" class="Video_Search_Input" required>
+                        <label>
+                            <input type="text" name="keyword" placeholder="キーワードを入力" class="Video_Search_Input" required>
+                        </label>
                         <input type="submit" value="検索" class="Video_Search_FollowButton">
                     </form>
                 </div>
