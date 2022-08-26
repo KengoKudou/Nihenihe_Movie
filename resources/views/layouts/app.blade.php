@@ -1,5 +1,5 @@
 @inject("LogoNameData","App\Http\Controllers\RandomLogoController")
-<!doctype html>
+    <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -22,9 +22,8 @@
     <!-- Styles -->
     <link href="{{asset("css/main.css")}}" rel="stylesheet">
     <link href="{{asset("css/checkbox.css")}}" rel="stylesheet">
-
-
 </head>
+
 <body>
 <div id="app">
     <header class="header">
@@ -34,6 +33,14 @@
                     <a class="HeaderLogo" href="{{ url('/') }}">
                         <img src="{{ asset('storage/logo/niconico_logo2.png') }}" class="Logo_Header_Main" alt="logo">
                     </a>
+                </div>
+                <div class="Container_Tag">
+                    <div class="Container_Tag_Item">
+                        動画
+                    </div>
+                    <div class="Container_Tag_Item">
+                        チャンネル
+                    </div>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
