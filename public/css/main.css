@@ -19,21 +19,7 @@ ul {
     display: flex;
 }
 
-.card-body-login {
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 8px;
-    border: #9C9F9F solid 2px;
-    box-shadow: 0 0 4px #9C9F9F;
-    background-color: white;
-    background-image: linear-gradient(white, #EFEFEC);
-    position: relative;
-    width: auto;
-    height: auto;
-    padding: 20px;
-}
-
-.card-body-register {
+.card-body-login .card-body-register {
     margin-left: 8px;
     margin-right: 8px;
     border-radius: 8px;
@@ -103,12 +89,12 @@ ul {
 }
 
 .dropdown-menu {
-    margin: 5px 1em;
+    margin: 10px 5px 0 5px;
     display: flex;
 }
 
 .Container_Icon {
-    margin: 5px 1em;
+    margin: 5px 5px;
 }
 
 .navbarDropdown {
@@ -283,8 +269,8 @@ ul {
 }
 
 .Logo_Header_Main {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
 }
 
 .nav-link:link {
@@ -304,8 +290,8 @@ ul {
 }
 
 .dropdown-icon {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
 }
 
 .Top_MyPage {
@@ -480,4 +466,13 @@ ul {
 
 .Video_Comment_List_Item_CommentNumber {
     margin: 0 5px 0 5px;
+}
+
+.Container_Tag {
+    display: flex;
+}
+
+.Container_Tag_Item {
+    margin: 10px 0 0 5px;
+    color: #39c4c1;
 }
