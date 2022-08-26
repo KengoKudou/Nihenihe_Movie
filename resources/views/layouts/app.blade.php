@@ -57,7 +57,7 @@
                         @else
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <div class="doropdown-name">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{route('home')}}"
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="/home/{{ Auth::user()->name }}"
                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                                        aria-expanded="false">
                                         <div style="display: flex">

@@ -21,14 +21,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 
 Route::get('/', [RandomPath::class, 'random']);
 
-Route::get('/video/{id}', [VideoLinkController::class,'getPath']);
+Route::get('/video/{id}', [VideoLinkController::class, 'getPath']);
 
 Route::get('/auth/verifyemail/{token}', [RegisterController::class, 'verify']);
 Auth::routes();
@@ -38,7 +34,7 @@ Route::post('/resend', [RegisterController::class, 'reSend']);
 // 画像投稿をコントローラーに送信
 Route::post('/new_send', [UploadController::class, 'saveimg']);
 
-Route::get('/home', [HomeController::class, 'path'])->name('home');
+Route::get('/home/{name}', [HomeController::class, 'path']);
 
 // チェックボックスの内容をコントローラーから取得
 Route::get('/upload', [CheckBoxController::class, 'showValue']);
@@ -52,13 +48,14 @@ Route::get('/portfolio_nishigata', function () {
 Route::get('/portfolio_kudou', function () {
     return view('add/portfolio_kudou');
 });
+
 // ポートフォリオ補足説明(西潟)接続
 Route::get('/atioa_poroslgtnihfi', function () {
     return view('add/portfolio_ura_nishigata');
 });
 
 // 動画検索ページの表示
-Route::get('/search', [SearchController::class, 'search']) -> name('search.search');
+Route::get('/search', [SearchController::class, 'search'])->name('search.search');
 
 // テスト用ページ呼び出し
 Route::get('/test', [TestController::class, 'index']);
