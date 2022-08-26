@@ -5,6 +5,7 @@ use App\Http\Controllers\CheckBoxController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SerachRandomPathController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\VideoLinkController;
@@ -56,6 +57,7 @@ Route::get('/atioa_poroslgtnihfi', function () {
 
 // 動画検索ページの表示
 Route::get('/search', [SearchController::class, 'search'])->name('search.search');
+Route::get('/search/form', [SerachRandomPathController::class, 'path']);
 
 // テスト用ページ呼び出し
 Route::get('/test', [TestController::class, 'index']);
