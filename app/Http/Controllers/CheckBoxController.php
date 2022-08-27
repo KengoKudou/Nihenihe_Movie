@@ -8,8 +8,6 @@ class CheckBoxController extends Controller
 {
     public function showValue()
     {
-        $tag = new Tag();
-        $send_data['tags'] = $tag->random_tag_get();
-        return view('video/upload', $send_data);
+        return view('video/upload', ['tags' => Tag::random_tag_get()]);
     }
 }
