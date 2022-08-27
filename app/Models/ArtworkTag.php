@@ -22,15 +22,15 @@ class ArtworkTag extends Model
             $tag_id = Tag::search_tag($data);
 
             if ($tag_id->isEmpty()) {
-                $new_tag_id = Tag::insert_data($data)['id'];
+                $new_tag_id = Tag::insert_data($data)->id;
                 $reg_list['tag' . $num] = $new_tag_id;
             } else {
-                $reg_list['tag' . $num] = $tag_id[0]['id'];
+                $reg_list['tag' . $num] = $tag_id[0]->id;
             }
 
             $num++;
         }
-        return DB::table('artwork_tags')->create($reg_list);
+        return self::create($reg_list);
     }
 
     public static function tag_gat($Artwork_id)
@@ -43,7 +43,8 @@ class ArtworkTag extends Model
 
         foreach ($tag_num_data as $tag_num) {
             for ($i = 1; $i < 11; $i++) {
-                $tag_data = Tag::search_id($tag_num['tag' . $i])[0]['tag'];
+                $num = 'tag' . $i;
+                $tag_data = Tag::search_id($tag_num->$num)[0]->tag;
                 if ($tag_data == 'master_null') {
                     break;
                 }

@@ -11,7 +11,7 @@ class UsersComment extends Model
 
     public static function insert_data($comment)
     {
-        return DB::table('users_comments')->create([
+        return self::create([
             'comment' => $comment
         ]);
     }

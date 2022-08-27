@@ -22,7 +22,7 @@ class Artwork extends Model
     // データをインサートするためのメソッド
     public static function insert_data($name, $title, $comment, $tag_data)
     {
-        $artwork_data = DB::table('artworks')->create([
+        $artwork_data = self::create([
             // カラム 'name' に受け取ったユーザー名を登録
             'name' => $name,
             // カラム 'artwork_num' に作品の数を登録

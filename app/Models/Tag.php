@@ -11,13 +11,13 @@ class Tag extends Model
 
     public static function init()
     {
-        DB::table('tags')->create(
+        self::create(
             ['tag' => 'master_null']
         );
 
         $datas = ['VOCALOID4', 'VOCALOID5', 'どうしてこうなった...', '初音ミク', '全ての元凶'];
         foreach ($datas as $data) {
-            DB::table('tags')->create(
+            self::create(
                 ['tag' => $data]
             );
         }
@@ -25,8 +25,7 @@ class Tag extends Model
 
     public static function insert_data($tag)
     {
-        return DB::table('tags')
-            ->create(['tag' => $tag]);
+        return self::create(['tag' => $tag]);
     }
 
     public static function search_tag($tag)
