@@ -3,21 +3,22 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class UsersComment extends Model
 {
     protected $fillable = ['comment'];
 
-    public function insert_data($comment)
+    public static function insert_data($comment)
     {
-        return $this->create([
+        return DB::table('users_comments')->create([
             'comment' => $comment
         ]);
     }
 
-    public function get_comment($name)
+    public static function get_comment($name)
     {
-        return $this
+        return DB::table('users_comments')
             ->where('name', $name)
             ->get();
     }
