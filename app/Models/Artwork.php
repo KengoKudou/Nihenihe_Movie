@@ -22,8 +22,6 @@ class Artwork extends Model
     // データをインサートするためのメソッド
     public static function insert_data($name, $title, $comment, $tag_data)
     {
-        $a_tag = new ArtworkTag();
-
         $artwork_data = DB::table('artworks')->create([
             // カラム 'name' に受け取ったユーザー名を登録
             'name' => $name,
@@ -35,7 +33,7 @@ class Artwork extends Model
             'comment' => $comment,
         ]);
 
-        $a_tag->insert_data($artwork_data['id'], $tag_data);
+        ArtworkTag::insert_data($artwork_data['id'], $tag_data);
 
         return $artwork_data;
     }
