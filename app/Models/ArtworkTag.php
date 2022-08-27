@@ -3,8 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use PhpOption\None;
-use function PHPUnit\Framework\isEmpty;
+use DB;
 
 class ArtworkTag extends Model
 {
@@ -14,7 +13,7 @@ class ArtworkTag extends Model
         'tag6', 'tag7', 'tag8', 'tag9', 'tag10'
     ];
 
-    public function insert_data($artwork_id, $data_list)
+    public static function insert_data($artwork_id, $data_list)
     {
         $tag = new Tag();
 
@@ -33,14 +32,14 @@ class ArtworkTag extends Model
 
             $num++;
         }
-        return $this->create($reg_list);
+        return DB::table('artwork_tags')->create($reg_list);
     }
 
-    public function tag_gat($Artwork_id)
+    public static function tag_gat($Artwork_id)
     {
         $tag = new Tag();
 
-        $tag_num_data = $this
+        $tag_num_data = DB::table('artwork_tags')
             ->where('id', $Artwork_id)
             ->get();
 
