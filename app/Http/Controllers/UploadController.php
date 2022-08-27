@@ -54,6 +54,6 @@ class UploadController extends Controller
         // サムネイルを保存
         Storage::put('public/users/' . $name . '/' . $artwork_num . '/thumbnail.jpg', $resized_image);
         // リダイレクト
-        return redirect('/home');
+        return redirect('/home/' . Auth::user()->name);
     }
 }
