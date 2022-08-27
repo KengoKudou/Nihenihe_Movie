@@ -3,48 +3,49 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class Tag extends Model
 {
     protected $fillable = ['tag'];
 
-    public function init()
+    public static function init()
     {
-        $this->create(
+        DB::table('tags')->create(
             ['tag' => 'master_null']
         );
 
         $datas = ['VOCALOID4', 'VOCALOID5', 'どうしてこうなった...', '初音ミク', '全ての元凶'];
         foreach ($datas as $data) {
-            $this->create(
+            DB::table('tags')->create(
                 ['tag' => $data]
             );
         }
     }
 
-    public function insert_data($tag)
+    public static function insert_data($tag)
     {
-        return $this
+        return DB::table('tags')
             ->create(['tag' => $tag]);
     }
 
-    public function search_tag($tag)
+    public static function search_tag($tag)
     {
-        return $this
+        return DB::table('tags')
             ->where('tag', $tag)
             ->get();
     }
 
-    public function search_id($id)
+    public static function search_id($id)
     {
-        return $this
+        return DB::table('tags')
             ->where('id', $id)
             ->get();
     }
 
-    public function random_tag_get()
+    public static function random_tag_get()
     {
-        return $this
+        return DB::table('tags')
             ->where('id', '!=', 1)
             ->inRandomOrder()
             ->take(5)
