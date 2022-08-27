@@ -46,21 +46,21 @@
             <!-- ピックアップ -->
             <li class="PickUp_Container">
                 <div style="position: relative">
-                    <a href="/video/{{ $datum['id'] }}">
-                        <img src="{{ asset($datum['thumbnail_path']) }}" class="PickUp_Container_Thumbnail"
+                    <a href="/video/{{ $datum->id }}">
+                        <img src="{{ asset($datum->thumbnail_path) }}" class="PickUp_Container_Thumbnail"
                              alt="Thumbnail">
                     </a>
-                    <span class="PickUp_Container_VideoTime">{{ $VideoTime -> time($datum['movie_path']) }}</span>
+                    <span class="PickUp_Container_VideoTime">{{ $VideoTime -> time($datum->movie_path) }}</span>
                 </div>
-                <a href="/video/{{ $datum['id'] }}" class="PickUp_Container_Title">
-                    {{ $datum['title'] }}
+                <a href="/video/{{ $datum->id }}" class="PickUp_Container_Title">
+                    {{ $datum->title }}
                 </a>
                 <div class="PickUp_Container_Overview">
-                    {{ $datum['comment'] }}
+                    {{ $datum->comment }}
                 </div>
                 <img src="{{ asset('storage/img/thumbnail/K_white.png') }}" class="PickUp_Container_Icon" alt="icon">
-                <a href="/home/{{ $datum['name'] }}" class="PickUp_Container_Title">
-                    {{ $datum['name'] }}
+                <a href="/home/{{ $datum->name }}" class="PickUp_Container_Title">
+                    {{ $datum->name }}
                 </a>
             </li>
         @endforeach

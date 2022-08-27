@@ -5,11 +5,11 @@
     <div class="Parent_Video">
         <!-- 動画タイトル表示 -->
         <div class="Video_Title">
-            {{ $main_data['title'] }}
+            {{ $data->title }}
         </div>
         <!-- 動画説明欄表示 -->
         <div class="Video_Overview">
-            概要欄：{{ $main_data['comment'] }}
+            概要欄：{{ $data->comment }}
         </div>
         <!-- 動画詳細表示 -->
         <div class="Video_GridCell">
@@ -19,7 +19,7 @@
                 <!-- 制作者詳細表示 -->
                 <div class="Video_Creator_Meta">
                     <div class="Video_Creator_Name">
-                        投稿者名：{{ $main_data['name'] }}
+                        投稿者名：{{ $data->name }}
                     </div>
                     <button type="button" onclick="alert('投稿動画確認しました')" class="Video_Creator_Button">投稿動画
                     </button>
@@ -32,7 +32,7 @@
                 <div class="Video_UploadDateMeta">
                     投稿時間
                     <div class="Video_UploadDateMeta_Data">
-                        {{ $main_data['created_at'] }}
+                        {{ $data->created_at }}
                     </div>
                 </div>
                 <!-- 再生数表示 -->
@@ -93,7 +93,7 @@
         <div class="Video_Player">
             <div class="Video">
                 <video width="1080" controls autoplay>
-                    <source src="../{{ $main_data['movie_path'] }}"
+                    <source src="../{{ $data->movie_path }}"
                             type="video/mp4">
                 </video>
                 <!-- コメント入力 -->
