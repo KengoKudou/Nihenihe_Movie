@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Artwork extends Model
@@ -19,15 +20,15 @@ class Artwork extends Model
     ];
 
     // データをインサートするためのメソッド
-    public function insert_data($name, $title, $comment, $tag_data)
+    public static function insert_data($name, $title, $comment, $tag_data)
     {
         $a_tag = new ArtworkTag();
 
-        $artwork_data = $this->create([
+        $artwork_data = DB::table('artworks')->create([
             // カラム 'name' に受け取ったユーザー名を登録
             'name' => $name,
             // カラム 'artwork_num' に作品の数を登録
-            'artwork_num' => $this->max_artwork_num($name),
+            'artwork_num' => self::max_artwork_num($name),
             // カラム 'title' に受け取ったタイトルを登録
             'title' => $title,
             // カラム 'comment' に受け取ったコメントを登録
@@ -40,9 +41,9 @@ class Artwork extends Model
     }
 
     // 作品の番号を取得
-    private function max_artwork_num($name)
+    private static function max_artwork_num($name)
     {
-        $artwork_num = $this
+        $artwork_num = DB::table('artworks')
             // カラム 'artwork_num' の最大値を取得する
             ->where('name', $name)
             ->max('artwork_num');
@@ -55,31 +56,31 @@ class Artwork extends Model
         return $artwork_num + 1;
     }
 
-    private function get_path($data)
+    private static function get_path($data)
     {
-        $user_path = 'storage/users/' . $data['name'] . '/' . $data['artwork_num'] . '/';
+        $user_path = 'storage/users/' . $data->name . '/' . $data->artwork_num . '/';
         $movie_path = glob($user_path . 'movie.*');
         $thumbnail_path = glob($user_path . 'thumbnail.*');
 
-        $paths['movie_path'] = $movie_path[0];
-        $paths['thumbnail_path'] = $thumbnail_path[0];
+        $paths[] = $movie_path[0];
+        $paths[] = $thumbnail_path[0];
 
         return $paths;
     }
 
     // 作品の情報を取得
-    public function get_data_name($name)
+    public static function get_data_name($name)
     {
-        $all_data = $this
+        $all_data = DB::table('artworks')
             ->where('name', $name)
             ->get();
 
         $send_data = array();
 
         foreach ($all_data as $data) {
-            $paths = $this->get_path($data);
-            $data['movie_path'] = $paths['movie_path'];
-            $data['thumbnail_path'] = $paths['thumbnail_path'];
+            $paths = self::get_path($data);
+            $data->movie_path = $paths[0];
+            $data->thumbnail_path = $paths[1];
 
             $send_data[] = $data;
         }
@@ -88,36 +89,36 @@ class Artwork extends Model
     }
 
     // 作品の情報を取得
-    public function get_data_title($title)
+    public static function get_data_title($title)
     {
-        $all_data = $this
+        $all_data = DB::table('artworks')
             ->where("title", "like", "%{$title}%")
             ->get();
 
         $send_data = array();
 
         foreach ($all_data as $data) {
-            $paths = $this->get_path($data);
-            $data['movie_path'] = $paths['movie_path'];
-            $data['thumbnail_path'] = $paths['thumbnail_path'];
+            $paths = self::get_path($data);
+            $data->movie_path = $paths[0];
+            $data->thumbnail_path = $paths[1];
             $send_data[] = $data;
         }
 
         return $send_data;
     }
 
-    public function get_data_id($id)
+    public static function get_data_id($id)
     {
-        $all_data = $this
+        $all_data = DB::table('artworks')
             ->where('id', $id)
             ->get();
 
         $send_data = array();
 
         foreach ($all_data as $data) {
-            $paths = $this->get_path($data);
-            $data['movie_path'] = $paths['movie_path'];
-            $data['thumbnail_path'] = $paths['thumbnail_path'];
+            $paths = self::get_path($data);
+            $data->movie_path = $paths[0];
+            $data->thumbnail_path = $paths[1];
 
             $send_data[] = $data;
         }
@@ -125,9 +126,9 @@ class Artwork extends Model
         return $send_data;
     }
 
-    public function get_random_data()
+    public static function get_random_data()
     {
-        $all_data = $this
+        $all_data = DB::table('artworks')
             ->inRandomOrder()
             ->take(10)
             ->get();
@@ -135,9 +136,9 @@ class Artwork extends Model
         $send_data = array();
 
         foreach ($all_data as $data) {
-            $paths = $this->get_path($data);
-            $data['movie_path'] = $paths['movie_path'];
-            $data['thumbnail_path'] = $paths['thumbnail_path'];
+            $paths = self::get_path($data);
+            $data->movie_path = $paths[0];
+            $data->thumbnail_path = $paths[1];
 
             $send_data[] = $data;
         }
