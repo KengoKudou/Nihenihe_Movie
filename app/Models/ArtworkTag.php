@@ -3,8 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use PhpOption\None;
-use function PHPUnit\Framework\isEmpty;
+use DB;
 
 class ArtworkTag extends Model
 {
@@ -14,33 +13,29 @@ class ArtworkTag extends Model
         'tag6', 'tag7', 'tag8', 'tag9', 'tag10'
     ];
 
-    public function insert_data($artwork_id, $data_list)
+    public static function insert_data($artwork_id, $data_list)
     {
-        $tag = new Tag();
-
         $reg_list = ['artwork_id' => $artwork_id];
         $num = 1;
 
         foreach ($data_list as $data) {
-            $tag_id = $tag->search_tag($data);
+            $tag_id = Tag::search_tag($data);
 
             if ($tag_id->isEmpty()) {
-                $new_tag_id = $tag->insert_data($data)['id'];
+                $new_tag_id = Tag::insert_data($data)->id;
                 $reg_list['tag' . $num] = $new_tag_id;
             } else {
-                $reg_list['tag' . $num] = $tag_id[0]['id'];
+                $reg_list['tag' . $num] = $tag_id[0]->id;
             }
 
             $num++;
         }
-        return $this->create($reg_list);
+        return self::create($reg_list);
     }
 
-    public function tag_gat($Artwork_id)
+    public static function tag_gat($Artwork_id)
     {
-        $tag = new Tag();
-
-        $tag_num_data = $this
+        $tag_num_data = DB::table('artwork_tags')
             ->where('id', $Artwork_id)
             ->get();
 
@@ -48,7 +43,8 @@ class ArtworkTag extends Model
 
         foreach ($tag_num_data as $tag_num) {
             for ($i = 1; $i < 11; $i++) {
-                $tag_data = $tag->search_id($tag_num['tag' . $i])[0]['tag'];
+                $num = 'tag' . $i;
+                $tag_data = Tag::search_id($tag_num->$num)[0]->tag;
                 if ($tag_data == 'master_null') {
                     break;
                 }

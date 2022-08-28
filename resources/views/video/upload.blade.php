@@ -53,9 +53,9 @@
                             <ul>
                                 @foreach( $tags as $key => $tag )
                                     <li>
-                                        <input type="checkbox" id="box-{{$key}}" name='tag[]' value='{{$tag['tag']}}'
+                                        <input type="checkbox" id="box-{{$key}}" name='tag[]' value='{{$tag->tag}}'
                                                onclick="click_cb();">
-                                        <label for="box-{{$key}}">{{$tag['tag']}}</label>
+                                        <label for="box-{{$key}}">{{$tag->tag}}</label>
                                     </li>
                                 @endforeach
                             </ul>

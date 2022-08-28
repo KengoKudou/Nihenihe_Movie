@@ -9,11 +9,10 @@ class VideoLinkController extends Controller
 {
     public function getPath($Artwork_id)
     {
-        $artwork = new Artwork();
-        $A_tag = new ArtworkTag();
-
-        $send_data['main_data'] = $artwork->get_data_id($Artwork_id)[0];
-        $send_data['tags'] = $A_tag->tag_gat($Artwork_id);
+        $send_data = [
+            'data' => Artwork::get_data_id($Artwork_id)[0],
+            'tags' => ArtworkTag::tag_gat($Artwork_id)
+        ];
 
         return view('video/video', $send_data);
     }

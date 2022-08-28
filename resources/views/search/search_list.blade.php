@@ -9,11 +9,11 @@
                     <div class="Video_List_Element_Container">
                         <div class="Video_List_Element_Container_Left">
                             <div class="Video_List_Element_PostingTime">
-                                投稿時間:{{ $datum['created_at'] }}
+                                投稿時間:{{ $datum->created_at }}
                             </div>
                             <div style="position: relative">
-                                <a href="/video/{{ $datum['id'] }}">
-                                    <img src="{{ asset($datum['thumbnail_path']) }}"
+                                <a href="/video/{{ $datum->id }}">
+                                    <img src="{{ asset($datum->thumbnail_path) }}"
                                          class="Video_List_Element_Thumbnail"
                                          alt="thumbnail">
                                 </a>
@@ -21,11 +21,11 @@
                             </div>
                         </div>
                         <div class="Video_List_Element">
-                            <a href="/video/{{ $datum['id'] }}" class="Video_List_Element_Title">
-                                {{ $datum['title'] }}
+                            <a href="/video/{{ $datum->id }}" class="Video_List_Element_Title">
+                                {{ $datum->title }}
                             </a>
                             <div class="Video_List_Element_Overview">
-                                {{ $datum['comment'] }}
+                                {{ $datum->comment }}
                             </div>
                             <div class="Video_List_Element_CommentList">
                                 <div class="Video_List_Element_Comment">

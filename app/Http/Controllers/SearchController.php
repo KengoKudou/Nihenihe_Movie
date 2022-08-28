@@ -13,13 +13,11 @@ class SearchController extends Controller
 {
     public function search(Request $request)
     {
-        $artwork = new Artwork();
         // 検索フォームで入力された値を取得する
         $keyword = $request->input('keyword');
 
         if (!empty($keyword)) {
-            $data['data'] = $artwork->get_data_title($keyword);
-            return view('search/search_list', $data);
+            return view('search/search_list', ['data' => Artwork::get_data_title($keyword)]);
         }
     }
 }

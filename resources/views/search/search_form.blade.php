@@ -8,20 +8,20 @@
                     <div class="Video_List_Element_Container">
                         <div class="Video_List_Element_Container_Left">
                             <div class="Video_List_Element_PostingTime">
-                                投稿時間:{{$datum['created_at']}}
+                                投稿時間:{{$datum->created_at}}
                             </div>
                             <div style="position: relative">
-                                <img src="{{ asset($datum['thumbnail_path']) }}" class="Video_List_Element_Thumbnail"
+                                <img src="{{ asset($datum->thumbnail_path) }}" class="Video_List_Element_Thumbnail"
                                      alt="Thumbnail">
                                 <span class="Video_List_Element_VideoTime">00:00</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">
                             <div class="Video_List_Element_Title">
-                                動画タイトル:{{$datum['title']}}
+                                動画タイトル:{{$datum->title}}
                             </div>
                             <div class="Video_List_Element_Overview">
-                                概要欄:{{$datum['comment']}}
+                                概要欄:{{$datum->comment}}
                             </div>
                             <div class="Video_List_Element_CommentList">
                                 <div class="Video_List_Element_Comment">

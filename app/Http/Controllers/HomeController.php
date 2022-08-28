@@ -25,21 +25,22 @@ class HomeController extends Controller
      */
     public function path($name)
     {
-        $artwork = new Artwork();
-        $user = Auth::user();
-        $data['data'] = $artwork->get_data_name($name);
-
-        $now_name = $user['name'];
+        $now_name = Auth::user()->name;
+        $judge = null;
 
         if ($now_name == $name) {
-            $data['judge'] = True;
+            $judge = True;
         } else {
-            $data['judge'] = False;
+            $judge = False;
         }
 
-        $data['user'] = User::where('name', $name)->get();
+        $send_data = [
+            'data'=>Artwork::get_data_name($name),
+            'user'=>User::where('name', $name)->get(),
+            'judge' => $judge
+        ];
 
         //dd($data);
-        return view('home', $data);
+        return view('home', $send_data);
     }
 }

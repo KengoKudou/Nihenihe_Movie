@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artwork;
+use Auth;
 
 class RandomPath extends Controller
 {
     public function random()
     {
-        $artwork = new Artwork();
-        $data['data'] = $artwork->get_random_data();
-        return view('welcome', $data);
+        return view('welcome', ['data' => Artwork::get_random_data()]);
     }
 }

@@ -36,13 +36,12 @@ class UploadController extends Controller
         ]);
 
         $user = Auth::user();
-        $artwork = new Artwork();
 
         $title = $request->input(['title']);
         $comment = $request->input(['comment']);
         $tag_data = $request->input(['tag']);
 
-        $data = $artwork->insert_data($user['name'], $title, $comment, $tag_data);
+        $data = Artwork::insert_data($user['name'], $title, $comment, $tag_data);
         $artwork_num = $data['artwork_num'];
         $name = $data['name'];
 
@@ -55,6 +54,6 @@ class UploadController extends Controller
         // サムネイルを保存
         Storage::put('public/users/' . $name . '/' . $artwork_num . '/thumbnail.jpg', $resized_image);
         // リダイレクト
-        return redirect('/home');
+        return redirect('/home/' . Auth::user()->name);
     }
 }
