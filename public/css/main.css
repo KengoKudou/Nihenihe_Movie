@@ -110,7 +110,6 @@ ul {
 }
 
 
-
 .Top_Video {
     display: flex;
 }
@@ -229,9 +228,10 @@ ul {
 }
 
 .PickUp_Container_Title:hover, .Video_List_Element_Title:hover, .Video_List_Element_Title:hover {
-    color: #a71d5d;}
+    color: #a71d5d;
+}
 
-.PickUp_Container_Title:active, .Video_List_Element_Title:active, .Video_List_Element_Title:active{
+.PickUp_Container_Title:active, .Video_List_Element_Title:active, .Video_List_Element_Title:active {
     color: #a71d5d;
 }
 

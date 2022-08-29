@@ -1,0 +1,6 @@
+header {
+    position: sticky; /*固定する*/
+    position: -webkit-sticky; /*Safari用ベンダープレフィックス*/
+    top: 0; /*ブラウザの上からの距離はゼロ*/
+    z-index: 9999; /* 最前面へ */
+}
