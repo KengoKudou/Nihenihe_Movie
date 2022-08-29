@@ -45,14 +45,16 @@
                     </a>
                 </div>
                 <div class="Container_Tag">
-                    <a href="/search/form">
+                    <a href="/search/video">
                         <div class="Container_Tag_Item">
                             動画
                         </div>
                     </a>
-                    <div class="Container_Tag_Item">
-                        チャンネル
-                    </div>
+                    <a href="/search/channel">
+                        <div class="Container_Tag_Item">
+                            チャンネル
+                        </div>
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->

@@ -143,4 +143,14 @@ class Artwork extends Model
 
         return $send_data;
     }
+
+    public static function get_artwork_num()
+    {
+        $all_data = ['user' => DB::table('users')->inRandomOrder()->take(10)->get()];
+        foreach ($all_data['user'] as $datum) {
+            $datum->artwork_num = Artwork::where('name', $datum->name)->max('artwork_num');
+        }
+        return $all_data;
+    }
+
 }

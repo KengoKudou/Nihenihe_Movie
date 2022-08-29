@@ -26,7 +26,6 @@ class HomeController extends Controller
     public function path($name)
     {
         $now_name = Auth::user()->name;
-        $judge = null;
 
         if ($now_name == $name) {
             $judge = True;
@@ -35,12 +34,11 @@ class HomeController extends Controller
         }
 
         $send_data = [
-            'data'=>Artwork::get_data_name($name),
-            'user'=>User::where('name', $name)->get(),
+            'data' => Artwork::get_data_name($name),
+            'user' => User::where('name', $name)->get(),
             'judge' => $judge
         ];
 
-        //dd($data);
         return view('home', $send_data);
     }
 }
