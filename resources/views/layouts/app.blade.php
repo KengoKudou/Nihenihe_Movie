@@ -2,12 +2,17 @@
     <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <!-- Scripts -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- favicon -->
+    <link rel="icon" href="{{ asset('storage/logo/favicon.ico') }}">
+
+    <!-- Scripts -->
     @hasSection('title')
         <title>@yield('title') - {{ config('app.name') }}</title>
     @else
@@ -116,7 +121,8 @@
                     <form method="get" action="{{ route('search.search') }}">
                         @csrf
                         <label>
-                            <input type="text" name="keyword" placeholder="キーワードを入力" class="Video_Search_Input" required>
+                            <input type="text" name="keyword" placeholder="キーワードを入力" class="Video_Search_Input"
+                                   required>
                         </label>
                         <input type="submit" value="検索" class="Video_Search_FollowButton">
                     </form>
