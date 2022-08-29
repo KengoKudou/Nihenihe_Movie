@@ -22,6 +22,7 @@
     <!-- Styles -->
     <link href="{{asset("css/main.css")}}" rel="stylesheet">
     <link href="{{asset("css/checkbox.css")}}" rel="stylesheet">
+    <link href="{{asset("css/header.css")}}" rel="stylesheet">
 </head>
 
 <body>
