@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
+@section('title')
+    {{ $data->title }}
+@endsection
+
 @section('content')
+
     <!-- 動画概要表示 -->
     <div class="Parent_Video">
         <!-- 動画タイトル表示 -->
