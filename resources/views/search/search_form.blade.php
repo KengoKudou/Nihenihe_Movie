@@ -4,24 +4,27 @@
     <div class="My_List">
         <div class="Video_List_Main">
             <div class="Video_List">
-                @foreach($data as $datum)
-                    <div class="Video_List_Element_Container">
+                @foreach( $data as $datum )
+                    <li class="Video_List_Element_Container">
                         <div class="Video_List_Element_Container_Left">
                             <div class="Video_List_Element_PostingTime">
-                                投稿時間:{{$datum->created_at}}
+                                投稿時間:{{ $datum->created_at }}
                             </div>
                             <div style="position: relative">
-                                <img src="{{ asset($datum->thumbnail_path) }}" class="Video_List_Element_Thumbnail"
-                                     alt="Thumbnail">
-                                <span class="Video_List_Element_VideoTime">00:00</span>
+                                <a href="/video/{{ $datum->id }}">
+                                    <img src="{{ asset($datum->thumbnail_path) }}"
+                                         class="Video_List_Element_Thumbnail" alt="Thumbnail">
+                                </a>
+                                <span
+                                    class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum->movie_path) }}</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">
-                            <div class="Video_List_Element_Title">
-                                動画タイトル:{{$datum->title}}
-                            </div>
+                            <a href="/video/{{ $datum->id }}" class="Video_List_Element_Title">
+                                {{ $datum->title }}
+                            </a>
                             <div class="Video_List_Element_Overview">
-                                概要欄:{{$datum->comment}}
+                                {{ $datum->comment }}
                             </div>
                             <div class="Video_List_Element_CommentList">
                                 <div class="Video_List_Element_Comment">
@@ -46,10 +49,6 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="Video_List_Element_Container_Edit_Button"
-                                onclick="location.href='/video_edit'">編集ボタン
-                        </button>
-                    </div>
                 @endforeach
             </div>
         </div>
