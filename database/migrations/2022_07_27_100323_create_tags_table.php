@@ -14,8 +14,6 @@ return new class extends Migration {
             $table->dateTime('created_at');
             $table->dateTime('updated_at');
         });
-        $tag = new Tag();
-        $tag->init();
     }
 
     public function down()

@@ -2,26 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 
 class Tag extends Model
 {
+    use HasFactory;
+
     protected $fillable = ['tag'];
-
-    public static function init()
-    {
-        self::create(
-            ['tag' => 'master_null']
-        );
-
-        $datas = ['VOCALOID4', 'VOCALOID5', 'どうしてこうなった...', '初音ミク', '全ての元凶'];
-        foreach ($datas as $data) {
-            self::create(
-                ['tag' => $data]
-            );
-        }
-    }
 
     public static function insert_data($tag)
     {
