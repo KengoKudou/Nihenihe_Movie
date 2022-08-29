@@ -9,7 +9,7 @@
         </div>
         <!-- 動画説明欄表示 -->
         <div class="Video_Overview">
-            概要欄：{{ $data->comment }}
+            {{ $data->comment }}
         </div>
         <!-- 動画詳細表示 -->
         <div class="Video_GridCell">

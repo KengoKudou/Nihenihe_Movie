@@ -84,8 +84,9 @@ ul {
 }
 
 .nav-item {
-    margin: 1em 1em;
     justify-content: flex-end;
+    margin: 10px 0 0 5px;
+    color: #39c4c1;
 }
 
 .dropdown-menu {
@@ -108,7 +109,6 @@ ul {
 .doropdown-logout {
     margin: auto;
 }
-
 
 
 .Top_Video {
@@ -229,9 +229,10 @@ ul {
 }
 
 .PickUp_Container_Title:hover, .Video_List_Element_Title:hover, .Video_List_Element_Title:hover {
-    color: #a71d5d;}
+    color: #a71d5d;
+}
 
-.PickUp_Container_Title:active, .Video_List_Element_Title:active, .Video_List_Element_Title:active{
+.PickUp_Container_Title:active, .Video_List_Element_Title:active, .Video_List_Element_Title:active {
     color: #a71d5d;
 }
 
@@ -285,7 +286,7 @@ ul {
     color: #a71d5d;
 }
 
-.nav-link:active {
+.Container_Tag_Item:active {
     color: #a71d5d;
 }
 
@@ -313,8 +314,8 @@ ul {
 
 .Video_List_Element_CommentList {
     background-color: #FFFFFF;
-    border: solid 3px #000000; /*線*/
-    border-radius: 10px; /*角の丸み*/
+    border: solid 3px #000000;
+    border-radius: 10px;
     display: flex;
 }
 
@@ -473,6 +474,14 @@ ul {
 }
 
 .Container_Tag_Item {
-    margin: 10px 0 0 5px;
+    margin: 10px 5px 0 5px;
     color: #39c4c1;
+}
+
+.Video_Title {
+    font-size: 20px;
+}
+
+.Video_Overview {
+    font-size: 14px;
 }
