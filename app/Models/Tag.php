@@ -36,7 +36,7 @@ class Tag extends Model
         return DB::table('tags')
             ->where('id', '!=', 1)
             ->inRandomOrder()
-            ->take(5)
+            ->take(10)
             ->get();
     }
 }
