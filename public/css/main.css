@@ -347,6 +347,11 @@ ul {
     border-radius: 5px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
 }
+.Video_List_Element_Slide_Container {
+    position: relative;
+    display: flex;
+    width: 290px;
+}
 
 .Video_List_Element_PostingTime {
     margin: 0 0 0 20px;
@@ -489,3 +494,4 @@ ul {
 .Video_Overview {
     font-size: 14px;
 }
+
