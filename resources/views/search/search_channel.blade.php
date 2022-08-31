@@ -30,13 +30,15 @@
                                     <div class="Video_List_Element_PostingTime">
                                         {{ $datum->created_at }}
                                     </div>
-                                    <a href="/video/{{$video->id}}">
-                                        <img src="{{ asset($video->thumbnail_path) }}"
-                                             class="Video_List_Element_Thumbnail"
-                                             alt="Thumbnail">
-                                    </a>
-                                    <span
-                                        class="Video_List_Element_VideoTime">{{ $VideoTime -> time($video->movie_path) }}</span>
+                                    <div class="Video_List_Element_Slide_Container">
+                                        <a href="/video/{{$video->id}}">
+                                            <img src="{{ asset($video->thumbnail_path) }}"
+                                                 class="Video_List_Element_Thumbnail"
+                                                 alt="Thumbnail">
+                                        </a>
+                                        <span
+                                            class="Video_List_Element_VideoTime">{{ $VideoTime -> time($video->movie_path) }}</span>
+                                    </div>
                                 </div>
                                 <div>
                                     <a href="/video/{{ $video->id }}" class="Video_List_Element_Title">
