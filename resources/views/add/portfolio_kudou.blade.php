@@ -51,7 +51,6 @@
             <img src="{{ asset('storage\img\portfolio_kudou\スライド12.JPG') }}" alt="portfolio">
         </div>
         <div>
-
             <img src="{{ asset('storage\img\portfolio_kudou\スライド13.JPG') }}" alt="portfolio">
         </div>
         <div>

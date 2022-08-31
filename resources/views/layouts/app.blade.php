@@ -23,6 +23,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/checkbox.js') }}"></script>
+    <script src="{{ asset('js/portfolio/slick.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/slide.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -32,6 +34,9 @@
     <link href="{{asset("css/main.css")}}" rel="stylesheet">
     <link href="{{asset("css/checkbox.css")}}" rel="stylesheet">
     <link href="{{asset("css/header.css")}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/portfolio/slick-theme.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/portfolio/slick.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/slide.css') }}" type="text/css">
 </head>
 
 <body>

@@ -82,7 +82,6 @@ class Artwork extends Model
 
             $send_data[] = $data;
         }
-
         return $send_data;
     }
 
@@ -149,6 +148,8 @@ class Artwork extends Model
         $all_data = ['user' => DB::table('users')->inRandomOrder()->take(10)->get()];
         foreach ($all_data['user'] as $datum) {
             $datum->artwork_num = Artwork::where('name', $datum->name)->max('artwork_num');
+            $datum->artwork = self::get_data_name($datum->name);
+
         }
         return $all_data;
     }
