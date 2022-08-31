@@ -23,31 +23,32 @@
                     <div class="">
                         紹介文:
                     </div>
-                    @foreach($datum->artwork as $video)
-                        <li class="Video_List_Element_Container">
-                            <div class="Video_List_Element_Container_Left">
-                                <div class="Video_List_Element_PostingTime">
-                                    投稿時間:{{ $video->created_at }}
-                                </div>
-                                <div style="position: relative">
-                                    <a href="/video/{{ $video->id }}">
+                    <div class="slide">
+                        @foreach($datum->artwork as $video)
+                            <div>
+                                <div>
+                                    <div class="Video_List_Element_PostingTime">
+                                        {{ $datum->created_at }}
+                                    </div>
+                                    <a href="/video/{{$video->id}}">
                                         <img src="{{ asset($video->thumbnail_path) }}"
-                                             class="Video_List_Element_Thumbnail" alt="Thumbnail">
+                                             class="Video_List_Element_Thumbnail"
+                                             alt="Thumbnail">
                                     </a>
                                     <span
                                         class="Video_List_Element_VideoTime">{{ $VideoTime -> time($video->movie_path) }}</span>
                                 </div>
-                            </div>
-                            <div class="Video_List_Element">
-                                <a href="/video/{{ $video->id }}" class="Video_List_Element_Title">
-                                    {{ $video->title }}
-                                </a>
-                                <div class="Video_List_Element_Overview">
-                                    {{ $video->comment }}
+                                <div>
+                                    <a href="/video/{{ $video->id }}" class="Video_List_Element_Title">
+                                        {{ $video->title }}
+                                    </a>
+                                    <div class="Video_List_Element_Overview">
+                                        {{ $video->comment }}
+                                    </div>
                                 </div>
                             </div>
-                        </li>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
         @endforeach

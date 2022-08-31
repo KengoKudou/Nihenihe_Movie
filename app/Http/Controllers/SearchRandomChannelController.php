@@ -9,7 +9,7 @@ class SearchRandomChannelController extends Controller
 {
     public function index()
     {
-        $data = Artwork::get_artwork_num()->take(3);
+        $data = Artwork::get_artwork_num();
         foreach ($data as $datum) {
             foreach ($datum as $user) {
                 if($user->artwork_num == null){
