@@ -97,10 +97,11 @@
         <!-- 動画再生 -->
         <div class="Video_Player">
             <div class="Video">
-                <video width="1080" controls autoplay>
-                    <source src="../{{ $data->movie_path }}"
-                            type="video/mp4">
-                </video>
+                <section>
+                    <video-js data-setup='{}' controls loop="loop">
+                        <source src="../{{ $data->movie_path }}" type="video/mp4">
+                    </video-js>
+                </section>
                 <!-- コメント入力 -->
                 <div class="Video_Comment">
                     <label>
