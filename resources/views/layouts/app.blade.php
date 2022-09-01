@@ -25,6 +25,7 @@
     <script src="{{ asset('js/checkbox.js') }}"></script>
     <script src="{{ asset('js/portfolio/slick.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/slide.js') }}"></script>
+    <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -34,9 +35,12 @@
     <link href="{{asset("css/main.css")}}" rel="stylesheet">
     <link href="{{asset("css/checkbox.css")}}" rel="stylesheet">
     <link href="{{asset("css/header.css")}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/portfolio/slick-theme.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/portfolio/slick.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/slide.css') }}" type="text/css">
+    <link href="{{ asset('css/portfolio/slick-theme.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/portfolio/slick.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/slide.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/video-js.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/video.css') }}" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
