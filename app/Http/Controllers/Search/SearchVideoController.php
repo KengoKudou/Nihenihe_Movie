@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Search;
 
 use App\Http\Controllers\Controller;
 use App\Models\Artwork;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Pagination\Paginator;
 
 
-class SearchController extends Controller
+class SearchVideoController extends Controller
 {
     public function search(Request $request)
     {
@@ -17,7 +15,7 @@ class SearchController extends Controller
         $keyword = $request->input('keyword');
 
         if (!empty($keyword)) {
-            return view('search/search_list', ['data' => Artwork::get_data_title($keyword)]);
+            return view('search.search_video_list', ['data' => Artwork::get_data_title($keyword)]);
         }
     }
 }
