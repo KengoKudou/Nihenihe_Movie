@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Search;
 
+use App\Http\Controllers\Controller;
 use App\Models\Artwork;
-use App\Models\User;
 
 class SearchRandomChannelController extends Controller
 {
@@ -12,11 +12,11 @@ class SearchRandomChannelController extends Controller
         $data = Artwork::get_artwork_num();
         foreach ($data as $datum) {
             foreach ($datum as $user) {
-                if($user->artwork_num == null){
+                if ($user->artwork_num == null) {
                     $user->artwork_num = 0;
                 }
             }
         }
-        return view('search/search_channel',$data);
+        return view('search/search_channel', $data);
     }
 }

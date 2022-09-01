@@ -4,9 +4,10 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CheckBoxController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RandomPath;
-use App\Http\Controllers\SearchRandomChannelController;
-use App\Http\Controllers\SearchController;
-use App\Http\Controllers\SearchRandomPathController;
+use App\Http\Controllers\Search\SearchChannelController;
+use App\Http\Controllers\Search\SearchRandomChannelController;
+use App\Http\Controllers\Search\SearchRandomPathController;
+use App\Http\Controllers\Search\SearchVideoController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\VideoLinkController;
@@ -24,10 +25,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// メイン画面
 Route::get('/', [RandomPath::class, 'random']);
 
+// 動画再生画面
 Route::get('/video/{id}', [VideoLinkController::class, 'getPath']);
 
+// ユーザー登録関係
 Route::get('/auth/verifyemail/{token}', [RegisterController::class, 'verify']);
 Auth::routes();
 Route::get('/resend', [RegisterController::class, 'showReSendForm'])->name('resend');
@@ -36,6 +40,7 @@ Route::post('/resend', [RegisterController::class, 'reSend']);
 // 画像投稿をコントローラーに送信
 Route::post('/new_send', [UploadController::class, 'saveimg']);
 
+// 各ユーザーのホームページ画面
 Route::get('/home/{name}', [HomeController::class, 'path']);
 
 // チェックボックスの内容をコントローラーから取得
@@ -57,11 +62,13 @@ Route::get('/atioa_poroslgtnihfi', function () {
 });
 
 // 動画検索ページの表示
-Route::get('/search', [SearchController::class, 'search'])->name('search.search');
+Route::get('/search/video/name', [SearchVideoController::class, 'search'])->name('search.video');
 Route::get('/search/video', [SearchRandomPathController::class, 'path']);
 
 // ユーザー検(チャンネル)検索ページの表示
 Route::get('/search/channel', [SearchRandomChannelController::class, 'index']);
+Route::get('/search/channel/name', [SearchChannelController::class, 'search'])->name('search.channel');
+
 
 // テスト用ページ呼び出し
 Route::get('/test', [TestController::class, 'index']);

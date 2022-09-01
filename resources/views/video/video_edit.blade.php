@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.header')
 
-@section('content')
+@section('header')
     <div class="row justify-content-center">
         <div class="Password_Edit">
             <div class="card-body-upload">

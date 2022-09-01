@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.header')
 
 @section('title')
     {{ $data->title }}
 @endsection
 
-@section('content')
+@section('header')
 
     <!-- 動画概要表示 -->
     <div class="Parent_Video">

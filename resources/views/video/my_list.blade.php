@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.header')
 @inject("VideoTime","App\Http\Controllers\VideoTimeController")
-@section('content')
+@section('header')
     <!-- ロゴ&検索ボックス表示 -->
     <div class="HeaderContainer">
         <!-- タイトルロゴランダム表示 -->

@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.header')
 @inject("VideoTime","App\Http\Controllers\VideoTimeController")
-@section('content')
+@section('header')
     <div class="Advertisement_And_Video_List_Main">
         <ul class="Video_List_Main">
             @foreach( $data as $datum )
@@ -17,7 +17,7 @@
                                          class="Video_List_Element_Thumbnail"
                                          alt="thumbnail">
                                 </a>
-                                <span class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum['movie_path']) }}</span>
+                                <span class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum->movie_path) }}</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">

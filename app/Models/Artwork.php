@@ -54,6 +54,7 @@ class Artwork extends Model
         return $artwork_num + 1;
     }
 
+    // 動画とサムネイルのパスを取得
     private static function get_path($data)
     {
         $user_path = 'storage/users/' . $data->name . '/' . $data->artwork_num . '/';
@@ -66,7 +67,7 @@ class Artwork extends Model
         return $paths;
     }
 
-    // 作品の情報を取得
+    // nameから動画を取得
     public static function get_data_name($name)
     {
         $all_data = DB::table('artworks')
@@ -85,7 +86,7 @@ class Artwork extends Model
         return $send_data;
     }
 
-    // 作品の情報を取得
+    // titleから動画を取得
     public static function get_data_title($title)
     {
         $all_data = DB::table('artworks')
@@ -104,6 +105,7 @@ class Artwork extends Model
         return $send_data;
     }
 
+    // idから動画を取得
     public static function get_data_id($id)
     {
         $all_data = DB::table('artworks')
@@ -123,6 +125,7 @@ class Artwork extends Model
         return $send_data;
     }
 
+    // 動画をランダムで10個取得
     public static function get_random_data()
     {
         $all_data = DB::table('artworks')
@@ -143,6 +146,7 @@ class Artwork extends Model
         return $send_data;
     }
 
+    // ユーザーをランダムで10件取得し、その作品数も取得
     public static function get_artwork_num()
     {
         $all_data = ['user' => DB::table('users')->inRandomOrder()->take(10)->get()];
@@ -153,5 +157,17 @@ class Artwork extends Model
         }
         return $all_data;
     }
+
+    public static function get_data_user($name)
+    {
+        $all_data=['user' => DB::table('users')->where('name',$name)->get()];
+        foreach ($all_data['user'] as $datum) {
+            $datum->artwork_num = Artwork::where('name', $datum->name)->max('artwork_num');
+            $datum->artwork = self::get_data_name($datum->name);
+
+        }
+        return $all_data;
+    }
+
 
 }
