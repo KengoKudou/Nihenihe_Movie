@@ -160,7 +160,7 @@ class Artwork extends Model
 
     public static function get_data_user($name)
     {
-        $all_data=['user' => DB::table('users')->where('name',$name)->get()];
+        $all_data=['user' => DB::table('users')->where("name","like","%{$name}%")->get()];
         foreach ($all_data['user'] as $datum) {
             $datum->artwork_num = Artwork::where('name', $datum->name)->max('artwork_num');
             $datum->artwork = self::get_data_name($datum->name);
