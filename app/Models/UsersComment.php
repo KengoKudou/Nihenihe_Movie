@@ -7,19 +7,10 @@ use DB;
 
 class UsersComment extends Model
 {
-    protected $fillable = ['comment'];
-
-    public static function insert_data($comment)
+    public static function intro_update($new_name, $old_name, $comment, $id)
     {
-        return self::create([
-            'comment' => $comment
-        ]);
-    }
+        $artworks = DB::table('artworks')->where('name', $old_name)->update(['name' => $new_name]);
 
-    public static function get_comment($name)
-    {
-        return DB::table('users_comments')
-            ->where('name', $name)
-            ->get();
+        DB::table('users')->where('id', $id)->update(['name' => $new_name, 'comment' => $comment]);
     }
 }

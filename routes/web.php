@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CheckBoxController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileEditController;
 use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\Search\SearchChannelController;
 use App\Http\Controllers\Search\SearchRandomChannelController;
@@ -71,20 +72,18 @@ Route::group(['middleware' => 'auth'], function () {
     // 画像投稿をコントローラーに送信
     Route::post('/new_send', [UploadController::class, 'saveimg']);
 
+    Route::post('/intro_send',[ProfileEditController::class,'update']);
 
     // 各ユーザーのホームページ画面
     Route::get('/home/{name}', [HomeController::class, 'path']);
 
-
     // チェックボックスの内容をコントローラーから取得
     Route::get('/upload', [CheckBoxController::class, 'showValue']);
-
 
     // 投稿動画変更画面
     Route::get('/video_edit', function () {
         return view('video/video_edit');
     });
-
 
     // パスワード変更画面
     Route::get('/pw_edit', function () {
@@ -100,6 +99,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/my_list', function () {
         return view('video/my_list');
     });
-
-
 });

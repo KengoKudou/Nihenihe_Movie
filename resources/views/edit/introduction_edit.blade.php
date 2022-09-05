@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card-body-upload">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="/intro_send" method="post" enctype="multipart/form-data">
                     @csrf
                     <div>
                         ID:{{ Auth::user()->id }}
@@ -11,13 +11,13 @@
                     <div>
                         <label>
                             名前
-                            <input type="text" name="name" value="{{ Auth::user()->name }}">
+                            <input type="text" name="name" id="name" value="{{ Auth::user()->name }}" required>
                         </label>
                     </div>
                     <div>
                         <label>
-                            メール
-                            <input type="text" name="email" value="{{ Auth::user()->email }}">
+                            自己紹介文
+                            <input type="text" name="comment" id="comment" value="{{ Auth::user()->comment }}">
                         </label>
                     </div>
                     <input type="submit" value="更新">
