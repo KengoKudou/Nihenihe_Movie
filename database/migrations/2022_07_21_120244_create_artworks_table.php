@@ -10,7 +10,7 @@ return new class extends Migration {
         Schema::create('artworks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreign('name')->references('name')->on('users')->cascadeOnDelete();
+            $table->foreign('name')->references('name')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('artwork_num')->nullable(false);
             $table->string('title')->nullable(false);
             $table->string('comment')->nullable(false);

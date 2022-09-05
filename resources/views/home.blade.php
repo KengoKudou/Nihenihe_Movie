@@ -20,14 +20,17 @@
                     <span>{{ $user[0]['email'] }}</span>
                 </div>
                 <div class="Profile_Introduction">
-                    紹介文:
+                    紹介文:{{ $user[0]['comment'] }}
                 </div>
             </div>
             @if( $judge )
+                <div>
+                    <button type="button" onclick="location.href='/intro_edit'">プロフィール編集</button>
+                </div>
                 <div class="Profile_Password_ChangeButton">
                     <button type="button" class="Video_Creator_Profile_Password_ChangeButton"
                             onclick="location.href='/pw_edit'">
-                        パスワード編集ボタン
+                        パスワード編集
                     </button>
 
                 </div>
@@ -52,7 +55,8 @@
                                 <img src="{{ asset($datum->thumbnail_path) }}"
                                      class="Video_List_Element_Thumbnail" alt="Thumbnail">
                             </a>
-                            <span class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum->movie_path) }}</span>
+                            <span
+                                class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum->movie_path) }}</span>
                         </div>
                     </div>
                     <div class="Video_List_Element">

@@ -11,7 +11,7 @@ return new class extends Migration {
             $table->id();
 
             $table->bigInteger('artwork_id')->unsigned()->nullable(false);
-            $table->foreign('artwork_id')->references('id')->on('artworks')->cascadeOnDelete();
+            $table->foreign('artwork_id')->references('id')->on('artworks')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->bigInteger('tag1')->unsigned()->nullable(false);
             $table->foreign('tag1')->references('id')->on('tags');

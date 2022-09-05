@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CheckBoxController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileEditController;
 use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\Search\SearchChannelController;
 use App\Http\Controllers\Search\SearchRandomChannelController;
@@ -37,15 +38,6 @@ Auth::routes();
 Route::get('/resend', [RegisterController::class, 'showReSendForm'])->name('resend');
 Route::post('/resend', [RegisterController::class, 'reSend']);
 
-// 画像投稿をコントローラーに送信
-Route::post('/new_send', [UploadController::class, 'saveimg']);
-
-// 各ユーザーのホームページ画面
-Route::get('/home/{name}', [HomeController::class, 'path']);
-
-// チェックボックスの内容をコントローラーから取得
-Route::get('/upload', [CheckBoxController::class, 'showValue']);
-
 // ポートフォリオ（西潟）接続
 Route::get('/portfolio_nishigata', function () {
     return view('add/portfolio_nishigata');
@@ -73,17 +65,38 @@ Route::get('/search/channel/name', [SearchChannelController::class, 'search'])->
 // テスト用ページ呼び出し
 Route::get('/test', [TestController::class, 'index']);
 
-// パスワード変更画面
-Route::get('/pw_edit', function () {
-    return view('auth/passwords/password_edit');
-});
 
-// 投稿動画変更画面
-Route::get('/video_edit', function () {
-    return view('video/video_edit');
-});
+// 以下のURLアクセス時にログインしていないユーザーをログイン画面へ送る
+Route::group(['middleware' => 'auth'], function () {
 
-// マイリスト画面
-Route::get('/my_list', function () {
-    return view('video/my_list');
+    // 画像投稿をコントローラーに送信
+    Route::post('/new_send', [UploadController::class, 'saveimg']);
+
+    Route::post('/intro_send',[ProfileEditController::class,'update']);
+
+    // 各ユーザーのホームページ画面
+    Route::get('/home/{name}', [HomeController::class, 'path']);
+
+    // チェックボックスの内容をコントローラーから取得
+    Route::get('/upload', [CheckBoxController::class, 'showValue']);
+
+    // 投稿動画変更画面
+    Route::get('/video_edit', function () {
+        return view('video/video_edit');
+    });
+
+    // パスワード変更画面
+    Route::get('/pw_edit', function () {
+        return view('edit/password_edit');
+    });
+
+    // プロフィール変更画面
+    Route::get('/intro_edit', function () {
+        return view('edit.introduction_edit');
+    });
+
+    // マイリスト画面
+    Route::get('/my_list', function () {
+        return view('video/my_list');
+    });
 });
