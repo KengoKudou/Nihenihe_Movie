@@ -54,4 +54,21 @@ class ArtworkTag extends Model
 
         return $all_tags;
     }
+
+
+    public static function search_video($id)
+    {
+        return DB::table('artwork_tags')
+            ->Where('tag1', $id)
+            ->orWhere('tag2', $id)
+            ->orWhere('tag3', $id)
+            ->orWhere('tag4', $id)
+            ->orWhere('tag5', $id)
+            ->orWhere('tag6', $id)
+            ->orWhere('tag7', $id)
+            ->orWhere('tag8', $id)
+            ->orWhere('tag9', $id)
+            ->orWhere('tag10', $id)
+            ->get();
+    }
 }

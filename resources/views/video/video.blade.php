@@ -88,11 +88,13 @@
                 タグ：
             </div>
             <!-- タグデータ表示 -->
-            @foreach($tags as $tag)
-                <div class="Video_Tag">
-                    {{$tag}}
-                </div>
-            @endforeach
+            <form method="get" action="{{ route('search.tag') }}">
+                @foreach($tags as $tag)
+                    <div class="Video_Tag">
+                        <input type="submit" name="tag" value="{{$tag}}">
+                    </div>
+                @endforeach
+            </form>
         </ul>
         <!-- 動画再生 -->
         <div class="Video_Player">

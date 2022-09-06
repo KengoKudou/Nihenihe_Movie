@@ -15,7 +15,7 @@ class SearchVideoController extends Controller
         $keyword = $request->input('keyword');
 
         if (!empty($keyword)) {
-            return view('search.search_video_list', ['data' => Artwork::get_data_title($keyword)]);
+            return view('search/search_video_list', ['data' => Artwork::get_data_title($keyword)]);
         }
     }
 }
