@@ -64,7 +64,13 @@
                             チャンネル
                         </div>
                     </a>
+                    <a href="/search/tag">
+                        <div class="Container_Tag_Item">
+                            タグ
+                        </div>
+                    </a>
                 </div>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <div class="navbar-nav me-auto">
