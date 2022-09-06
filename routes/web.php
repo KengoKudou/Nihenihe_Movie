@@ -8,6 +8,7 @@ use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\Search\SearchChannelController;
 use App\Http\Controllers\Search\SearchRandomChannelController;
 use App\Http\Controllers\Search\SearchRandomPathController;
+use App\Http\Controllers\Search\SearchTagController;
 use App\Http\Controllers\Search\SearchVideoController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UploadController;
@@ -60,6 +61,8 @@ Route::get('/search/video', [SearchRandomPathController::class, 'path']);
 // ユーザー検(チャンネル)検索ページの表示
 Route::get('/search/channel', [SearchRandomChannelController::class, 'index']);
 Route::get('/search/channel/name', [SearchChannelController::class, 'search'])->name('search.channel');
+
+Route::get('/search/tag/name', [SearchTagController::class, 'index'])->name('search.tag');
 
 
 // テスト用ページ呼び出し
