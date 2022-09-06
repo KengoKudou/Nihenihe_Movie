@@ -64,5 +64,6 @@
                 </a>
             </li>
         @endforeach
+        <div id="end"/>
     </ul>
 @endsection

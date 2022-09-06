@@ -11,4 +11,10 @@ class RandomPath extends Controller
     {
         return view('welcome', ['data' => Artwork::get_random_data()]);
     }
+
+    public function scroll_load(){
+        return response()->json([
+            'test' => 'ugoiteruyo'
+        ]);
+    }
 }
