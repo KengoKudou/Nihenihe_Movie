@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 // メイン画面
 Route::get('/', [RandomPath::class, 'random']);
+Route::get('/scroll_load', [RandomPath::class, 'scroll_load']);
 
 // 動画再生画面
 Route::get('/video/{id}', [VideoLinkController::class, 'getPath']);

@@ -7,7 +7,7 @@ use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 
 class VideoTimeController extends Controller
 {
-    public function time($path)
+    public static function time($path)
     {
 
         $path = str_replace('storage','public',$path);
@@ -16,10 +16,10 @@ class VideoTimeController extends Controller
 
 
 
-        return $this->sToM($media->getDurationInSeconds());
+        return self::sToM($media->getDurationInSeconds());
     }
 
-    private function sToM($seconds)
+    private static function sToM($seconds)
     {
         //秒を分に変換
         $minutes = floor(($seconds / 60) % 60);

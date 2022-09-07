@@ -20,21 +20,23 @@
     @endif
 
     <!-- Scripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('js/library/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/library/jquery.inview.min.js') }}"></script>
+    <script src="{{ asset('js/library/video.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/checkbox.js') }}"></script>
-    <script src="{{ asset('js/portfolio/slick.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/portfolio/slick.js') }}"></script>
     <script src="{{ asset('js/slide.js') }}"></script>
-    <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+    <script src="{{ asset('js/scroll_load.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{asset("css/main.css")}}" rel="stylesheet">
-    <link href="{{asset("css/checkbox.css")}}" rel="stylesheet">
-    <link href="{{asset("css/header.css")}}" rel="stylesheet">
+    <link href="{{ asset("css/main.css") }}" rel="stylesheet">
+    <link href="{{ asset("css/checkbox.css") }}" rel="stylesheet">
+    <link href="{{ asset("css/header.css") }}" rel="stylesheet">
     <link href="{{ asset('css/portfolio/slick-theme.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/portfolio/slick.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/slide.css') }}" rel="stylesheet" type="text/css">
