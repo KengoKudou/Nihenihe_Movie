@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\CheckBoxController;
+use App\Http\Controllers\GetAllTagsController;
+use App\Http\Controllers\RandomTagController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileEditController;
 use App\Http\Controllers\RandomPath;
@@ -63,7 +64,8 @@ Route::get('/search/video', [SearchRandomPathController::class, 'path']);
 Route::get('/search/channel', [SearchRandomChannelController::class, 'index']);
 Route::get('/search/channel/name', [SearchChannelController::class, 'search'])->name('search.channel');
 
-Route::get('/search/tag/name', [SearchTagController::class, 'index'])->name('search.tag');
+Route::get('/search/tag/name', [SearchTagController::class, 'search'])->name('search.tag');
+Route::get('/search/tag', [GetAllTagsController::class, 'index']);
 
 
 // テスト用ページ呼び出し
@@ -82,7 +84,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home/{name}', [HomeController::class, 'path']);
 
     // チェックボックスの内容をコントローラーから取得
-    Route::get('/upload', [CheckBoxController::class, 'showValue']);
+    Route::get('/upload', [RandomTagController::class, 'showValue']);
 
     // 投稿動画変更画面
     Route::get('/video_edit', function () {

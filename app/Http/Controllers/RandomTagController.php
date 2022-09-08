@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 
-class CheckBoxController extends Controller
+class RandomTagController extends Controller
 {
     public function showValue()
     {
