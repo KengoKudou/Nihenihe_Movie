@@ -24,6 +24,13 @@ class Tag extends Model
             ->get();
     }
 
+    public static function get_all_tag()
+    {
+        return DB::table('tags')
+            ->where('id','!=',1)
+            ->get();
+    }
+
     public static function search_id($id)
     {
         return DB::table('tags')

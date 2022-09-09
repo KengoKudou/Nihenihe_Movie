@@ -11,11 +11,30 @@ use Illuminate\Http\Request;
 
 class SearchTagController extends Controller
 {
-    public function index(Request $request)
+    public function search(Request $request)
     {
-        $tag = $request->input('tag');
-        $tag_list = Tag::search_tag($tag);
-        $video_list = ArtworkTag::search_video($tag_list[0]->id);
+        $tags = $request->input('tag');
+
+        if (is_array($tags)) {
+            foreach ($tags as $tag) {
+                $tag_list[] = Tag::search_tag($tag)[0];
+            }
+        } else {
+            $tag_list[] = Tag::search_tag($tags)[0];
+        }
+        foreach ($tag_list as $tag) {
+            $tag_id[] = $tag->id;
+        }
+
+        $len = count($tag_id);
+
+        while ($len <= 9) {
+            $tag_id[] = 1;
+            $len += 1;
+
+        }
+
+        $video_list = ArtworkTag::search_video($tag_id);
         foreach ($video_list as $video) {
             $data['data'][] = Artwork::get_data_id($video->artwork_id)[0];
         }

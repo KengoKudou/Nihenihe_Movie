@@ -56,19 +56,129 @@ class ArtworkTag extends Model
     }
 
 
-    public static function search_video($id)
+    public static function search_video($tag_id)
     {
         return DB::table('artwork_tags')
-            ->Where('tag1', $id)
-            ->orWhere('tag2', $id)
-            ->orWhere('tag3', $id)
-            ->orWhere('tag4', $id)
-            ->orWhere('tag5', $id)
-            ->orWhere('tag6', $id)
-            ->orWhere('tag7', $id)
-            ->orWhere('tag8', $id)
-            ->orWhere('tag9', $id)
-            ->orWhere('tag10', $id)
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[0])
+                    ->orWhere("tag2", $tag_id[0])
+                    ->orWhere("tag3", $tag_id[0])
+                    ->orWhere("tag4", $tag_id[0])
+                    ->orWhere("tag5", $tag_id[0])
+                    ->orWhere("tag6", $tag_id[0])
+                    ->orWhere("tag7", $tag_id[0])
+                    ->orWhere("tag8", $tag_id[0])
+                    ->orWhere("tag9", $tag_id[0])
+                    ->orWhere("tag10", $tag_id[0]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[1])
+                    ->orWhere("tag2", $tag_id[1])
+                    ->orWhere("tag3", $tag_id[1])
+                    ->orWhere("tag4", $tag_id[1])
+                    ->orWhere("tag5", $tag_id[1])
+                    ->orWhere("tag6", $tag_id[1])
+                    ->orWhere("tag7", $tag_id[1])
+                    ->orWhere("tag8", $tag_id[1])
+                    ->orWhere("tag9", $tag_id[1])
+                    ->orWhere("tag10", $tag_id[1]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[2])
+                    ->orWhere("tag2", $tag_id[2])
+                    ->orWhere("tag3", $tag_id[2])
+                    ->orWhere("tag4", $tag_id[2])
+                    ->orWhere("tag5", $tag_id[2])
+                    ->orWhere("tag6", $tag_id[2])
+                    ->orWhere("tag7", $tag_id[2])
+                    ->orWhere("tag8", $tag_id[2])
+                    ->orWhere("tag9", $tag_id[2])
+                    ->orWhere("tag10", $tag_id[2]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[3])
+                    ->orWhere("tag2", $tag_id[3])
+                    ->orWhere("tag3", $tag_id[3])
+                    ->orWhere("tag4", $tag_id[3])
+                    ->orWhere("tag5", $tag_id[3])
+                    ->orWhere("tag6", $tag_id[3])
+                    ->orWhere("tag7", $tag_id[3])
+                    ->orWhere("tag8", $tag_id[3])
+                    ->orWhere("tag9", $tag_id[3])
+                    ->orWhere("tag10", $tag_id[3]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[4])
+                    ->orWhere("tag2", $tag_id[4])
+                    ->orWhere("tag3", $tag_id[4])
+                    ->orWhere("tag4", $tag_id[4])
+                    ->orWhere("tag5", $tag_id[4])
+                    ->orWhere("tag6", $tag_id[4])
+                    ->orWhere("tag7", $tag_id[4])
+                    ->orWhere("tag8", $tag_id[4])
+                    ->orWhere("tag9", $tag_id[4])
+                    ->orWhere("tag10", $tag_id[4]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[5])
+                    ->orWhere("tag2", $tag_id[5])
+                    ->orWhere("tag3", $tag_id[5])
+                    ->orWhere("tag4", $tag_id[5])
+                    ->orWhere("tag5", $tag_id[5])
+                    ->orWhere("tag6", $tag_id[5])
+                    ->orWhere("tag7", $tag_id[5])
+                    ->orWhere("tag8", $tag_id[5])
+                    ->orWhere("tag9", $tag_id[5])
+                    ->orWhere("tag10", $tag_id[5]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[6])
+                    ->orWhere("tag2", $tag_id[6])
+                    ->orWhere("tag3", $tag_id[6])
+                    ->orWhere("tag4", $tag_id[6])
+                    ->orWhere("tag5", $tag_id[6])
+                    ->orWhere("tag6", $tag_id[6])
+                    ->orWhere("tag7", $tag_id[6])
+                    ->orWhere("tag8", $tag_id[6])
+                    ->orWhere("tag9", $tag_id[6])
+                    ->orWhere("tag10", $tag_id[6]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[7])
+                    ->orWhere("tag2", $tag_id[7])
+                    ->orWhere("tag3", $tag_id[7])
+                    ->orWhere("tag4", $tag_id[7])
+                    ->orWhere("tag5", $tag_id[7])
+                    ->orWhere("tag6", $tag_id[7])
+                    ->orWhere("tag7", $tag_id[7])
+                    ->orWhere("tag8", $tag_id[7])
+                    ->orWhere("tag9", $tag_id[7])
+                    ->orWhere("tag10", $tag_id[7]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[8])
+                    ->orWhere("tag2", $tag_id[8])
+                    ->orWhere("tag3", $tag_id[8])
+                    ->orWhere("tag4", $tag_id[8])
+                    ->orWhere("tag5", $tag_id[8])
+                    ->orWhere("tag6", $tag_id[8])
+                    ->orWhere("tag7", $tag_id[8])
+                    ->orWhere("tag8", $tag_id[8])
+                    ->orWhere("tag9", $tag_id[8])
+                    ->orWhere("tag10", $tag_id[8]);
+            })
+            ->where(function ($query) use ($tag_id) {
+                $query->orWhere("tag1", $tag_id[9])
+                    ->orWhere("tag2", $tag_id[9])
+                    ->orWhere("tag3", $tag_id[9])
+                    ->orWhere("tag4", $tag_id[9])
+                    ->orWhere("tag5", $tag_id[9])
+                    ->orWhere("tag6", $tag_id[9])
+                    ->orWhere("tag7", $tag_id[9])
+                    ->orWhere("tag8", $tag_id[9])
+                    ->orWhere("tag9", $tag_id[9])
+                    ->orWhere("tag10", $tag_id[9]);
+            })
             ->get();
     }
 }
