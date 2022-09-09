@@ -16,6 +16,7 @@ class ProfileEditController extends Controller
         $comment=$request->input(['comment']);
         $id=Auth::user()->id;
         UsersComment::intro_update($new_name,$old_name,$comment,$id);
+        rename( 'public/users/' . $old_name, 'public/users/' . $new_name);
         return redirect('/home/' .$new_name);
     }
 }
