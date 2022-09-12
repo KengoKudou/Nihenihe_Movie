@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Video;
 use App\Http\Controllers\Controller;
 use App\Models\Artwork;
 use App\Models\ArtworkTag;
+use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
@@ -17,7 +18,11 @@ class VideoController extends Controller
 
         return view('video/video', $send_data);
     }
-    public function myListRegister(){
+
+    public function myListRegister(Request $request)
+    {
 
     }
+
+
 }

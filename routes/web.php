@@ -12,7 +12,7 @@ use App\Http\Controllers\Search\SearchRandomPathController;
 use App\Http\Controllers\Search\SearchTagController;
 use App\Http\Controllers\Search\SearchVideoController;
 use App\Http\Controllers\TestController;
-use App\Http\Controllers\UploadController;
+use App\Http\Controllers\Video\UploadController;
 use App\Http\Controllers\Video\VideoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -100,6 +100,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/intro_edit', function () {
         return view('edit.introduction_edit');
     });
+
+    // お気に入り登録処理
+    Route::post('/my_list_register', [VideoController::class,'myListRegister']);
 
     // マイリスト画面
     Route::get('/my_list', function () {

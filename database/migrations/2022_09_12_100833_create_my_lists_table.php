@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMyListTable extends Migration
+class CreateMyListsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateMyListTable extends Migration
      */
     public function up()
     {
-        Schema::create('my_list', function (Blueprint $table) {
+        Schema::create('my_lists', function (Blueprint $table) {
             $table->id();
 
             $table->bigInteger('user_id')->unsigned()->nullable(false);
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
 
             for ($i = 1; $i <= 50; $i++) {
-                $table->bigInteger("like{$i}")->unsigned()->nullable(false);
+                $table->bigInteger("like{$i}")->unsigned()->default(1)->nullable(false);
                 $table->foreign("like{$i}")->references('id')->on('artworks');
             }
 

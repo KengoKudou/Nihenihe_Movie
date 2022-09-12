@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->bigInteger('artwork_id')->unsigned()->nullable(false);
             $table->foreign('artwork_id')->references('id')->on('artworks')->cascadeOnDelete()->cascadeOnUpdate();
 
-            for ($i = 0; $i <= 10; $i++) {
+            for ($i = 1; $i <= 10; $i++) {
                 $table->bigInteger("tag{$i}")->unsigned()->nullable(false);
                 $table->foreign("tag{$i}")->references('id')->on('tags');
             }
