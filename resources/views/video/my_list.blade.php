@@ -1,5 +1,5 @@
 @extends('layouts.header')
-@inject("VideoTime","App\Http\Controllers\VideoTimeController")
+@inject("VideoTime","App\Http\Controllers\Video\VideoTimeController")
 @section('header')
     <!-- ロゴ&検索ボックス表示 -->
     <div class="HeaderContainer">

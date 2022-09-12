@@ -1,4 +1,4 @@
-@inject("LogoNameData","App\Http\Controllers\RandomLogoController")
+@inject("LogoNameData","App\Http\Controllers\Random\RandomLogoController")
     <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -42,6 +42,7 @@
     <link href="{{ asset('css/slide.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/video-js.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/video.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/heart.css') }}" rel="stylesheet" type="text/css">
 
 </head>
 

@@ -79,6 +79,10 @@
                 <div class="Video_MetaOverflowMenuContainer">
                     ・・・
                 </div>
+                <form method="post">
+                    @csrf
+                    <input type="submit" value="like">
+                </form>
             </div>
         </div>
         <!-- タグ一覧表示 -->

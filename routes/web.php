@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\GetAllTagsController;
-use App\Http\Controllers\RandomTagController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileEditController;
-use App\Http\Controllers\RandomPath;
+use App\Http\Controllers\Random\RandomPath;
+use App\Http\Controllers\Random\RandomTagController;
 use App\Http\Controllers\Search\SearchChannelController;
 use App\Http\Controllers\Search\SearchRandomChannelController;
 use App\Http\Controllers\Search\SearchRandomPathController;
@@ -13,7 +13,7 @@ use App\Http\Controllers\Search\SearchTagController;
 use App\Http\Controllers\Search\SearchVideoController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UploadController;
-use App\Http\Controllers\VideoLinkController;
+use App\Http\Controllers\Video\VideoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +33,7 @@ Route::get('/', [RandomPath::class, 'random']);
 Route::get('/scroll_load', [RandomPath::class, 'scroll_load']);
 
 // 動画再生画面
-Route::get('/video/{id}', [VideoLinkController::class, 'getPath']);
+Route::get('/video/{id}', [VideoController::class, 'getPath']);
 
 // ユーザー登録関係
 Route::get('/auth/verifyemail/{token}', [RegisterController::class, 'verify']);
