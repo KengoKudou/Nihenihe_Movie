@@ -110,6 +110,7 @@ class Artwork extends Model
     {
         $all_data = DB::table('artworks')
             ->where('id', '!=', 1)
+            ->where('id',$id)
             ->get();
 
         $send_data = array();
@@ -129,9 +130,9 @@ class Artwork extends Model
     public static function get_random_data()
     {
         $all_data = DB::table('artworks')
-            ->where('id', '!=', 1)
             ->inRandomOrder()
             ->take(10)
+            ->where('id', '!=', 1)
             ->get();
 
         $send_data = array();

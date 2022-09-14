@@ -79,7 +79,7 @@
                 <div class="Video_MetaOverflowMenuContainer">
                     ・・・
                 </div>
-                <form action = "/my_list_register" method="post" enctype="multipart/form-data">
+                <form action="/my_list_register/{{$data->id}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <input type="submit" value="like">
                 </form>

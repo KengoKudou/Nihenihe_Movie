@@ -4,8 +4,8 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\GetAllTagsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileEditController;
-use App\Http\Controllers\Random\RandomPath;
 use App\Http\Controllers\Random\RandomTagController;
+use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\Search\SearchChannelController;
 use App\Http\Controllers\Search\SearchRandomChannelController;
 use App\Http\Controllers\Search\SearchRandomPathController;
@@ -102,7 +102,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     // お気に入り登録処理
-    Route::post('/my_list_register', [VideoController::class,'myListRegister']);
+    Route::post('/my_list_register/{id}', [VideoController::class,'myListRegister']);
 
     // マイリスト画面
     Route::get('/my_list', function () {

@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Random;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Controllers\Video\VideoTimeController;
 use App\Models\Artwork;
-use phpDocumentor\Reflection\Types\Array_;
 
 class RandomPath extends Controller
 {
