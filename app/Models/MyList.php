@@ -56,7 +56,7 @@ class MyList extends Model
 
     public static function get_data($user_id)
     {
-        $data= self::where('user_id', $user_id)->get();
+        return self::where('user_id', $user_id)->get();
     }
 
 }
