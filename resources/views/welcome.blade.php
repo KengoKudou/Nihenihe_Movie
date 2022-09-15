@@ -3,11 +3,12 @@
 @section('header')
     <div class="Top_Video">
         <div class="Video">
-            <a href="/video/1">
-                <video controls loop autoplay muted width="700px" height="auth">
-                    <source src="{{ asset('storage/users/K.Kudou/1/movie.mp4') }}"
-                            type="video/mp4">
-                </video>
+            <a href="/video/2">
+                <section>
+                    <video-js data-setup='{}' controls loop="loop">
+                        <source src="" type="video/mp4">
+                    </video-js>
+                </section>
             </a>
         </div>
         <div class="Description">
