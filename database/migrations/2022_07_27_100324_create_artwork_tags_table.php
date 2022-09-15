@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->foreign('artwork_id')->references('id')->on('artworks')->cascadeOnDelete()->cascadeOnUpdate();
 
             for ($i = 1; $i <= 10; $i++) {
-                $table->bigInteger("tag{$i}")->unsigned()->nullable(false);
+                $table->bigInteger("tag{$i}")->unsigned()->nullable(false)->default(1);
                 $table->foreign("tag{$i}")->references('id')->on('tags');
             }
 
