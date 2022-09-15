@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\MyList;
 use App\Providers\RouteServiceProvider;
+use DB;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
@@ -61,6 +63,11 @@ class LoginController extends Controller
         if (!file_exists(storage_path('app/public/users/' . $user['name']))) {
             // ユーザーフォルダを作成
             mkdir(storage_path('app/public/users/' . $user['name']));
+        }
+
+        $judge=DB::table('my_lists')->where('user_id', $user['id'])->exists();
+        if(!$judge){
+            MyList::insert_myList($user['id']);
         }
     }
 }

@@ -1,5 +1,5 @@
 @extends('layouts.header')
-@inject("VideoTime","App\Http\Controllers\VideoTimeController")
+@inject("VideoTime","App\Http\Controllers\Video\VideoTimeController")
 @section('header')
     <div class="My_List">
         <div class="Video_List_Main">
@@ -16,7 +16,7 @@
                                          class="Video_List_Element_Thumbnail" alt="Thumbnail">
                                 </a>
                                 <span
-                                    class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum->movie_path) }}</span>
+                                        class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum->movie_path) }}</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">

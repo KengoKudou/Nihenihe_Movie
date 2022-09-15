@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Random;
 
+use App\Http\Controllers\Controller;
 use App\Models\Tag;
 
 class RandomTagController extends Controller

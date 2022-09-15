@@ -131,11 +131,6 @@ ul {
     height: auto;
 }
 
-.Advertisement_Icon {
-    width: 250px;
-    height: auto;
-}
-
 .PickUp {
     display: flex;
     flex-wrap: wrap;
@@ -146,6 +141,10 @@ ul {
     background-color: #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+.PickUp_Container:hover{
+    opacity: 0.6;
+    transition-duration: 0.3s;
 }
 
 .PickUp_Container_VideoTime {

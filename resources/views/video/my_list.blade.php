@@ -1,53 +1,37 @@
 @extends('layouts.header')
-@inject("VideoTime","App\Http\Controllers\VideoTimeController")
+@inject("VideoTime","App\Http\Controllers\Video\VideoTimeController")
 @section('header')
-    <!-- ロゴ&検索ボックス表示 -->
-    <div class="HeaderContainer">
-        <!-- タイトルロゴランダム表示 -->
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src='{{ $LogoNameData -> RandomLogo() }}' width="auto" height="100"
-                 alt="ランダム画像">
-        </a>
-        <!-- 検索ボックス表示 -->
-        <div class="Video_Search">
-            <div class="Video_SearchBox_Button">
-                <label>
-                    <input type="text" class="Video_Search_Input">
-                </label>
-                <button type="button" onclick="alert('動画検索')" class="Video_Search_FollowButton">検索</button>
-            </div>
-            <span class="Video_Search_NumberOfVideos">総動画数　000000　でした。</span>
-        </div>
-    </div>
-
-    <div class="My_List">
-        <div class="Video_List_Main">
-            <div class="Video_List">
-                @foreach($data as $datum)
+    <div class="Advertisement_And_Video_List_Main">
+        <ul class="Video_List_Main">
+            @foreach( $data as $datum )
+                <li class="Video_List">
                     <div class="Video_List_Element_Container">
                         <div class="Video_List_Element_Container_Left">
                             <div class="Video_List_Element_PostingTime">
-                                投稿時間:{{$datum->created_at}}
+                                投稿時間:{{ $datum->created_at }}
                             </div>
                             <div style="position: relative">
-                                <img src="{{ asset($datum->thumbnail_path) }}" class="Video_List_Element_Thumbnail"
-                                     alt="Thumbnail">
-                                <span class="Video_List_Element_VideoTime">00:00</span>
+                                <a href="/video/{{ $datum->id }}">
+                                    <img src="{{ asset($datum->thumbnail_path) }}"
+                                         class="Video_List_Element_Thumbnail"
+                                         alt="thumbnail">
+                                </a>
+                                <span class="Video_List_Element_VideoTime">{{ $VideoTime -> time($datum->movie_path) }}</span>
                             </div>
                         </div>
                         <div class="Video_List_Element">
-                            <div class="Video_List_Element_Title">
-                                動画タイトル:{{$datum->title}}
-                            </div>
+                            <a href="/video/{{ $datum->id }}" class="Video_List_Element_Title">
+                                {{ $datum->title }}
+                            </a>
                             <div class="Video_List_Element_Overview">
-                                概要欄:{{$datum->comment}}
+                                {{ $datum->comment }}
                             </div>
                             <div class="Video_List_Element_CommentList">
                                 <div class="Video_List_Element_Comment">
-                                    コメント①
+                                    うぽつ
                                 </div>
                                 <div class="Video_List_Element_Comment">
-                                    コメント②
+                                    おつ
                                 </div>
                             </div>
                             <div class="Video_List_Element_List">
@@ -65,12 +49,12 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="Video_List_Element_Container_Edit_Button"
-                                onclick="location.href='/video_edit'">編集ボタン
-                        </button>
                     </div>
-                @endforeach
-            </div>
+                </li>
+            @endforeach
+        </ul>
+        <div class="imgRandom">
+            <script type="text/javascript" src="{{ asset("js/imgRandom.js") }}"></script>
         </div>
     </div>
 @endsection

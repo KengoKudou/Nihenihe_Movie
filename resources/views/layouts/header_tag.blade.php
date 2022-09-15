@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@inject("LogoNameData","App\Http\Controllers\RandomLogoController")
+@inject("LogoNameData","App\Http\Controllers\Random\RandomLogoController")
 @section('content')
     <!-- ロゴ&検索ボックス表示 -->
     <div class="HeaderContainer">

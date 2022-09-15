@@ -109,7 +109,8 @@ class Artwork extends Model
     public static function get_data_id($id)
     {
         $all_data = DB::table('artworks')
-            ->where('id', $id)
+            ->where('id', '!=', 1)
+            ->where('id',$id)
             ->get();
 
         $send_data = array();
@@ -131,6 +132,7 @@ class Artwork extends Model
         $all_data = DB::table('artworks')
             ->inRandomOrder()
             ->take(10)
+            ->where('id', '!=', 1)
             ->get();
 
         $send_data = array();
@@ -149,7 +151,11 @@ class Artwork extends Model
     // ユーザーをランダムで10件取得し、その作品数も取得
     public static function get_artwork_num()
     {
-        $all_data = ['user' => DB::table('users')->inRandomOrder()->take(10)->get()];
+        $all_data = ['user' => DB::table('users')
+            ->where('id', '!=', 1)
+            ->inRandomOrder()
+            ->take(10)
+            ->get()];
         foreach ($all_data['user'] as $datum) {
             $datum->artwork_num = Artwork::where('name', $datum->name)->max('artwork_num');
             $datum->artwork = self::get_data_name($datum->name);
@@ -160,7 +166,9 @@ class Artwork extends Model
 
     public static function get_data_user($name)
     {
-        $all_data=['user' => DB::table('users')->where("name","like","%{$name}%")->get()];
+        $all_data = ['user' => DB::table('users')
+            ->where("name", "like", "%{$name}%")
+            ->get()];
         foreach ($all_data['user'] as $datum) {
             $datum->artwork_num = Artwork::where('name', $datum->name)->max('artwork_num');
             $datum->artwork = self::get_data_name($datum->name);

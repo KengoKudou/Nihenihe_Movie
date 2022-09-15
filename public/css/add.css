@@ -1,0 +1,33 @@
+.Advertisement_icon {
+    width: 250px;
+    height: auto;
+    border-style: solid;
+    border-color: #7a7a7a;
+}
+
+.Advertisement_icon:hover {
+    top:-3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.x-mark{
+    position:absolute;
+    font-size: 100%;/*ボタンの大きさ*/
+    font-weight: bold;
+    border: 1px solid #999;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 1.3em;
+    line-height: 1.3em;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.x-mark:hover{
+    background: #333;
+    border-color: #333;
+    color: #FFF;
+}

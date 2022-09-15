@@ -18,10 +18,10 @@ class ArtworkTableSeeder extends Seeder
     {
         DB::table('artworks')->insert([
             'id' => 1,
-            'name' => 'Hero',
+            'name' => 'Master',
             'artwork_num' => 1,
-            'title' => 'test1',
-            'comment' => 'comment1',
+            'title' => 'Master',
+            'comment' => 'Master',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime()
         ]);
@@ -46,7 +46,7 @@ class ArtworkTableSeeder extends Seeder
         DB::table('artworks')->insert([
             'id' => 4,
             'name' => 'Hero',
-            'artwork_num' => 2,
+            'artwork_num' => 1,
             'title' => 'テスト',
             'comment' => 'komento',
             'created_at' => new DateTime(),
@@ -64,7 +64,7 @@ class ArtworkTableSeeder extends Seeder
         DB::table('artworks')->insert([
             'id' => 6,
             'name' => 'Hero',
-            'artwork_num' => 3,
+            'artwork_num' => 2,
             'title' => 'ｔeｓto',
             'comment' => 'ｃoｍｍeｎt',
             'created_at' => new DateTime(),
@@ -73,7 +73,7 @@ class ArtworkTableSeeder extends Seeder
         DB::table('artworks')->insert([
             'id' => 7,
             'name' => 'Hero',
-            'artwork_num' => 4,
+            'artwork_num' => 3,
             'title' => 'Hello World!',
             'comment' => 'See You World!',
             'created_at' => new DateTime(),
@@ -100,7 +100,7 @@ class ArtworkTableSeeder extends Seeder
         DB::table('artworks')->insert([
             'id' => 10,
             'name' => 'Hero',
-            'artwork_num' => 5,
+            'artwork_num' => 4,
             'title' => 'てすと',
             'comment' => 'こめんと',
             'created_at' => new DateTime(),
@@ -112,6 +112,15 @@ class ArtworkTableSeeder extends Seeder
             'artwork_num' => 3,
             'title' => 't',
             'comment' => 'c',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime()
+        ]);
+        DB::table('artworks')->insert([
+            'id' => 12,
+            'name' => 'Hero',
+            'artwork_num' => 5,
+            'title' => 'test1',
+            'comment' => 'comment1',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime()
         ]);

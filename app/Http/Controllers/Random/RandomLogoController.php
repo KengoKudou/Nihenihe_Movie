@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Random;
+
+use App\Http\Controllers\Controller;
 
 class RandomLogoController extends Controller
 {

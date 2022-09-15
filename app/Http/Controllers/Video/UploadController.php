@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Video;
 
+use App\Http\Controllers\Controller;
 use App\Models\Artwork;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
-use FFMpeg;
+use Intervention\Image\Facades\Image;
 
 class UploadController extends Controller
 {
