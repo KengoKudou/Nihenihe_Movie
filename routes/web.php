@@ -12,9 +12,9 @@ use App\Http\Controllers\Search\SearchTagController;
 use App\Http\Controllers\Search\SearchVideoController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\Video\GetAllTagsController;
+use App\Http\Controllers\Video\MyListController;
 use App\Http\Controllers\Video\UploadController;
 use App\Http\Controllers\Video\VideoController;
-use App\Models\MyList;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -106,6 +106,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/my_list_register/{id}', [VideoController::class, 'myListRegister']);
 
     // マイリスト画面
-    Route::get('/my_list', [MyList::class, 'display']);
+    Route::get('/my_list', [MyListController::class, 'display']);
 
 });
