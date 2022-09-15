@@ -62,6 +62,30 @@
         <div>
             <img src="{{ asset('storage\img\portfolio_kudou\スライド16.JPG') }}" alt="portfolio">
         </div>
+        <div>
+            <img src="{{ asset('storage\img\portfolio_kudou\スライド17.JPG') }}" alt="portfolio">
+        </div>
+        <div>
+            <img src="{{ asset('storage\img\portfolio_kudou\スライド18.JPG') }}" alt="portfolio">
+        </div>
+        <div>
+            <img src="{{ asset('storage\img\portfolio_kudou\スライド19.JPG') }}" alt="portfolio">
+        </div>
+        <div>
+            <img src="{{ asset('storage\img\portfolio_kudou\スライド20.JPG') }}" alt="portfolio">
+        </div>
+        <div>
+            <img src="{{ asset('storage\img\portfolio_kudou\スライド21.JPG') }}" alt="portfolio">
+        </div>
+        <div>
+            <img src="{{ asset('storage\img\portfolio_kudou\スライド22.JPG') }}" alt="portfolio">
+        </div>
+        <div>
+            <img src="{{ asset('storage\img\portfolio_kudou\スライド23.JPG') }}" alt="portfolio">
+        </div>
+        <div>
+            <img src="{{ asset('storage\img\portfolio_kudou\スライド24.JPG') }}" alt="portfolio">
+        </div>
     </div>
 </div>
 

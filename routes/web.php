@@ -1,19 +1,20 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\GetAllTagsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileEditController;
+use App\Http\Controllers\Random\RandomPath;
 use App\Http\Controllers\Random\RandomTagController;
-use App\Http\Controllers\RandomPath;
 use App\Http\Controllers\Search\SearchChannelController;
 use App\Http\Controllers\Search\SearchRandomChannelController;
 use App\Http\Controllers\Search\SearchRandomPathController;
 use App\Http\Controllers\Search\SearchTagController;
 use App\Http\Controllers\Search\SearchVideoController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\Video\GetAllTagsController;
 use App\Http\Controllers\Video\UploadController;
 use App\Http\Controllers\Video\VideoController;
+use App\Models\MyList;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -78,7 +79,7 @@ Route::group(['middleware' => 'auth'], function () {
     // 画像投稿をコントローラーに送信
     Route::post('/new_send', [UploadController::class, 'saveimg']);
 
-    Route::post('/intro_send',[ProfileEditController::class,'update']);
+    Route::post('/intro_send', [ProfileEditController::class, 'update']);
 
     // 各ユーザーのホームページ画面
     Route::get('/home/{name}', [HomeController::class, 'path']);
@@ -102,10 +103,9 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     // お気に入り登録処理
-    Route::post('/my_list_register/{id}', [VideoController::class,'myListRegister']);
+    Route::post('/my_list_register/{id}', [VideoController::class, 'myListRegister']);
 
     // マイリスト画面
-    Route::get('/my_list', function () {
-        return view('video/my_list');
-    });
+    Route::get('/my_list', [MyList::class, 'display']);
+
 });

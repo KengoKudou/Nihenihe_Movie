@@ -29,6 +29,9 @@
         <div><img src="{{ asset('storage\img\portfolio_nishigata\スライド14.JPG') }}" alt="portfolio"></div>
         <div><img src="{{ asset('storage\img\portfolio_nishigata\スライド15.JPG') }}" alt="portfolio"></div>
         <div><img src="{{ asset('storage\img\portfolio_nishigata\スライド16.JPG') }}" alt="portfolio"></div>
+        <div><img src="{{ asset('storage\img\portfolio_nishigata\スライド17.JPG') }}" alt="portfolio"></div>
+        <div><img src="{{ asset('storage\img\portfolio_nishigata\スライド18.JPG') }}" alt="portfolio"></div>
+        <div><img src="{{ asset('storage\img\portfolio_nishigata\スライド19.JPG') }}" alt="portfolio"></div>
     </div>
     <a href="/">二へ二へ動画へ戻る</a>
     <a href="/atioa_poroslgtnihfi">裏</a>

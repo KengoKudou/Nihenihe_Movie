@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Video;
 
+use App\Http\Controllers\Controller;
 use App\Models\Tag;
 
 class GetAllTagsController extends Controller

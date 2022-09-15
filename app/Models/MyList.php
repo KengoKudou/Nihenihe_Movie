@@ -46,12 +46,17 @@ class MyList extends Model
 
     public static function update_date($array, $user_id)
     {
-        foreach ($array as $like =>$item) {
+        foreach ($array as $like => $item) {
             self::where('user_id', $user_id)
                 ->update([
                     $like => $item]);
         }
 
+    }
+
+    public static function get_data($user_id)
+    {
+        $data= self::where('user_id', $user_id)->get();
     }
 
 }

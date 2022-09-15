@@ -43,6 +43,7 @@
     <link href="{{ asset('css/video-js.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/video.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/heart.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/add.css') }}" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -70,6 +71,11 @@
                     <a href="/search/tag">
                         <div class="Container_Tag_Item">
                             タグ
+                        </div>
+                    </a>
+                    <a href="/my_list">
+                        <div class="Container_Tag_Item">
+                            マイリスト
                         </div>
                     </a>
                 </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>portfolio</title>
-    <link rel="stylesheet" href="{{ asset('css/portfolio.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/portfolio/portfolio_nishigata.css') }}">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ asset('js/portfolio/turn.js') }}"></script>
     <script src="{{ asset('js/portfolio/portfolio_nishigata.js') }}"></script>
